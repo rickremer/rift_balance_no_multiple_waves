@@ -1,3 +1,12 @@
+## Foreword: 
+1. Huge props to @TheKilltech for what is obviously a massive amount of effort and some super cool concepts.  The added complexity suits my definition of "fun".  Not so much the multiple and stacked attacks/events ; that's gotta go.
+2. I don't intend to ever release this officially on mod.io or otherwise.  (But never say never...)
+3. I'm nowhere close to proficient with Lua, and I'm not a professional software developer, but I've been programming as a hobby since 1981, so maybe I'm not completely incompetent.
+4. I'm nowhere close to fully understanding everything in this mod.  At this point it's just educated guesses.
+
+--  
+RR - March 19, 2025
+
 # Rift Exploration Defense Industry
 
 This mod changes the resource economy of the Riftbreaker campaign, reworking many existing energy and resource buildings but most prominently entierly reworks ammo production. Now powerful weapons (both mech and towers) need a specialized industry to supply them. Also refining rare resources from bio-collectors requires now a multi step process. Overall, maintaining a powerful defense for your outposts won't be such a trivial task anymore and normal difficulty waves might actually prove to be a challenge, when power, ammo and resources aren't easily available in infinite numbers.
