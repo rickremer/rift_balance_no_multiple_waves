@@ -115,15 +115,15 @@ return function()
 	-- an attack once stopped will not continue, ignoring later chance in the table.
 	rules.waveRepeatChances = 
 	{
-		{20},                  -- consecutive chances of wave repeating at level 1
-		{90},                  -- consecutive chances of wave repeating at level 2
-		{80, 50},              -- consecutive chances of wave repeating at level 3
-		{80, 50},              -- consecutive chances of wave repeating at level 4
-		{50, 50},              -- consecutive chances of wave repeating at level 5
-		{60, 60, 20},          -- consecutive chances of wave repeating at level 6
-		{60, 60, 50},          -- consecutive chances of wave repeating at level 7
-		{70, 70, 60, 20},      -- consecutive chances of wave repeating at level 8
-		{80, 70, 70, 30, 30},  -- consecutive chances of wave repeating at level 9
+		{},                  -- consecutive chances of wave repeating at level 1
+		{},                  -- consecutive chances of wave repeating at level 2
+		{},              -- consecutive chances of wave repeating at level 3
+		{},              -- consecutive chances of wave repeating at level 4
+		{},              -- consecutive chances of wave repeating at level 5
+		{},          -- consecutive chances of wave repeating at level 6
+		{},          -- consecutive chances of wave repeating at level 7
+		{},      -- consecutive chances of wave repeating at level 8
+		{},  -- consecutive chances of wave repeating at level 9
 	}
 		
 	rules.waveChanceRerollSpawnGroup = 15  -- chance for rerolled attack wave to change its map border spawn direction (N/W/S/E)
