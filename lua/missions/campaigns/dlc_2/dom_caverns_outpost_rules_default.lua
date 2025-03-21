@@ -89,13 +89,13 @@ return function()
 	{
 		{},                    -- consecutive chances of wave repeating at level 1
 		{},                    -- consecutive chances of wave repeating at level 2
-		{},                  -- consecutive chances of wave repeating at level 3
-		{},                  -- consecutive chances of wave repeating at level 4
-		{},              -- consecutive chances of wave repeating at level 5
-		{},          -- consecutive chances of wave repeating at level 6
-		{},          -- consecutive chances of wave repeating at level 7
-		{},      -- consecutive chances of wave repeating at level 8
-		{},  -- consecutive chances of wave repeating at level 9
+		{15},                  -- consecutive chances of wave repeating at level 3
+		{50},                  -- consecutive chances of wave repeating at level 4
+		{50, 20},              -- consecutive chances of wave repeating at level 5
+		{60, 40, 10},          -- consecutive chances of wave repeating at level 6
+		{60, 40, 20},          -- consecutive chances of wave repeating at level 7
+		{70, 50, 40, 10},      -- consecutive chances of wave repeating at level 8
+		{80, 60, 50, 30, 30},  -- consecutive chances of wave repeating at level 9
 	}
 	
 	rules.waveChanceRerollSpawnGroup = 10
