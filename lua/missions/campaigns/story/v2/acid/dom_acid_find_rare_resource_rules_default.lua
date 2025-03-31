@@ -123,8 +123,8 @@ return function()
 		0,  -- difficulty level 5
 		1,  -- difficulty level 6
 		1,  -- difficulty level 7
-		2,  -- difficulty level 8
-		3,  -- difficulty level 9
+		1,  -- difficulty level 8
+		1,  -- difficulty level 9
 	}
 	
 	rules.prepareAttackDefinitions =

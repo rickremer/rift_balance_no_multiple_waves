@@ -88,13 +88,13 @@ return function()
 	{			
 		{ minCount = 1, maxCount = 1 },  -- difficulty level 1
 		{ minCount = 1, maxCount = 1 },  -- difficulty level 2
-		{ minCount = 1, maxCount = 2 },  -- difficulty level 3
-		{ minCount = 1, maxCount = 2 },  -- difficulty level 4
-		{ minCount = 1, maxCount = 2 },  -- difficulty level 5
-		{ minCount = 1, maxCount = 3 },  -- difficulty level 6
-		{ minCount = 2, maxCount = 3 },  -- difficulty level 7
-		{ minCount = 2, maxCount = 3 },  -- difficulty level 8
-		{ minCount = 2, maxCount = 4 },  -- difficulty level 9
+		{ minCount = 1, maxCount = 1 },  -- difficulty level 3
+		{ minCount = 1, maxCount = 1 },  -- difficulty level 4
+		{ minCount = 1, maxCount = 1 },  -- difficulty level 5
+		{ minCount = 1, maxCount = 1 },  -- difficulty level 6
+		{ minCount = 1, maxCount = 1 },  -- difficulty level 7
+		{ minCount = 1, maxCount = 1 },  -- difficulty level 8
+		{ minCount = 1, maxCount = 1 },  -- difficulty level 9
 	}
 	
 	rules.waveRepeatChances = 
@@ -112,7 +112,7 @@ return function()
 	
 	rules.waveChanceRerollSpawnGroup = 10
 	rules.waveChanceRerollSpawn      = 15
-	rules.waveChanceReroll  
+	rules.waveChanceReroll           = 40
 
 	local waves_gen = require( "lua/missions/v2/waves_gen.lua" )
 	rules.waves = {}
