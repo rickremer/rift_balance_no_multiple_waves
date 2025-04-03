@@ -3,9 +3,9 @@ return function()
 	local rules  = helper:PrepareDefaultRules( {}, "outpost", "default")
 
 	rules.maxObjectivesAtOnce = 1
-	rules.eventsPerIdleState = 2
+	rules.eventsPerIdleState = 1
 	rules.eventsPerPrepareState = 0 -- [0,1]
-	rules.eventsPerPrepareStateChance = 25
+	rules.eventsPerPrepareStateChance = 1
 	rules.pauseAttacks = false
 	rules.prepareAttacks = true
 	rules.baseTimeBetweenObjectives = 1800
@@ -60,7 +60,7 @@ return function()
 
 	-- events spawn chance during/after attack (cooldown state). event timing is random ranging from the start of attack to max cooldown time.
 	-- chances are consecutive, i.e. dice roll for event n+1 may only happen if roll for event n was also succefful
-	rules.spawnCooldownEventChance = { 25, 5, 1 }
+	rules.spawnCooldownEventChance = { 3, 2, 1 }
 
 	rules.addResourcesOnRunOut =     
 	{
@@ -101,18 +101,18 @@ return function()
 	{
 		{},                    -- consecutive chances of wave repeating at level 1
 		{},                    -- consecutive chances of wave repeating at level 2
-		{15},                  -- consecutive chances of wave repeating at level 3
-		{50},                  -- consecutive chances of wave repeating at level 4
-		{50, 20},              -- consecutive chances of wave repeating at level 5
-		{60, 40, 10},          -- consecutive chances of wave repeating at level 6
-		{60, 40, 20},          -- consecutive chances of wave repeating at level 7
-		{70, 50, 40, 10},      -- consecutive chances of wave repeating at level 8
-		{80, 60, 50, 30, 30},  -- consecutive chances of wave repeating at level 9
+		{1},                  -- consecutive chances of wave repeating at level 3
+		{1},                  -- consecutive chances of wave repeating at level 4
+		{2, 1},              -- consecutive chances of wave repeating at level 5
+		{3, 2, 1},          -- consecutive chances of wave repeating at level 6
+		{3, 2, 1},          -- consecutive chances of wave repeating at level 7
+		{4, 3, 2, 1},      -- consecutive chances of wave repeating at level 8
+		{5, 4, 3, 2, 1},  -- consecutive chances of wave repeating at level 9
 	}
 	
-	rules.waveChanceRerollSpawnGroup = 10
-	rules.waveChanceRerollSpawn      = 15
-	rules.waveChanceReroll           = 40
+	rules.waveChanceRerollSpawnGroup = 1
+	rules.waveChanceRerollSpawn      = 2
+	rules.waveChanceReroll           = 3
 
 	local waves_gen = require( "lua/missions/v2/waves_gen.lua" )
 	rules.waves = {}
