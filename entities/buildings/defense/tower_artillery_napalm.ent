@@ -76,7 +76,7 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 	"resin"
-				value 		"5"
+				value 		"2"
 				family		"warhead"
 				attachment	"att_in_1"
 			}
@@ -117,8 +117,8 @@ EntityBlueprint
 		aim_volume "SphericalAimVolume"
 		{
 			range_min "8"
-			range_max "44"
-			aiming_range "55"
+			range_max "60"
+			aiming_range "70"
 		}
 
 		aiming_cooldown "1"

@@ -100,7 +100,7 @@ EntityBlueprint
 			Storage
 			{
 				resource	"ai"
-				max			"60"
+				max			"72"
 			}
 		}
 	}

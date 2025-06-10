@@ -1,12 +1,10 @@
 EntityBlueprint
 {
 	name  					"buildings/energy/magma_powerplant_lvl_2"
-
 	base_blueprint 			"buildings/energy/magma_powerplant"
 
 	BuildingDesc
-	{
-	
+	{	
 		name 				"magma_powerplant_lvl_2"
 		bp   				"buildings/energy/magma_powerplant_lvl_2"
 		category 			"energy"
@@ -19,7 +17,7 @@ EntityBlueprint
 		upgrade				"buildings/energy/magma_powerplant_lvl_3"
 		buildable			"0"
 		going_green_state	"1"
-		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
+		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless,magma_powerplant,magma_powerplant_lvl_3"
 				
 		costs
 		{
@@ -29,8 +27,8 @@ EntityBlueprint
 				building_time 120
 				building_cost
 				{
-					carbonium 	"500"		
-					steel 		"500"
+					carbonium 	"300"		
+					steel 		"600"
 					titanium	"250"
 				}
 			}		
@@ -45,7 +43,7 @@ EntityBlueprint
 			{
 				resource 	"magma"
 				value 		"300"
-				attachment	"att_in_1"
+				attachment	"att_in_1|att_in_3"
 			}
 			GameplayResource
 			{
@@ -61,6 +59,14 @@ EntityBlueprint
 				resource 	"energy"
 				value 		"800"
 			}
+			
+			GameplayResource
+			{
+				resource 	"magma_metal"
+				value 		"30"
+				attachment	"att_out_1"
+				optional	"1"
+			}
 		}
 		priority 10
 		reset_interval 0.5
@@ -73,11 +79,18 @@ EntityBlueprint
 			Storage
 			{
 				resource "energy"
-				max 	 "800"
-			}	
+				max 	 "1500"
+			}
+			
+			Storage
+			{
+				resource	"magma_metal"
+				max 	 	"100"
+				attachment	"att_out_1"
+			}
 		}
 	}
-
+	
 	HealthDesc
 	{
 		max_health 					"3000"
@@ -188,76 +201,114 @@ EntityBlueprint
 		{
 			"buildings/effects_big_base"
 		}
-////////////////////////Resources/////////////////////////			
+		////////////////////////Resources/////////////////////////
 		EffectGroup
 		{
 			group "att_in_1"
-			enabled "0"				
+			enabled "0"
 			delay "0"
 			
 			Effects
 			{
 				Effect
 				{
-					blueprint "effects/buildings_and_machines/building_arrow"								
+					blueprint "effects/buildings_and_machines/building_arrow_twosided"
 					bone "att_in_arrow"
 				}
 			}
 		}	
 		EffectGroup
 		{
-			group "att_out_1"
-			enabled "0"				
+			group "att_in_3"
+			enabled "0"
 			delay "0"
 			
 			Effects
 			{
 				Effect
 				{
-					blueprint "effects/buildings_and_machines/building_arrow"								
-					bone "att_out_arrow"
+					blueprint "effects/buildings_and_machines/building_arrow_twosided"
+					bone "att_in_3_arrow"
 				}
 			}
-		}	
-////////////////////////MISC/////////////////////////			
+		}
 		EffectGroup
 		{
-			group "working"
-			enabled "0"				
+			group "att_out_1"
+			enabled "0"
+			delay "0"
 			
 			Effects
 			{
 				Effect
 				{
-					blueprint "effects/buildings_and_machines/magma_powerplant_pool"								
+					blueprint "effects/buildings_and_machines/building_arrow"
+					bone "att_out_1_arrow"
+				}
+			}
+		}	
+		////////////////////////MISC/////////////////////////
+		EffectGroup
+		{
+			group "vismod"
+			enabled "1"			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/pipe"
+					bone 	"att_in_3_pipe"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/pipe_s"
+					bone 	"att_in_2_pipe"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/pipe"
+					bone 	"att_out_1_pipe"
+				}
+			}
+		}
+		EffectGroup
+		{
+			group "working"
+			enabled "0"
+			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/magma_powerplant_pool"
 					bone "att_magma_1"
 					delay "1"
 				}	
 				Effect
 				{
-					blueprint "effects/buildings_and_machines/magma_powerplant_pool"								
+					blueprint "effects/buildings_and_machines/magma_powerplant_pool"
 					bone "att_magma_2"
 					delay "1"
 				}
 				Effect
 				{
-					blueprint "effects/buildings_and_machines/magma_powerplant_pool"								
+					blueprint "effects/buildings_and_machines/magma_powerplant_pool"
 					bone "att_magma_3"
 					delay "1"
 				}		
 				Effect
 				{
-					blueprint "effects/buildings_and_machines/magma_powerplant_flow"								
+					blueprint "effects/buildings_and_machines/magma_powerplant_flow"
 					bone "att_magma_flow"
 					delay "1"
 				}
 				Effect
 				{
-					blueprint "effects/buildings_energy/magma_powerplant_working"		
+					blueprint "effects/buildings_energy/magma_powerplant_working"
 					delay "0.5"
 				}
 			}
-		}	
+		}
 		EffectGroup
 		{
 			group "level"

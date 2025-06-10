@@ -49,28 +49,28 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 	"fluorine"
-				value 		"40"
+				value 		"25"
 				family		"charge"
 				attachment	"att_in_1"
 			}
 			GameplayResource
 			{
 				resource 	"plasma"
-				value 		"40"
-				family		"charge"
-				attachment	"att_in_1"
-			}
-			GameplayResource
-			{
-				resource 	"resin"
-				value 		"40"
+				value 		"25"
 				family		"charge"
 				attachment	"att_in_1"
 			}
 			GameplayResource
 			{
 				resource 	"plasma_charged"
-				value 		"25"
+				value 		"20"
+				family		"charge"
+				attachment	"att_in_1"
+			}
+			GameplayResource
+			{
+				resource 	"resin"
+				value 		"15"
 				family		"charge"
 				attachment	"att_in_1"
 			}
@@ -233,9 +233,9 @@ EntityBlueprint
 		type	"quad"
 		color
 		{
-			x "1"
-			y "0.5"
-			z "0"
+			x "0.6"  // r
+			y "0.25" // g
+			z "0.25" // b
 			w "1"
 		}
 		size

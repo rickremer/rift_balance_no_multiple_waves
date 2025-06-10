@@ -40,23 +40,23 @@ EntityBlueprint
 		}
 	}
 
-	//ResourceConverterDesc // must be here for AI
-	//{
-	//	in
-	//	{
-	//		GameplayResource
-	//		{
-	//			resource 	"energy"
-	//			value 		"1"
-	//		}
-	//	}
-	//
-	//	out
-	//	{
-	//	}
-	//
-	//	priority 6
-	//}
+	ResourceConverterDesc
+	{
+		in
+		{
+			GameplayResource
+			{
+				resource 	"energy"
+				value 		"5"
+			}
+		}
+	
+		out
+		{
+		}
+	
+		priority 6
+	}
 
 	LuaDesc
 	{
@@ -175,9 +175,9 @@ EntityBlueprint
 		type	"quad"
 		color
 		{
-			x "1"
-			y "0.5"
-			z "0"
+			x "0.6"  // r
+			y "0.25" // g
+			z "0.25" // b
 			w "1"
 		}
 		size

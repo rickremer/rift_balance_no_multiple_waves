@@ -5,16 +5,17 @@ EntityBlueprint
 
 	BuildingDesc
 	{
-		buildable 			"0"	
 		name 				"bio_composter_lvl_2"
 		bp   				"buildings/resources/bio_composter_lvl_2"
-		category 			"resources"
+		category 			"liquids"
 		type				"pipe"
 		localization_id		"gui/hud/building_name/bio_composter"
 		description			"gui/hud/building_description/bio_composter"
 		menu_icon			"gui/hud/building_icons/bio_composter_lvl2"
 		require 			"headquarters"
-		upgrade				"buildings/resources/bio_composter_lvl_3"			
+		upgrade				"buildings/resources/bio_composter_lvl_3"
+		building_group		"gas_filtering_plant"
+		buildable			"0"	
 		order				"15"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
 		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
@@ -70,6 +71,7 @@ EntityBlueprint
 		}
 		priority 4			
 	}
+	
 	ResourceStorageDesc
 	{
 		Storages
@@ -82,6 +84,7 @@ EntityBlueprint
 			}
 		}
 	}
+	
 	LuaDesc
 	{
 		script "lua/buildings/building.lua"
@@ -152,7 +155,6 @@ EntityBlueprint
 				destroy_comp_delay 					"0.6"
 				destroy_comp_event 					"default"
 				//destroyed_state_material 			"units_ground/medium_tank_regular_dest_0"
-				//destroyed_state_effect_group 		"0_state"
 			}			
 		}
 	}

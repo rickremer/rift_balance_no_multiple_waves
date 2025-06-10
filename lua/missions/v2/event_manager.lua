@@ -53,6 +53,8 @@ function event_manager:init()
 	self.eventManagerTimer = 0
 
 	self.dynamicStreamingSceneName = "   "
+	
+	self.availableEventGroups	   = {} -- currently filled and updated by dom_manager
 
 	self.cancelTheAttack		   = false
 	self.spawnBoss				   = false;
@@ -121,6 +123,43 @@ function event_manager:FillInitialParamsEventManager()
 	if ( self.rules.baseTimeBetweenObjectives ~= nil ) then
 		self.objectiveBaseTimeBetweenNext = self.rules.baseTimeBetweenObjectives
 	end
+	
+	
+	if ( self.availableEventGroups == nil ) then
+		self.availableEventGroups = {}
+	end	
+	local campaignData = CampaignService:GetCampaignData()
+	if ( campaignData:GetStringOrDefault("global.uranium_outpost_complete", "" ) == "true" ) then 
+		self.availableEventGroups.uranium_completed = true
+		self.availableEventGroups.desert            = true
+	end  
+	if ( campaignData:GetStringOrDefault("global.titanium_outpost_complete", "" ) == "true" ) then 
+		self.availableEventGroups.titanium_completed = true
+		self.availableEventGroups.magma              = true
+	end 
+	if ( campaignData:GetStringOrDefault("global.palladium_outpost_complete", "" ) == "true" ) then 
+		self.availableEventGroups.palladium_completed = true
+		self.availableEventGroups.acid                = true
+	end
+	if ( campaignData:GetStringOrDefault("global.metallic_outpost_stage_1", "" ) == "true" ) then 
+		self.availableEventGroups.morphium_unlocked = true
+	end
+	if ( campaignData:GetStringOrDefault("global.alien_core_destroyed", "" ) == "true" or campaignData:GetStringOrDefault("global.alien_core_destroyed", "" ) == "true") then 
+		self.availableEventGroups.metallic = true
+	end
+	--if ( campaignData:GetStringOrDefault("global.metallic_start", "" ) == "true" ) then end
+	--if ( campaignData:GetStringOrDefault("global.metallic_outpost_stage_2_complete", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.metallic_outpost_stage_3_complete", "" ) == "true" ) then end
+	--if ( campaignData:GetStringOrDefault("global.alien_core_activated", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.alien_core_destroyed", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.anoryx_good", "" ) == "true" ) then   end
+	--if ( campaignData:GetStringOrDefault("global.caverns_start", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.caverns_outpost_stage_1_complete", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.caverns_outpost_stage_2_start", "" ) == "true" ) then end
+	--if ( campaignData:GetStringOrDefault("global.caverns_outpost_stage_2_complete", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.caverns_end", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.swamp_start", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.swamp_outpost_stage_1_complete", "" ) == "true" ) then  end
 end
 
 function event_manager:IncreamentEventLevel( freezedDifficultyLevel )
@@ -820,6 +859,97 @@ function event_manager:CheckAmmoRemove( data )
 
 end
 
+function event_manager:HasResouceRunout( gameState )
+	if ( ( self.addResourcesOnRunOut == nil ) or ( #self.addResourcesOnRunOut <= 0 ) )then
+		return false
+	end
+	self:VerboseLog("event_manager:HasResouceRunout - available event groups:")
+	for key,val in pairs(self.availableEventGroups) do 
+		self:VerboseLog( "   ".. tostring( key ) )
+	end	
+
+	LogService:Log( "event_manager:HasResouceRunout - checking resources amount on map." )
+
+	-- get all low resources that are unlocked for refill
+	local rngRoll = RandInt(1, 100)
+	local runningOutResources = {}
+	for i = 1, #self.addResourcesOnRunOut, 1 do 
+		local element = self.addResourcesOnRunOut[i]
+		if ( element.eventGroup ~= nil and not self.availableEventGroups[ element.eventGroup ]) then
+			LogService:Log( "event_manager:HasResouceRunout - skipping ".. element.name .. " because event group ".. tostring( element.eventGroup) .." missing." )
+			goto continueLoop
+		end
+		local chance = element.chance or (100-(element.ignoreChance or 0)) or 100
+		if (rngRoll <= chance) then
+			LogService:Log( "event_manager:HasResouceRunout - not ignoring ".. element.name .. " because rng roll ".. tostring(rngRoll) .." within ".. tostring(chance) .. " chance." )
+		elseif ( chance > 0) then
+			LogService:Log( "event_manager:HasResouceRunout - ignoring ".. element.name .. " because rng roll ".. tostring(rngRoll) .." outside ".. tostring(chance) .. " chance." )
+			goto continueLoop
+		end
+		local currentResourcePercentage = ResourceService:GetPercentOfAvailableResourceByType( element.name )
+
+		if ( currentResourcePercentage == nil ) then
+			LogService:Log( "event_manager:HasResouceRunout - resource does not exist on this map : " .. element.name )
+			currentResourcePercentage = 0
+		end
+		currentResourcePercentage = currentResourcePercentage * 100;
+
+		if ( element.runOutPercentageOnMap >= currentResourcePercentage ) then
+			local runningOutResourcesIndex = #runningOutResources + 1
+			runningOutResources[runningOutResourcesIndex] = element
+			runningOutResources[runningOutResourcesIndex].currentResourcePercentage = currentResourcePercentage
+			LogService:Log( "event_manager:HasResouceRunout - resource is running out : " .. element.name .. " amount " ..  tostring( currentResourcePercentage ) .. " adding on below " .. tostring( element.runOutPercentageOnMap ) ) 
+		else
+			LogService:Log( "event_manager:HasResouceRunout - resource is not running out : " .. element.name .. " amount " ..  tostring( currentResourcePercentage ) .. " adding on below " .. tostring( element.runOutPercentageOnMap ) ) 
+		end
+		::continueLoop::
+	end
+
+	-- get the lowest resource first
+	local runOutOnMap = false
+	local lowerIndex = 1
+	local minResourcePercentage = 100
+
+	for i = 1, #runningOutResources, 1 do 
+		local currentResourcePercentage = runningOutResources[i].currentResourcePercentage
+		if ( minResourcePercentage >= currentResourcePercentage ) then
+			lowerIndex = i
+			runOutOnMap = true
+			minResourcePercentage = currentResourcePercentage
+		end
+	end
+	local selected = runningOutResources[lowerIndex]
+
+	-- setup resource respawn event
+	if ( runOutOnMap ) then
+		LogService:Log( "event_manager:HasResouceRunout - selecting most run out resource : " .. selected.name )	
+	
+		if ( self.addResourcesOnRunOutTimer > self.eventManagerTimer ) then
+			LogService:Log( "event_manager:HasResouceRunout - timer is not ready to spawn new resources : " .. tostring( self.addResourcesOnRunOutTimer ) .. " current time : " .. tostring( self.eventManagerTimer ) )
+		else
+			local events = self.resourceEvents
+			if ( selected.events ~= nil ) then events = selected.events end
+			local eventName = events[RandInt( 1, #events )] 
+			local logicFile = self:GetLogicFileFromAction( eventName, self.rules.gameEvents )
+
+			self.addResourcesOnRunOutTimer = self.eventManagerTimer + self.addResourcesOnRunOutTime
+
+			if ( logicFile ~= "" ) then
+				
+				LogService:Log( "event_manager:HasResouceRunout - spawning resource event : " .. eventName .. " logic file name : " .. logicFile )			
+				LogService:Log( "event_manager:HasResouceRunout - skipping events : " .. gameState )
+
+				self:SpawnExtraResources( logicFile, selected.name, selected.minToSpawn, selected.maxToSpawn, selected.isInfinite, selected.blueprint )
+
+				return true
+			else
+				LogService:Log( "event_manager:HasResouceRunout - spawning resource event " .. eventName .. " does not exist in the rules." )
+			end
+		end		
+	end
+	return false
+end
+
 function event_manager:CheckObjectiveLogicFile( logicFile )
 	
 	LogService:Log( "event_manager:CheckObjectiveLogicFile " .. logicFile  )
@@ -832,13 +962,14 @@ function event_manager:CheckObjectiveLogicFile( logicFile )
 	end
 end
 
-function event_manager:SpawnExtraResources( logicFile, resourceName, minAmount, maxAmount )
-	LogService:Log( "event_manager:SpawnExtraResources " .. resourceName  )
-	self.data:SetInt( "minAmount", minAmount )
-	self.data:SetInt( "maxAmount", maxAmount )
-	self.data:SetString( "resource", resourceName )
+function event_manager:SpawnExtraResources( logicFile, resourceName, minAmount, maxAmount, isInfinite, blueprint )
+	LogService:Log( "event_manager:SpawnExtraResources " .. resourceName .. " min: ".. tostring(minAmount).." max: ".. tostring(maxAmount).." inf: ".. tostring(isInfinite).." bp: ".. tostring(blueprint)  )
+	if (minAmount ~= nil )    then self.data:SetInt( "minAmount", minAmount)       else self.data:RemoveKey("minAmount")  end
+	if (maxAmount ~= nil )    then self.data:SetInt( "maxAmount", maxAmount)       else self.data:RemoveKey("maxAmount")  end
+	if (isInfinite ~= nil )   then self.data:SetInt( "isInfinite", isInfinite)     else self.data:RemoveKey("isInfinite") end
+	if (resourceName ~= nil ) then self.data:SetString( "resource", resourceName ) else self.data:RemoveKey("resource")   end
+	if (blueprint ~= nil )    then self.data:SetString( "blueprint", blueprint )   else self.data:RemoveKey("blueprint")  end
 	MissionService:ActivateMissionFlow( "", logicFile, "default", self.data )
-
 end
 
 function event_manager:StartStreamingVoting()
@@ -908,70 +1039,7 @@ function event_manager:StartAnEvent( gameState )
 	LogService:Log( "event_manager:StartAnEvent()" )
 
 	if ( gameState == "IDLE" ) then	
-		if ( ( self.addResourcesOnRunOut ~= nil ) and ( #self.addResourcesOnRunOut > 0 ) )then
-
-			LogService:Log( "event_manager:StartAnEvent - checking resources amount on map." )
-
-			local runningOutResources = {}
-
-			for i = 1, #self.addResourcesOnRunOut, 1 do 
-				local currentResourcePercentage = ResourceService:GetPercentOfAvailableResourceByType( self.addResourcesOnRunOut[i].name )
-
-				if ( currentResourcePercentage ~= nil ) then
-					
-					currentResourcePercentage = currentResourcePercentage * 100;
-
-					if ( self.addResourcesOnRunOut[i].runOutPercentageOnMap >= currentResourcePercentage ) then
-						local runningOutResourcesIndex = #runningOutResources + 1
-						runningOutResources[runningOutResourcesIndex] = self.addResourcesOnRunOut[i]
-						runningOutResources[runningOutResourcesIndex].currentResourcePercentage = currentResourcePercentage
-						LogService:Log( "event_manager:StartAnEvent - resource is running out : " .. self.addResourcesOnRunOut[i].name .. " amount " ..  tostring( currentResourcePercentage ) .. " adding on below " .. tostring( self.addResourcesOnRunOut[i].runOutPercentageOnMap ) ) 
-					else
-						LogService:Log( "event_manager:StartAnEvent - resource is not running out : " .. self.addResourcesOnRunOut[i].name .. " amount " ..  tostring( currentResourcePercentage ) .. " adding on below " .. tostring( self.addResourcesOnRunOut[i].runOutPercentageOnMap ) ) 
-					end
-				else
-					LogService:Log( "event_manager:StartAnEvent - resource does not exist on this map : " .. self.addResourcesOnRunOut[i].name )
-				end
-			end
-
-			local runOutOnMap = false
-			local lowerIndex = 1
-			local minResourcePercentage = 100
-
-			for i = 1, #runningOutResources, 1 do 
-				local currentResourcePercentage = runningOutResources[i].currentResourcePercentage
-				if ( minResourcePercentage >= currentResourcePercentage ) then
-					lowerIndex = i
-					runOutOnMap = true
-					minResourcePercentage = currentResourcePercentage
-				end
-			end
-
-			if ( runOutOnMap ) then
-				LogService:Log( "event_manager:StartAnEvent - selecting most run out resource : " .. runningOutResources[lowerIndex].name )	
-			
-				if ( self.addResourcesOnRunOutTimer > self.eventManagerTimer ) then
-					LogService:Log( "event_manager:StartAnEvent - timer is not ready to spawn new resources : " .. tostring( self.addResourcesOnRunOutTimer ) .. " current time : " .. tostring( self.eventManagerTimer ) )
-				elseif ( ( runOutOnMap ) and ( self.addResourcesOnRunOutTimer < self.eventManagerTimer ) ) then
-					local eventName = self.resourceEvents[RandInt( 1, #self.resourceEvents )] 
-					local logicFile = self:GetLogicFileFromAction( eventName, self.rules.gameEvents )
-
-					self.addResourcesOnRunOutTimer = self.eventManagerTimer + self.addResourcesOnRunOutTime
-
-					if ( logicFile ~= "" ) then
-						
-						LogService:Log( "event_manager:StartAnEvent - spawning resource event : " .. eventName .. " logic file name : " .. logicFile )			
-						LogService:Log( "event_manager:StartAnEvent - skipping events : " .. gameState )
-
-						self:SpawnExtraResources( logicFile, runningOutResources[lowerIndex].name, runningOutResources[lowerIndex].minToSpawn, runningOutResources[lowerIndex].maxToSpawn )
-
-						return
-					else
-						LogService:Log( "event_manager:StartAnEvent - spawning resource event " .. eventName .. " does not exist in the rules." )
-					end
-				end		
-			end
-		end
+		if ( self:HasResouceRunout( gameState )) then return end
 	end
 
 	if ( GameStreamingService:IsInStreamEvent() == true ) then
@@ -1023,7 +1091,6 @@ function event_manager:StartAnEvent( gameState )
 		else
 			LogService:Log( "event_manager:StartAnEvent() - eventChanceRoll is below roll chance : " .. eventChance )
 		end
-
 	end
 end
 

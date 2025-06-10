@@ -14,6 +14,7 @@ EntityBlueprint
 		order				"20"
 		upgrade				"buildings/resources/uranium_centrifuge_lvl_2"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
+		overrides			"uranium_centrifuge_lvl_2,uranium_centrifuge_lvl_3"
 
 		costs
 		{
@@ -53,11 +54,17 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 			"uranium_ore"
-				value			 	"1"
+				value			 	"2"
 			}			
 		}
 		out
 		{
+			GameplayResource
+			{
+				resource 			"uranium_depleted"
+				value			 	"2"
+				optional			"1"
+			}
 			GameplayResource
 			{
 				resource 			"uranium"

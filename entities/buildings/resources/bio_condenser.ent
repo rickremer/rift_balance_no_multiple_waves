@@ -1,4 +1,4 @@
-EntityBlueprint
+EntityBlueprint  // bio_condenser
 {
 	name  "buildings/resources/bio_condenser"
 
@@ -6,14 +6,14 @@ EntityBlueprint
 	{
 		name 				"bio_condenser"
 		bp   				"buildings/resources/bio_condenser"
-		category 			"resources"
+		category 			"liquids"
 		type				"pipe"
 		localization_id		"gui/hud/building_name/bio_condenser"
 		description			"gui/hud/building_description/bio_condenser"
 		menu_icon			"gui/hud/building_icons/bio_condenser"
 		require 			"headquarters"
-		upgrade				"buildings/resources/bio_condenser_lvl_2"			
-		order				"15"
+		upgrade				"buildings/resources/bio_condenser_lvl_2"
+		order				"5"
 		radius_name			"pump"
 		min_radius			"20"
 
@@ -30,7 +30,7 @@ EntityBlueprint
 				building_cost
 				{
 					carbonium 	"150"
-					steel 		"150"		
+					steel 		"150"
 				}
 			}		
 		}
@@ -73,6 +73,7 @@ EntityBlueprint
 			}
 		}
 	}
+	
 	LuaDesc
 	{
 		script "lua/buildings/building.lua"
@@ -144,7 +145,6 @@ EntityBlueprint
 				destroy_comp_delay 					"0.6"
 				destroy_comp_event 					"default"
 				//destroyed_state_material 			"units_ground/medium_tank_regular_dest_0"
-				//destroyed_state_effect_group 		"0_state"
 			}			
 		}
 	}
@@ -157,7 +157,7 @@ EntityBlueprint
 
 	TypeDesc
 	{
-		type "building|resource"
+		type "building|liquids"
 	}
 
 	SkeletonDesc
@@ -229,9 +229,9 @@ EntityBlueprint
 		type	"quad"
 		color 
 		{
-			x "0.5"
-			y "0.5"
-			z "1"
+			x "0.3"  // r
+			y "0.5"  // g
+			z "0.9"  // b
 			w "1"
 		}
 		size
@@ -371,7 +371,7 @@ EntityBlueprint
 		{
 			"buildings/effects_medium_base"
 		}
-////////////////////////Resources/////////////////////////				
+		////////////////////////Resources/////////////////////////
 		EffectGroup
 		{
 			group "att_out_1"
@@ -382,12 +382,33 @@ EntityBlueprint
 			{
 				Effect
 				{
-					blueprint "effects/buildings_and_machines/building_arrow"								
+					blueprint "effects/buildings_and_machines/building_arrow"
 					bone "att_out_arrow"
 				}
 			}
 		}				
-//////////////////////////////// MISC /////////////////////////////////////////		
+		//////////////////////////////// MISC /////////////////////////////////////////
+		EffectGroup
+		{
+			group "vismod"
+			enabled "1"
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/reactor_green"
+					bone "att_vismod_1"
+					scale 1.9 2.0 1.9
+					orientation 45 0 0
+				}
+				//Effect
+				//{
+				//	blueprint "effects/buildings_and_machines/minipipes"
+				//	bone "att_vismod_2"
+				//	scale "0.8 0.8 0.8"
+				//}
+			}
+		}
 		EffectGroup
 		{
 			group "working"
@@ -419,7 +440,7 @@ EntityBlueprint
 
 
 
-EntityBlueprint
+EntityBlueprint  // bio_condenser_ruins
 {
 	name  "buildings/resources/bio_condenser_ruins"
 

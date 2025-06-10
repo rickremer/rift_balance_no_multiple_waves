@@ -57,7 +57,7 @@ EntityBlueprint
 		database
 		{
 			name				string:"range"
-			range				float:"140"
+			range				float:"180"
 		}
 	}
 

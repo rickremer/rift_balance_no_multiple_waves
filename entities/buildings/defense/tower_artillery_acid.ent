@@ -62,6 +62,14 @@ EntityBlueprint
 				family		"warhead"
 				attachment	"att_in_1"
 			}
+			
+			GameplayResource
+			{
+				resource 	"reagent"
+				value 		"5"
+				family		"warhead"
+				attachment	"att_in_1"
+			}
 		}
 
 		out
@@ -83,8 +91,8 @@ EntityBlueprint
 		aim_volume "SphericalAimVolume"
 		{
 			range_min "8"
-			range_max "42"
-			aiming_range "55"
+			range_max "60"
+			aiming_range "70"
 		}
 
 		aiming_cooldown "1"

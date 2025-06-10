@@ -37,7 +37,7 @@ Research
 					research_scripts
 					position
 					{
-						x "18.000"
+						x "207.000"
 						y "-126.000"
 					}
 
@@ -131,6 +131,12 @@ Research
 						{
 							blueprint "buildings/defense/wall_small_x_01_lvl_2"
 							is_visible "0"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/energy/energy_connector_armored"
+							is_visible "1"
 						}
 
 					}
@@ -330,7 +336,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-639.000"
+						x "-648.000"
 						y "423.000"
 					}
 
@@ -384,7 +390,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-639.000"
+						x "-648.000"
 						y "342.000"
 					}
 
@@ -614,68 +620,6 @@ Research
 
 						}
 
-						ResearchScript
-						{
-							script_name "lua/research/limit_increase.lua"
-							script_database
-							{
-								Strings
-								{
-									StringData
-									{
-										value "communications_hub"
-										key "limit_name"
-									}
-
-								}
-
-								Floats
-								Vectors
-								Integers
-								{
-									IntData
-									{
-										value "1"
-										key "increase_amount"
-									}
-
-								}
-
-							}
-
-						}
-
-						ResearchScript
-						{
-							script_name "lua/research/limit_increase.lua"
-							script_database
-							{
-								Strings
-								{
-									StringData
-									{
-										value "outpost"
-										key "limit_name"
-									}
-
-								}
-
-								Floats
-								Vectors
-								Integers
-								{
-									IntData
-									{
-										value "8"
-										key "increase_amount"
-									}
-
-								}
-
-							}
-
-						}
-
 					}
 
 					position
@@ -689,12 +633,6 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/main/headquarters_lvl_7"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "research/building_limit_cap_increase_comms_hub"
 							is_visible "1"
 						}
 
@@ -747,8 +685,8 @@ Research
 					research_scripts
 					position
 					{
-						x "576.000"
-						y "378.000"
+						x "882.000"
+						y "369.000"
 					}
 
 					research_awards
@@ -756,12 +694,6 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/fusion_powerplant_lvl_3"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "buildings/resources/plasma_converter_lvl_3"
 							is_visible "1"
 						}
 
@@ -786,7 +718,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl6"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -807,8 +739,8 @@ Research
 					research_scripts
 					position
 					{
-						x "576.000"
-						y "297.000"
+						x "882.000"
+						y "288.000"
 					}
 
 					research_awards
@@ -816,12 +748,6 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/fusion_powerplant_lvl_2"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "buildings/resources/plasma_converter_lvl_2"
 							is_visible "1"
 						}
 
@@ -846,7 +772,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl6"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -867,8 +793,8 @@ Research
 					research_scripts
 					position
 					{
-						x "828.000"
-						y "234.000"
+						x "1197.000"
+						y "225.000"
 					}
 
 					research_awards
@@ -900,7 +826,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -921,8 +847,8 @@ Research
 					research_scripts
 					position
 					{
-						x "873.000"
-						y "72.000"
+						x "1242.000"
+						y "63.000"
 					}
 
 					research_awards
@@ -930,12 +856,6 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/nuclear_powerplant_lvl_2"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "buildings/resources/uranium_centrifuge_lvl_2"
 							is_visible "1"
 						}
 
@@ -981,8 +901,8 @@ Research
 					research_scripts
 					position
 					{
-						x "531.000"
-						y "297.000"
+						x "837.000"
+						y "288.000"
 					}
 
 					research_awards
@@ -1028,7 +948,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1215.000"
+						x "-1260.000"
 						y "-9.000"
 					}
 
@@ -1082,7 +1002,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1116.000"
+						x "-1143.000"
 						y "-72.000"
 					}
 
@@ -1148,7 +1068,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1071.000"
+						x "-1098.000"
 						y "-9.000"
 					}
 
@@ -1202,7 +1122,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1269.000"
+						x "-1314.000"
 						y "270.000"
 					}
 
@@ -1263,7 +1183,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-819.000"
+						x "-828.000"
 						y "270.000"
 					}
 
@@ -1296,7 +1216,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl6"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -1317,8 +1237,8 @@ Research
 					research_scripts
 					position
 					{
-						x "531.000"
-						y "234.000"
+						x "837.000"
+						y "225.000"
 					}
 
 					research_awards
@@ -1378,7 +1298,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-819.000"
+						x "-828.000"
 						y "-18.000"
 					}
 
@@ -1455,37 +1375,6 @@ Research
 								{
 									StringData
 									{
-										value "communications_hub"
-										key "limit_name"
-									}
-
-								}
-
-								Floats
-								Vectors
-								Integers
-								{
-									IntData
-									{
-										value "1"
-										key "increase_amount"
-									}
-
-								}
-
-							}
-
-						}
-
-						ResearchScript
-						{
-							script_name "lua/research/limit_increase.lua"
-							script_database
-							{
-								Strings
-								{
-									StringData
-									{
 										value "outpost"
 										key "limit_name"
 									}
@@ -1498,7 +1387,7 @@ Research
 								{
 									IntData
 									{
-										value "3"
+										value "2"
 										key "increase_amount"
 									}
 
@@ -1518,12 +1407,6 @@ Research
 
 					research_awards
 					{
-						ResearchAward
-						{
-							blueprint "buildings/main/communications_hub_lvl_4"
-							is_visible "1"
-						}
-
 						ResearchAward
 						{
 							blueprint "buildings/main/headquarters_lvl_5"
@@ -1592,37 +1475,6 @@ Research
 
 						}
 
-						ResearchScript
-						{
-							script_name "lua/research/limit_increase.lua"
-							script_database
-							{
-								Strings
-								{
-									StringData
-									{
-										value "outpost"
-										key "limit_name"
-									}
-
-								}
-
-								Floats
-								Vectors
-								Integers
-								{
-									IntData
-									{
-										value "2"
-										key "increase_amount"
-									}
-
-								}
-
-							}
-
-						}
-
 					}
 
 					position
@@ -1633,12 +1485,6 @@ Research
 
 					research_awards
 					{
-						ResearchAward
-						{
-							blueprint "buildings/main/communications_hub_lvl_5"
-							is_visible "1"
-						}
-
 						ResearchAward
 						{
 							blueprint "buildings/main/headquarters_lvl_6"
@@ -1710,37 +1556,6 @@ Research
 								{
 									StringData
 									{
-										value "communications_hub"
-										key "limit_name"
-									}
-
-								}
-
-								Floats
-								Vectors
-								Integers
-								{
-									IntData
-									{
-										value "1"
-										key "increase_amount"
-									}
-
-								}
-
-							}
-
-						}
-
-						ResearchScript
-						{
-							script_name "lua/research/limit_increase.lua"
-							script_database
-							{
-								Strings
-								{
-									StringData
-									{
 										value "outpost"
 										key "limit_name"
 									}
@@ -1753,7 +1568,7 @@ Research
 								{
 									IntData
 									{
-										value "4"
+										value "2"
 										key "increase_amount"
 									}
 
@@ -1775,19 +1590,7 @@ Research
 					{
 						ResearchAward
 						{
-							blueprint "buildings/main/communications_hub_lvl_3"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
 							blueprint "buildings/main/headquarters_lvl_4"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "research/building_limit_cap_increase_comms_hub"
 							is_visible "1"
 						}
 
@@ -1826,8 +1629,8 @@ Research
 					research_scripts
 					position
 					{
-						x "873.000"
-						y "-162.000"
+						x "1242.000"
+						y "-171.000"
 					}
 
 					research_awards
@@ -1880,7 +1683,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1215.000"
+						x "-1260.000"
 						y "270.000"
 					}
 
@@ -1967,7 +1770,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl6"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -1988,8 +1791,8 @@ Research
 					research_scripts
 					position
 					{
-						x "873.000"
-						y "234.000"
+						x "1242.000"
+						y "225.000"
 					}
 
 					research_awards
@@ -1997,12 +1800,6 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/nuclear_powerplant_lvl_3"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "buildings/resources/uranium_centrifuge_lvl_3"
 							is_visible "1"
 						}
 
@@ -2041,7 +1838,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1035.000"
+						x "-1098.000"
 						y "-261.000"
 					}
 
@@ -2088,7 +1885,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1116.000"
+						x "-1143.000"
 						y "-153.000"
 					}
 
@@ -2125,7 +1922,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1143.000"
+						x "-1170.000"
 						y "-315.000"
 					}
 
@@ -2170,6 +1967,12 @@ Research
 						ResearchAward
 						{
 							blueprint "items/loot/resources/biomass_animal_item"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "items/loot/resources/biomass_mycelium_item"
 							is_visible "1"
 						}
 
@@ -2242,6 +2045,12 @@ Research
 
 						ResearchAward
 						{
+							blueprint "buildings/main/repellent_drone_hub"
+							is_visible "0"
+						}
+
+						ResearchAward
+						{
 							blueprint "buildings/main/seismic_laboratory"
 							is_visible "0"
 						}
@@ -2293,7 +2102,7 @@ Research
 					research_scripts
 					position
 					{
-						x "18.000"
+						x "207.000"
 						y "-216.000"
 					}
 
@@ -2469,7 +2278,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-765.000"
+						x "-774.000"
 						y "-324.000"
 					}
 
@@ -2537,14 +2346,14 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_name "gui/menu/research/name/plasma_physics"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/plasma_physics"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -2565,8 +2374,8 @@ Research
 					research_scripts
 					position
 					{
-						x "576.000"
-						y "72.000"
+						x "882.000"
+						y "63.000"
 					}
 
 					research_awards
@@ -2603,7 +2412,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/resource_handling_liquid_lvl1"
+							research_name "gui/menu/research/name/comm_hub_lvl_2"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -2624,8 +2433,8 @@ Research
 					research_scripts
 					position
 					{
-						x "693.000"
-						y "-162.000"
+						x "1053.000"
+						y "-171.000"
 					}
 
 					research_awards
@@ -2783,7 +2592,7 @@ Research
 					research_scripts
 					position
 					{
-						x "252.000"
+						x "576.000"
 						y "144.000"
 					}
 
@@ -2809,7 +2618,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl4"
+							research_name "gui/menu/research/name/comm_hub_lvl_3"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -2830,8 +2639,8 @@ Research
 					research_scripts
 					position
 					{
-						x "828.000"
-						y "-81.000"
+						x "1197.000"
+						y "-90.000"
 					}
 
 					research_awards
@@ -2875,6 +2684,71 @@ Research
 					}
 
 					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "communications_hub"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "1"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "outpost"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "2"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
 					position
 					{
 						x "117.000"
@@ -2883,12 +2757,6 @@ Research
 
 					research_awards
 					{
-						ResearchAward
-						{
-							blueprint "buildings/main/communications_hub_lvl_2"
-							is_visible "1"
-						}
-
 						ResearchAward
 						{
 							blueprint "buildings/main/headquarters_lvl_3"
@@ -2922,7 +2790,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -2943,8 +2811,8 @@ Research
 					research_scripts
 					position
 					{
-						x "693.000"
-						y "72.000"
+						x "1053.000"
+						y "63.000"
 					}
 
 					research_awards
@@ -2998,7 +2866,7 @@ Research
 					position
 					{
 						x "63.000"
-						y "117.000"
+						y "72.000"
 					}
 
 					research_awards
@@ -3091,8 +2959,8 @@ Research
 					research_scripts
 					position
 					{
-						x "918.000"
-						y "-162.000"
+						x "1287.000"
+						y "-171.000"
 					}
 
 					research_awards
@@ -3151,7 +3019,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1071.000"
+						x "-1098.000"
 						y "270.000"
 					}
 
@@ -3198,8 +3066,8 @@ Research
 					research_scripts
 					position
 					{
-						x "828.000"
-						y "-162.000"
+						x "1197.000"
+						y "-171.000"
 					}
 
 					research_awards
@@ -3258,7 +3126,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1269.000"
+						x "-1314.000"
 						y "423.000"
 					}
 
@@ -3414,7 +3282,7 @@ Research
 					research_scripts
 					position
 					{
-						x "252.000"
+						x "576.000"
 						y "-18.000"
 					}
 
@@ -3468,7 +3336,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1143.000"
+						x "-1170.000"
 						y "270.000"
 					}
 
@@ -3522,7 +3390,7 @@ Research
 					research_scripts
 					position
 					{
-						x "207.000"
+						x "531.000"
 						y "72.000"
 					}
 
@@ -3530,7 +3398,7 @@ Research
 					{
 						ResearchAward
 						{
-							blueprint "buildings/resources/liquid_material_storage_lvl_3"
+							blueprint "buildings/resources/liquid_material_storage_large"
 							is_visible "1"
 						}
 
@@ -3588,7 +3456,7 @@ Research
 					research_scripts
 					position
 					{
-						x "207.000"
+						x "531.000"
 						y "-81.000"
 					}
 
@@ -3596,7 +3464,7 @@ Research
 					{
 						ResearchAward
 						{
-							blueprint "buildings/resources/liquid_material_storage_lvl_2"
+							blueprint "buildings/resources/liquid_material_storage_medium"
 							is_visible "1"
 						}
 
@@ -3647,8 +3515,8 @@ Research
 					research_scripts
 					position
 					{
-						x "531.000"
-						y "144.000"
+						x "837.000"
+						y "135.000"
 					}
 
 					research_awards
@@ -3694,7 +3562,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-819.000"
+						x "-828.000"
 						y "-216.000"
 					}
 
@@ -3759,7 +3627,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1143.000"
+						x "-1170.000"
 						y "-9.000"
 					}
 
@@ -3813,7 +3681,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1116.000"
+						x "-1143.000"
 						y "207.000"
 					}
 
@@ -3879,7 +3747,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1179.000"
+						x "-1206.000"
 						y "207.000"
 					}
 
@@ -3926,7 +3794,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1269.000"
+						x "-1314.000"
 						y "-9.000"
 					}
 
@@ -3980,7 +3848,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1179.000"
+						x "-1206.000"
 						y "-72.000"
 					}
 
@@ -4027,8 +3895,8 @@ Research
 					research_scripts
 					position
 					{
-						x "873.000"
-						y "-270.000"
+						x "1242.000"
+						y "-279.000"
 					}
 
 					research_awards
@@ -4074,7 +3942,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-639.000"
+						x "-648.000"
 						y "72.000"
 					}
 
@@ -4186,7 +4054,7 @@ Research
 					research_scripts
 					position
 					{
-						x "252.000"
+						x "576.000"
 						y "-162.000"
 					}
 
@@ -4239,7 +4107,7 @@ Research
 					research_scripts
 					position
 					{
-						x "207.000"
+						x "531.000"
 						y "-216.000"
 					}
 
@@ -4247,7 +4115,7 @@ Research
 					{
 						ResearchAward
 						{
-							blueprint "buildings/resources/liquid_material_storage"
+							blueprint "buildings/resources/liquid_material_storage_small"
 							is_visible "1"
 						}
 
@@ -4348,7 +4216,7 @@ Research
 					position
 					{
 						x "-351.000"
-						y "153.000"
+						y "144.000"
 					}
 
 					research_awards
@@ -4410,7 +4278,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl4"
+							research_name "gui/menu/research/name/comm_hub_lvl_3"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -4456,8 +4324,8 @@ Research
 
 					position
 					{
-						x "873.000"
-						y "-81.000"
+						x "1242.000"
+						y "-90.000"
 					}
 
 					research_awards
@@ -4477,6 +4345,12 @@ Research
 						ResearchAward
 						{
 							blueprint "items/loot/resources/shard_uranium_bio_item"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "items/loot/resources/shard_uranium_depleted_item"
 							is_visible "1"
 						}
 
@@ -4508,6 +4382,13 @@ Research
 						{
 							render_line "1"
 							research_name "gui/menu/research/name/orbital_scanning"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_2"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -4581,8 +4462,8 @@ Research
 
 					position
 					{
-						x "783.000"
-						y "-162.000"
+						x "1152.000"
+						y "-171.000"
 					}
 
 					research_awards
@@ -4640,8 +4521,8 @@ Research
 					research_scripts
 					position
 					{
-						x "918.000"
-						y "-216.000"
+						x "1287.000"
+						y "-225.000"
 					}
 
 					research_awards
@@ -4673,7 +4554,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -4694,8 +4575,8 @@ Research
 					research_scripts
 					position
 					{
-						x "828.000"
-						y "72.000"
+						x "1197.000"
+						y "63.000"
 					}
 
 					research_awards
@@ -4831,8 +4712,8 @@ Research
 					research_scripts
 					position
 					{
-						x "639.000"
-						y "-162.000"
+						x "972.000"
+						y "-171.000"
 					}
 
 					research_awards
@@ -4870,7 +4751,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -4891,8 +4772,8 @@ Research
 					research_scripts
 					position
 					{
-						x "639.000"
-						y "72.000"
+						x "972.000"
+						y "63.000"
 					}
 
 					research_awards
@@ -4930,7 +4811,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl7"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -4951,8 +4832,8 @@ Research
 					research_scripts
 					position
 					{
-						x "639.000"
-						y "378.000"
+						x "972.000"
+						y "225.000"
 					}
 
 					research_awards
@@ -5004,7 +4885,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1314.000"
+						x "-1359.000"
 						y "-9.000"
 					}
 
@@ -5058,7 +4939,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1314.000"
+						x "-1359.000"
 						y "270.000"
 					}
 
@@ -5112,7 +4993,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1314.000"
+						x "-1359.000"
 						y "423.000"
 					}
 
@@ -5159,18 +5040,12 @@ Research
 					research_scripts
 					position
 					{
-						x "-1179.000"
+						x "-1206.000"
 						y "-261.000"
 					}
 
 					research_awards
 					{
-						ResearchAward
-						{
-							blueprint "buildings/energy/energy_connector_water"
-							is_visible "1"
-						}
-
 						ResearchAward
 						{
 							blueprint "buildings/energy/energy_pylon"
@@ -5219,8 +5094,8 @@ Research
 					research_scripts
 					position
 					{
-						x "783.000"
-						y "117.000"
+						x "1152.000"
+						y "108.000"
 					}
 
 					research_awards
@@ -5258,7 +5133,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl7"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -5279,8 +5154,8 @@ Research
 					research_scripts
 					position
 					{
-						x "783.000"
-						y "378.000"
+						x "1152.000"
+						y "225.000"
 					}
 
 					research_awards
@@ -5332,7 +5207,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-729.000"
+						x "-738.000"
 						y "-9.000"
 					}
 
@@ -5393,7 +5268,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-729.000"
+						x "-738.000"
 						y "297.000"
 					}
 
@@ -5447,7 +5322,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-729.000"
+						x "-738.000"
 						y "423.000"
 					}
 
@@ -5494,7 +5369,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-873.000"
+						x "-900.000"
 						y "-153.000"
 					}
 
@@ -5548,7 +5423,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-873.000"
+						x "-900.000"
 						y "72.000"
 					}
 
@@ -5602,7 +5477,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-873.000"
+						x "-900.000"
 						y "342.000"
 					}
 
@@ -5649,7 +5524,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-765.000"
+						x "-774.000"
 						y "-216.000"
 					}
 
@@ -5737,7 +5612,7 @@ Research
 
 					position
 					{
-						x "-765.000"
+						x "-774.000"
 						y "-81.000"
 					}
 
@@ -5825,7 +5700,7 @@ Research
 
 					position
 					{
-						x "-765.000"
+						x "-774.000"
 						y "216.000"
 					}
 
@@ -5872,8 +5747,8 @@ Research
 					research_scripts
 					position
 					{
-						x "783.000"
-						y "-18.000"
+						x "1152.000"
+						y "-27.000"
 					}
 
 					research_awards
@@ -6259,7 +6134,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl3"
+							research_name "gui/menu/research/name/comm_hub_lvl_3"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -6280,18 +6155,12 @@ Research
 					research_scripts
 					position
 					{
-						x "162.000"
-						y "-162.000"
+						x "738.000"
+						y "-81.000"
 					}
 
 					research_awards
 					{
-						ResearchAward
-						{
-							blueprint "buildings/resources/ammonium_extractor"
-							is_visible "1"
-						}
-
 						ResearchAward
 						{
 							blueprint "buildings/resources/nitrification_plant"
@@ -6300,7 +6169,7 @@ Research
 
 					}
 
-					icon "gui/menu/research/icons/skill_shockwave_blast"
+					icon "gui/menu/research/icons/floor_acid"
 				}
 
 				ResearchNode
@@ -6319,7 +6188,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl4"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -6340,8 +6209,8 @@ Research
 					research_scripts
 					position
 					{
-						x "162.000"
-						y "-18.000"
+						x "738.000"
+						y "63.000"
 					}
 
 					research_awards
@@ -6354,7 +6223,7 @@ Research
 
 					}
 
-					icon "gui/menu/research/icons/skill_shockwave_blast"
+					icon "gui/menu/research/icons/floor_acid"
 				}
 
 				ResearchNode
@@ -6367,6 +6236,13 @@ Research
 						{
 							render_line "1"
 							research_name "gui/menu/research/name/nitrogen_chemistry_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -6387,8 +6263,8 @@ Research
 					research_scripts
 					position
 					{
-						x "162.000"
-						y "72.000"
+						x "738.000"
+						y "189.000"
 					}
 
 					research_awards
@@ -6401,7 +6277,7 @@ Research
 
 					}
 
-					icon "gui/menu/research/icons/skill_shockwave_blast"
+					icon "gui/menu/research/icons/floor_acid"
 				}
 
 				ResearchNode
@@ -6484,16 +6360,16 @@ Research
 
 						ResearchNodeRequirement
 						{
-							render_line "1"
-							research_name "gui/menu/research/name/ammo_low_caliber_lvl2"
-							research_category "gui/menu/research/category_base_buildings"
+							render_line "0"
+							research_name "gui/menu/research/name/armory_lvl4"
+							research_category "gui/menu/research/category_weapons_equipment"
 						}
 
 						ResearchNodeRequirement
 						{
-							render_line "0"
-							research_name "gui/menu/research/name/armory_lvl4"
-							research_category "gui/menu/research/category_weapons_equipment"
+							render_line "1"
+							research_name "gui/menu/research/name/ammo_low_caliber_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
 						}
 
 					}
@@ -6553,12 +6429,6 @@ Research
 
 					research_awards
 					{
-						ResearchAward
-						{
-							blueprint "buildings/ammo/ammo_factory_lowcaliber_adv_lvl_2"
-							is_visible "1"
-						}
-
 						ResearchAward
 						{
 							blueprint "buildings/ammo/ammo_factory_lowcaliber_ext"
@@ -6902,12 +6772,6 @@ Research
 					{
 						ResearchAward
 						{
-							blueprint "buildings/ammo/ammo_factory_highcaliber_adv_lvl_2"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
 							blueprint "buildings/ammo/ammo_factory_highcaliber_ext"
 							is_visible "1"
 						}
@@ -7079,7 +6943,7 @@ Research
 						{
 							amount "0.000"
 							resource "download"
-							count "4500.000"
+							count "3500.000"
 						}
 
 					}
@@ -7241,7 +7105,7 @@ Research
 
 					position
 					{
-						x "-846.000"
+						x "-855.000"
 						y "-81.000"
 					}
 
@@ -7250,12 +7114,6 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/ammo/ammo_factory_liquid_adv"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "buildings/ammo/ammo_factory_liquid_adv_gas"
 							is_visible "1"
 						}
 
@@ -7354,18 +7212,12 @@ Research
 
 					position
 					{
-						x "-846.000"
+						x "-855.000"
 						y "216.000"
 					}
 
 					research_awards
 					{
-						ResearchAward
-						{
-							blueprint "buildings/ammo/ammo_factory_liquid_adv_lvl_2"
-							is_visible "1"
-						}
-
 						ResearchAward
 						{
 							blueprint "buildings/ammo/ammo_factory_liquid_ext"
@@ -7460,7 +7312,7 @@ Research
 
 					position
 					{
-						x "-1197.000"
+						x "-1233.000"
 						y "63.000"
 					}
 
@@ -7561,7 +7413,7 @@ Research
 
 					position
 					{
-						x "-1197.000"
+						x "-1233.000"
 						y "315.000"
 					}
 
@@ -7603,6 +7455,13 @@ Research
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
 					}
 
 					research_name "gui/menu/research/name/coolants"
@@ -7620,7 +7479,7 @@ Research
 					research_scripts
 					position
 					{
-						x "612.000"
+						x "666.000"
 						y "-81.000"
 					}
 
@@ -7667,7 +7526,7 @@ Research
 					research_scripts
 					position
 					{
-						x "486.000"
+						x "477.000"
 						y "-81.000"
 					}
 
@@ -7721,8 +7580,8 @@ Research
 					research_scripts
 					position
 					{
-						x "486.000"
-						y "9.000"
+						x "477.000"
+						y "18.000"
 					}
 
 					research_awards
@@ -7775,7 +7634,7 @@ Research
 					research_scripts
 					position
 					{
-						x "486.000"
+						x "477.000"
 						y "234.000"
 					}
 
@@ -7812,6 +7671,13 @@ Research
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
 					}
 
 					research_name "gui/menu/research/name/coolants_lvl_2"
@@ -7829,8 +7695,8 @@ Research
 					research_scripts
 					position
 					{
-						x "612.000"
-						y "9.000"
+						x "666.000"
+						y "72.000"
 					}
 
 					research_awards
@@ -7866,6 +7732,13 @@ Research
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
 					}
 
 					research_name "gui/menu/research/name/coolants_lvl_3"
@@ -7883,7 +7756,7 @@ Research
 					research_scripts
 					position
 					{
-						x "612.000"
+						x "666.000"
 						y "234.000"
 					}
 
@@ -8201,7 +8074,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-594.000"
+						x "-603.000"
 						y "72.000"
 					}
 
@@ -8262,7 +8135,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-594.000"
+						x "-603.000"
 						y "297.000"
 					}
 
@@ -8316,7 +8189,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-594.000"
+						x "-603.000"
 						y "423.000"
 					}
 
@@ -8632,6 +8505,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "buildings/resources/bioreactor"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/bio_condenser"
@@ -8683,6 +8562,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/bio_condenser_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/resources/bioreactor_lvl_2"
 							is_visible "1"
 						}
 
@@ -8816,7 +8701,7 @@ Research
 
 					position
 					{
-						x "-846.000"
+						x "-855.000"
 						y "423.000"
 					}
 
@@ -8911,7 +8796,7 @@ Research
 
 					position
 					{
-						x "-1197.000"
+						x "-1233.000"
 						y "378.000"
 					}
 
@@ -9316,8 +9201,8 @@ Research
 					research_scripts
 					position
 					{
-						x "18.000"
-						y "117.000"
+						x "207.000"
+						y "72.000"
 					}
 
 					research_awards
@@ -9370,7 +9255,7 @@ Research
 					research_scripts
 					position
 					{
-						x "297.000"
+						x "621.000"
 						y "-18.000"
 					}
 
@@ -9431,7 +9316,7 @@ Research
 					research_scripts
 					position
 					{
-						x "297.000"
+						x "621.000"
 						y "144.000"
 					}
 
@@ -9532,7 +9417,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-27.000"
+						x "162.000"
 						y "-81.000"
 					}
 
@@ -9546,7 +9431,7 @@ Research
 
 					}
 
-					icon "gui/menu/research/icons/consumable_gravity_granade"
+					icon "gui/menu/research/icons/mech_upgrade_combat_drones"
 				}
 
 				ResearchNode
@@ -9586,8 +9471,8 @@ Research
 					research_scripts
 					position
 					{
-						x "-27.000"
-						y "117.000"
+						x "162.000"
+						y "72.000"
 					}
 
 					research_awards
@@ -9600,7 +9485,7 @@ Research
 
 					}
 
-					icon "gui/menu/research/icons/consumable_gravity_granade"
+					icon "gui/menu/research/icons/mech_upgrade_combat_drones"
 				}
 
 				ResearchNode
@@ -9612,7 +9497,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl3"
+							research_name "gui/menu/research/name/basic_structures"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -9625,7 +9510,7 @@ Research
 						{
 							amount "0.000"
 							resource "download"
-							count "100.000"
+							count "50.000"
 						}
 
 					}
@@ -9633,8 +9518,8 @@ Research
 					research_scripts
 					position
 					{
-						x "-27.000"
-						y "-216.000"
+						x "162.000"
+						y "-270.000"
 					}
 
 					research_awards
@@ -9647,7 +9532,7 @@ Research
 
 					}
 
-					icon "gui/menu/research/icons/consumable_gravity_granade"
+					icon "gui/menu/research/icons/mech_upgrade_combat_drones"
 				}
 
 				ResearchNode
@@ -9881,7 +9766,7 @@ Research
 
 					}
 
-					research_name "gui/menu/research/name/gas_extractor_lvl_3"
+					research_name "gui/menu/research/name/gas_extractor_lvl3"
 					research_costs
 					{
 						ResearchCost
@@ -9943,7 +9828,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-684.000"
+						x "-693.000"
 						y "-9.000"
 					}
 
@@ -9990,7 +9875,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-684.000"
+						x "-693.000"
 						y "297.000"
 					}
 
@@ -10044,7 +9929,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-684.000"
+						x "-693.000"
 						y "423.000"
 					}
 
@@ -10059,6 +9944,2063 @@ Research
 					}
 
 					icon "gui/menu/research/icons/mech_basic_equipment"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/comm_hub_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "500.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1098.000"
+						y "-243.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/main/communications_hub_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/main"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl4"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/comm_hub_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "1000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1098.000"
+						y "-135.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/main/communications_hub_lvl_3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/main"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/comm_hub_lvl_4"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "2500.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1098.000"
+						y "9.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/main/communications_hub_lvl_4"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/main"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl6"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/comm_hub_lvl_5"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "5000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1098.000"
+						y "135.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/main/communications_hub_lvl_5"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/main"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/outposts_lvl_1"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "2000.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "outpost"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "2"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "252.000"
+						y "72.000"
+					}
+
+					research_awards
+					icon "gui/menu/research/icons/orbital_scanning"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/outposts_lvl_1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl6"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/outposts_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "5000.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "outpost"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "2"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "252.000"
+						y "144.000"
+					}
+
+					research_awards
+					icon "gui/menu/research/icons/orbital_scanning"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/outposts_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/outposts_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "7500.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "outpost"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "2"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "252.000"
+						y "234.000"
+					}
+
+					research_awards
+					icon "gui/menu/research/icons/orbital_scanning"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl7"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/outposts_lvl_3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/outposts_lvl_4"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "7500.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "outpost"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "2"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "252.000"
+						y "297.000"
+					}
+
+					research_awards
+					icon "gui/menu/research/icons/orbital_scanning"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/outposts_lvl_4"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/outposts_lvl_5"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "10000.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "outpost"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "3"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "252.000"
+						y "378.000"
+					}
+
+					research_awards
+					icon "gui/menu/research/icons/orbital_scanning"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_expansion_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/comm_hub_expansion_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "2750.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "communications_hub"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "1"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "252.000"
+						y "18.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "research/building_limit_cap_increase_comms_hub"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/consumable_gravity_granade"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/comm_hub_expansion_lvl_1"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "450.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "communications_hub"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "1"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "252.000"
+						y "-216.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "research/building_limit_cap_increase_comms_hub"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/consumable_gravity_granade"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_expansion_lvl_1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl4"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/comm_hub_expansion_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "1000.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "communications_hub"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "1"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "252.000"
+						y "-126.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "research/building_limit_cap_increase_comms_hub"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/consumable_gravity_granade"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/nuclear_energy_lvl1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/rtg"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "2200.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1332.000"
+						y "-27.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/energy/rtg"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/mech_upgrade_fusion_core"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/rtg"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/rtg_lvl2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "4000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1332.000"
+						y "63.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/energy/rtg_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/mech_upgrade_fusion_core"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/rtg_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/rtg_lvl3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "7000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1332.000"
+						y "225.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/energy/rtg_lvl_3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/mech_upgrade_fusion_core"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/fire_control_station"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/ammo_explosive_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/fire_control_station_artillery"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "3000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-405.000"
+						y "-18.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/defense/fire_control_station_artillery"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/skill_timewarp"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/nuclear_energy_lvl1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/crystalizer_tanzanite"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/uranium_enrichment_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "3000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1287.000"
+						y "63.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/uranium_centrifuge_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/nuclear_energy"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/uranium_enrichment_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/towers_morphium_lvl1"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/uranium_enrichment_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "5000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1287.000"
+						y "225.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/uranium_centrifuge_lvl_3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/nuclear_energy"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/nitrogen_chemistry"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/ammonium_synthesis"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "1500.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "693.000"
+						y "0.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/ammonium_synthesizer"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/skill_shockwave_blast"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/ammonium_synthesis"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/ammonium_synthesis_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "3000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "693.000"
+						y "189.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/ammonium_synthesizer_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/skill_shockwave_blast"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/nitrogen_chemistry"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/ammonium_extraction"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "900.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "783.000"
+						y "0.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/ammonium_extractor"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/floor_desert"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/ammonium_extraction"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/ammonium_extraction_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "3000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "783.000"
+						y "189.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/ammonium_extractor_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/floor_desert"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/basic_resource_production_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/carbonization"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "2000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1017.000"
+						y "-90.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/carbonizer"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/mech_weapons_flame_blade"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/carbonization"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/carbonization_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "6000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "1017.000"
+						y "108.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/carbonizer_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/mech_weapons_flame_blade"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/ammo_low_caliber_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/ammo_low_caliber_lvl2b"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "2500.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "ammo_storage_lowcaliber"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "1"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "-108.000"
+						y "72.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/ammo/ammo_factory_lowcaliber_adv_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/ammo/ammo_factory_lowcaliber_adv_uranium"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/tower_ammunition_handling"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/ammo_high_caliber_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/ammo_high_caliber_lvl2b"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "3000.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "ammo_storage_highcaliber"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "1"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "-252.000"
+						y "72.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/ammo/ammo_factory_highcaliber_adv_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/ammo/ammo_factory_highcaliber_adv_uranium"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/tower_ammunition_handling"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/ammo_explosive_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/ammo_explosive_lvl2b"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "4500.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "ammo_storage_explosive"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "1"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "-558.000"
+						y "72.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/ammo/ammo_factory_explosive_adv_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/tower_ammunition_handling"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/ammo_liquid_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/ammo_liquid_lvl2b"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "3500.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "ammo_storage_liquid"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "1"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "-855.000"
+						y "72.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/ammo/ammo_factory_liquid_adv_gas"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/ammo/ammo_factory_liquid_adv_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/tower_ammunition_handling"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/ammo_energy_cell_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/ammo_energy_cell_lvl2b"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "3500.000"
+						}
+
+					}
+
+					research_scripts
+					{
+						ResearchScript
+						{
+							script_name "lua/research/limit_increase.lua"
+							script_database
+							{
+								Strings
+								{
+									StringData
+									{
+										value "ammo_storage_energy"
+										key "limit_name"
+									}
+
+								}
+
+								Floats
+								Vectors
+								Integers
+								{
+									IntData
+									{
+										value "1"
+										key "increase_amount"
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					position
+					{
+						x "-1233.000"
+						y "144.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/ammo/ammo_factory_energy_adv_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/ammo/ammo_factory_energy_ext"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "resources/ammo_mech_energy_cell_lvl3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/tower_ammunition_handling"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/fusion_energy_lvl1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/deep_ionization"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "1750.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "927.000"
+						y "135.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/plasma_converter"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/mech_upgrade_sensors"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/deep_ionization"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/deep_ionization_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "2500.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "927.000"
+						y "225.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/plasma_converter_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/mech_upgrade_sensors"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/deep_ionization_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/deep_ionization_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "download"
+							count "6000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "927.000"
+						y "288.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/plasma_converter_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/mech_upgrade_sensors"
 				}
 
 			}
@@ -20673,7 +22615,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-693.000"
+						x "-729.000"
 						y "0.000"
 					}
 
@@ -22005,7 +23947,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-693.000"
+						x "-729.000"
 						y "-396.000"
 					}
 
@@ -22571,7 +24513,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-693.000"
+						x "-729.000"
 						y "-189.000"
 					}
 
@@ -23306,7 +25248,7 @@ Research
 
 				ResearchNode
 				{
-					research_flags "hidden"
+					research_flags "hidden|hidden_requirements_visible"
 					requirement_tooltip
 					requirements
 					{
@@ -23322,6 +25264,13 @@ Research
 							render_line "1"
 							research_name "gui/menu/research/name/alien_research_lvl3"
 							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/resource_handling_titanium"
+							research_category "gui/menu/research/category_base_buildings"
 						}
 
 					}
@@ -23506,7 +25455,7 @@ Research
 					position
 					{
 						x "54.000"
-						y "180.000"
+						y "162.000"
 					}
 
 					research_awards
@@ -24994,7 +26943,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-891.000"
+						x "-1044.000"
 						y "-342.000"
 					}
 
@@ -25061,7 +27010,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-891.000"
+						x "-1044.000"
 						y "0.000"
 					}
 
@@ -25122,7 +27071,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-891.000"
+						x "-1044.000"
 						y "198.000"
 					}
 
@@ -25169,7 +27118,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-927.000"
+						x "-1080.000"
 						y "-234.000"
 					}
 
@@ -25223,7 +27172,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-927.000"
+						x "-1080.000"
 						y "90.000"
 					}
 
@@ -25277,7 +27226,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-927.000"
+						x "-1080.000"
 						y "324.000"
 					}
 
@@ -25303,13 +27252,6 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/alien_research_lvl1"
-							research_category "gui/menu/research/category_alien"
-						}
-
-						ResearchNodeRequirement
-						{
-							render_line "1"
 							research_name "gui/menu/research/name/towers_morphium_lvl1"
 							research_category "gui/menu/research/category_alien"
 						}
@@ -25331,7 +27273,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-954.000"
+						x "-1107.000"
 						y "-288.000"
 					}
 
@@ -25409,7 +27351,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-954.000"
+						x "-1107.000"
 						y "36.000"
 					}
 
@@ -25487,7 +27429,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-954.000"
+						x "-1107.000"
 						y "243.000"
 					}
 
@@ -25936,7 +27878,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1053.000"
+						x "-1206.000"
 						y "-342.000"
 					}
 
@@ -26021,7 +27963,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1053.000"
+						x "-1206.000"
 						y "36.000"
 					}
 
@@ -26106,7 +28048,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1053.000"
+						x "-1206.000"
 						y "279.000"
 					}
 
@@ -27137,7 +29079,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-747.000"
+						x "-783.000"
 						y "-288.000"
 					}
 
@@ -27191,7 +29133,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-747.000"
+						x "-783.000"
 						y "-54.000"
 					}
 
@@ -27292,8 +29234,8 @@ Research
 
 					position
 					{
-						x "-729.000"
-						y "90.000"
+						x "-828.000"
+						y "144.000"
 					}
 
 					research_awards
@@ -27331,14 +29273,14 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/bio_processing_lvl_2"
+							research_name "gui/menu/research/name/alien_flora_cultivation_lvl3"
 							research_category "gui/menu/research/category_alien"
 						}
 
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/alien_flora_cultivation_lvl3"
+							research_name "gui/menu/research/name/bio_reactive_compounds_lvl_2"
 							research_category "gui/menu/research/category_alien"
 						}
 
@@ -27399,8 +29341,8 @@ Research
 
 					position
 					{
-						x "-774.000"
-						y "90.000"
+						x "-873.000"
+						y "144.000"
 					}
 
 					research_awards
@@ -27506,8 +29448,8 @@ Research
 
 					position
 					{
-						x "-819.000"
-						y "90.000"
+						x "-918.000"
+						y "144.000"
 					}
 
 					research_awards
@@ -27573,7 +29515,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-747.000"
+						x "-783.000"
 						y "144.000"
 					}
 
@@ -27614,6 +29556,13 @@ Research
 						{
 							render_line "1"
 							research_name "gui/menu/research/name/alien_flora_cultivation_lvl2"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/bio_reactive_compounds"
 							research_category "gui/menu/research/category_alien"
 						}
 
@@ -27674,7 +29623,7 @@ Research
 
 					position
 					{
-						x "-774.000"
+						x "-828.000"
 						y "-144.000"
 					}
 
@@ -28623,13 +30572,6 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/alien_research_lvl1"
-							research_category "gui/menu/research/category_alien"
-						}
-
-						ResearchNodeRequirement
-						{
-							render_line "1"
 							research_name "gui/menu/research/name/alien_flora_cultivation_lvl1"
 							research_category "gui/menu/research/category_alien"
 						}
@@ -28651,7 +30593,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-612.000"
+						x "-648.000"
 						y "-342.000"
 					}
 
@@ -28717,8 +30659,8 @@ Research
 					research_scripts
 					position
 					{
-						x "-612.000"
-						y "-99.000"
+						x "-648.000"
+						y "-144.000"
 					}
 
 					research_awards
@@ -28755,7 +30697,7 @@ Research
 
 					}
 
-					research_name "gui/menu/research/name/biomass_morpherd_processing"
+					research_name "gui/menu/research/name/biomass_morphed_processing"
 					research_costs
 					{
 						ResearchCost
@@ -28770,7 +30712,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-855.000"
+						x "-963.000"
 						y "-288.000"
 					}
 
@@ -28823,7 +30765,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-657.000"
+						x "-693.000"
 						y "-342.000"
 					}
 
@@ -28877,7 +30819,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-657.000"
+						x "-693.000"
 						y "-99.000"
 					}
 
@@ -28931,7 +30873,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-657.000"
+						x "-693.000"
 						y "144.000"
 					}
 
@@ -28978,7 +30920,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1107.000"
+						x "-1260.000"
 						y "-342.000"
 					}
 
@@ -29051,7 +30993,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1107.000"
+						x "-1260.000"
 						y "36.000"
 					}
 
@@ -29124,7 +31066,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1107.000"
+						x "-1260.000"
 						y "279.000"
 					}
 
@@ -29183,7 +31125,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1161.000"
+						x "-1314.000"
 						y "-342.000"
 					}
 
@@ -29192,6 +31134,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_water_basic"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/energy/energy_connector_water"
 							is_visible "1"
 						}
 
@@ -29226,6 +31174,13 @@ Research
 							research_category "gui/menu/research/category_alien"
 						}
 
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/defensive_buildings_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
 					}
 
 					research_name "gui/menu/research/name/tower_water_basic_lvl2"
@@ -29243,7 +31198,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1161.000"
+						x "-1314.000"
 						y "-99.000"
 					}
 
@@ -29280,6 +31235,13 @@ Research
 							research_category "gui/menu/research/category_alien"
 						}
 
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/defensive_buildings_lvl3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
 					}
 
 					research_name "gui/menu/research/name/tower_water_basic_lvl3"
@@ -29297,7 +31259,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1161.000"
+						x "-1314.000"
 						y "279.000"
 					}
 
@@ -29316,8 +31278,8 @@ Research
 
 				ResearchNode
 				{
-					research_flags "hidden|locked|hidden_requirements_visible"
-					requirement_tooltip "gui/menu/research/tooltip_requirement_objective"
+					research_flags "hidden"
+					requirement_tooltip
 					requirements
 					{
 						ResearchNodeRequirement
@@ -29344,7 +31306,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1206.000"
+						x "-1359.000"
 						y "-288.000"
 					}
 
@@ -29404,7 +31366,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1206.000"
+						x "-1359.000"
 						y "-54.000"
 					}
 
@@ -29458,7 +31420,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1206.000"
+						x "-1359.000"
 						y "324.000"
 					}
 
@@ -30575,7 +32537,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1305.000"
+						x "-1458.000"
 						y "-180.000"
 					}
 
@@ -30622,7 +32584,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1305.000"
+						x "-1458.000"
 						y "-135.000"
 					}
 
@@ -30688,7 +32650,7 @@ Research
 
 				ResearchNode
 				{
-					research_flags "hidden"
+					research_flags "hidden|hidden_requirements_visible"
 					requirement_tooltip
 					requirements
 					{
@@ -30704,6 +32666,13 @@ Research
 							render_line "1"
 							research_name "gui/menu/research/name/magma_energy_lvl2"
 							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/resource_handling_titanium"
+							research_category "gui/menu/research/category_base_buildings"
 						}
 
 					}
@@ -30993,7 +32962,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1134.000"
+						x "-1287.000"
 						y "-234.000"
 					}
 
@@ -31040,7 +33009,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1251.000"
+						x "-1404.000"
 						y "-180.000"
 					}
 
@@ -31087,7 +33056,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-1251.000"
+						x "-1404.000"
 						y "-135.000"
 					}
 
@@ -31745,6 +33714,747 @@ Research
 					icon "gui/menu/research/icons/resource_handling"
 				}
 
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/towers_morphium_lvl1"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/resource_handling_cobalt"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/resource_converter_cobalt"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "6000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-1008.000"
+						y "-144.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/resource_converter_cobalt"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/resource_converter_cobalt"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/resource_handling_palladium"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/resource_converter_palladium"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "10000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-1008.000"
+						y "-54.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/resource_converter_palladium"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/resource_converter_cobalt"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/resource_handling_titanium"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/resource_converter_titanium"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "10000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-963.000"
+						y "-54.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/resource_converter_titanium"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/alien_flora_cultivation_lvl1"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/mycelium_processing"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "350.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-603.000"
+						y "-342.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/biomass_mycelium_press"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "items/loot/resources/biomass_mycelium_item"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/consumable_gravity_granade"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/mycelium_processing"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/alien_flora_cultivation_lvl2"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/mycelium_processing_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "1500.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-603.000"
+						y "-144.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/biomass_mycelium_press_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/consumable_gravity_granade"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/biomass_morphed_processing"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/biomass_morphed_processing_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "3000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-963.000"
+						y "-144.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/biomass_morphed_press_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/auto_resource_gather"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/bio_cobalt"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/bio_cobalt_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "5000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-828.000"
+						y "-54.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/bio_cobalt_refinery_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/bio_cobalt_lvl_2"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/alien_flora_cultivation_lvl3"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/bio_cobalt_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "10000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-828.000"
+						y "36.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/bio_cobalt_refinery_lvl_3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/bio_uranium"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/alien_research_lvl4"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/bio_uranium_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "7500.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-918.000"
+						y "279.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/bio_uranium_refinery_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/bio_uranium_lvl_2"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/alien_research_lvl5"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/bio_uranium_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "15000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-918.000"
+						y "414.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/bio_uranium_refinery_lvl_3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/bio_titanium"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/alien_research_lvl4"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/bio_titanium_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "7500.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-873.000"
+						y "279.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/bio_titanium_refinery_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/bio_titanium_lvl_2"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/alien_research_lvl5"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/bio_titanium_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "7500.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-873.000"
+						y "414.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/bio_titanium_refinery_lvl_3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/bio_palladium"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/alien_research_lvl4"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/bio_palladium_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "7500.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-828.000"
+						y "279.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/bio_palladium_refinery_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/bio_palladium_lvl_2"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/alien_research_lvl5"
+							research_category "gui/menu/research/category_alien"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/bio_palladium_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0.000"
+							resource "analysis"
+							count "15000.000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-828.000"
+						y "414.000"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/bio_palladium_refinery_lvl_3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/rare_element_mining"
+				}
+
 			}
 
 		}
@@ -31753,6 +34463,6 @@ Research
 
 	type
 	editor "6380"
-	version "149"
+	version "171"
 }
 

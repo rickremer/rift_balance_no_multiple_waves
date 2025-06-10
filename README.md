@@ -4,6 +4,30 @@
 3. I'm nowhere close to proficient with Lua, and I'm not a professional software developer, but I've been programming as a hobby since 1981, so maybe I'm not completely incompetent.
 4. I'm nowhere close to fully understanding everything in this mod.  At this point it's just educated guesses.
 
+# Changes from "Rift Exploration Defense Industry"
+## "un-re-balance" changes - restore to unmod values
+### Radar tower ranges:
+ - 1: 90 to 160
+ - 2: 140 to 180
+### Artillery tower ranges
+ - all levels non-propelled: to 60/70
+ - propelled: 48/55 to 70/80
+ - propelled 2: 50/60 to 80/90
+## AI provided by HQ (not sure what unmod values are)
+ - 1: 12 to 24
+ - 2: 20 to 32
+ - 3: 30 to 42
+ - 4: no change
+ - 5: 42 to 54
+ - 6: 60 to 72
+ - 7: 80 to 92
+## Mission logic
+### "find new resource", acid & magma
+ - goal 2000 to 500
+
+## Reduce or remove the multiple/simultaneous attacks/events
+ - still haven't figured this out...
+
 --  
 RR - March 19, 2025
 

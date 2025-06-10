@@ -63,6 +63,14 @@ EntityBlueprint
 			
 			GameplayResource
 			{
+				resource 	"reagent"
+				value 		"5"
+				family		"carrier"
+				attachment	"att_in_1"
+			}
+			
+			GameplayResource
+			{
 				resource 	"mud"
 				value		"20"
 				family		"carrier"
@@ -205,9 +213,9 @@ EntityBlueprint
 		type	"quad"
 		color
 		{
-			x "1"
-			y "0.5"
-			z "0"
+			x "0.6"  // r
+			y "0.25" // g
+			z "0.25" // b
 			w "1"
 		}
 		size

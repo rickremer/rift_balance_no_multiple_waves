@@ -33,12 +33,22 @@ EntityBlueprint
 			}	
 			Storage
 			{
+				resource	 "uranium_depleted"
+				max 	 	"300"
+			}	
+			Storage
+			{
 				resource	 "uranium"
 				max 	 	"300"
 			}		
 			Storage
 			{
 				resource	 "uranium_bio"
+				max 	 	"300"
+			}			
+			Storage
+			{
+				resource	 "alloys"
 				max 	 	"300"
 			}			
 			Storage
@@ -94,6 +104,11 @@ EntityBlueprint
 			Storage
 			{
 				resource	 "biomass_plant"
+				max 	 	"500"
+			}
+			Storage
+			{
+				resource	 "biomass_mycelium"
 				max 	 	"500"
 			}
 			Storage
