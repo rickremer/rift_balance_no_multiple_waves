@@ -302,6 +302,10 @@ end
 function event_manager:SpawnObjective()
 
 	LogService:Log( "event_manager:SpawnObjective() - Trying to spawn an objective. " )
+	
+	if ( #self.objectiveActiveList > 0 ) then -- RRR Jun-22-2025 try to limit to one objective.
+		LogService:Log( "event_manager:SpawnObjective() - NO MULT ATTACKS"  )
+	else -- RRR Jun-22-2025 resume original code
 
 	if ( #self.objectiveAvailableList > 0 ) then
 		local random = RandInt( 1, #self.objectiveAvailableList )
@@ -319,6 +323,8 @@ function event_manager:SpawnObjective()
 	else
 		LogService:Log( "event_manager:SpawnObjective() - No objective to spawn from the objective list." )
 	end
+	
+	end -- RRR Jun-22-2025 END: try to limit to one objective.
 
 end
 
