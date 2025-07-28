@@ -27,7 +27,7 @@ EntityBlueprint
 				building_cost
 				{
 					carbonium 	"9"
-					tanzanite 	"27"
+					tanzanite 	"1.8"
 				}
 			}		
 		}

@@ -48,12 +48,12 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 			"biomass_plant"
-				value			 	"2"
+				value			 	".13"
 			}
 			GameplayResource
 			{
 				resource 			"biomass_animal"
-				value			 	"2"
+				value			 	".13"
 			}
 		}
 		

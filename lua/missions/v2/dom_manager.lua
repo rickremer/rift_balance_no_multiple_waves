@@ -257,7 +257,8 @@ function dom_mananger:Update( dt)
 
 
 
-	LogService:DebugText( 50, 1000, debug);
+	LogService:DebugText( 50, 1000, debug)
+	LogService:Log(debug)	;
 end
 
 function dom_mananger:OnLoad()
@@ -971,7 +972,7 @@ function dom_mananger:RandomizeSpawnPoint( borderSpawnPointGroupName, waveData )
 	local spawn_target_max_radius = waveData.target_max_radius or 0.0
 	local spawn_target_min_radius = waveData.target_min_radius or 0.0
 
-	self:VerboseLog( "RandomizeSpawnPoint: spawn_type: '" .. spawn_type .. "', spawn_type_value='" .. spawn_type_value .. "', spawn_target_type='" .. spawn_target_type .. ", spawn_target_value='" .. spawn_target_value .. "'" )
+	self:VerboseLog( "RandomizeSpawnPoint: spawn_type: '" .. spawn_type .. "', spawn_type_value='" .. spawn_type_value .. "', spawn_target_type='" .. spawn_target_type .. "', spawn_target_value='" .. spawn_target_value .. "'" )
 
 	if spawn_type == "RandomBorder" then
 		spawn_type = FIND_TYPE_GROUP
@@ -1044,7 +1045,7 @@ function dom_mananger:GetWavePool( currentDifficultyLevel, silent )
 		if (not silent) then self:VerboseLog("GetWavePool - available groups." ) end
 
 		for i = 1, #self.availableAttackGroups, 1 do 
-			self:VerboseLog( tostring( self.availableAttackGroups[i] ) )
+			self:VerboseLog( string.format("availableAttackGroups[%i]: ", i) .. tostring( self.availableAttackGroups[i] ) )
 		end	
 	end
 		
@@ -1331,9 +1332,10 @@ function dom_mananger:OnEnterIdle( state )
 		local rngScale = (math.random()-0.5)*2*(self.rules.idleTimeRelativeVariation or 0.35)
 		stateDuration = stateDuration * (1 + rngScale)
 		self:VerboseLog("Idle time random scaling by ".. tostring(rngScale) .. " changing base ".. tostring(self.rules.idleTime[self.currentDifficultyLevel]) .." to ".. tostring(stateDuration))
-	elseif ((self.rules.idleTimeCancelChance or 10)> math.random()*100) then
-		stateDuration = 30
-		self:VerboseLog("Idle time modifier: cancelled (down to ".. tostring(stateDuration) ..")")
+	-- REDINMA 8:00 AM Friday, July 4, 2025: No cancelling idle time?
+	-- elseif ((self.rules.idleTimeCancelChance or 10)> math.random()*100) then
+		-- stateDuration = 30
+		-- self:VerboseLog("Idle time modifier: cancelled (down to ".. tostring(stateDuration) ..")")
 	end
 	self.idleTimer = stateDuration
 
@@ -1345,13 +1347,19 @@ function dom_mananger:OnEnterIdle( state )
 	if ( self.rules.eventsPerIdleState > 0 ) then
 		self.allowEvents = true
 
-		if ( ( self.idleTimer < 400 ) or ( numberOfEvents > 1 ) ) then
+		if ( self.idleTimer < 400 ) then
 			numberOfEvents = 1
 			self:VerboseLog("OnEnterIdle - clamping number of events to : " .. tostring( numberOfEvents ) )
 		end
 	else
 		numberOfEvents = 1
 	end
+	-- REDINMA 1:25 PM Friday, July 4, 2025: Always clamp #events to 1
+	if ( numberOfEvents > 1 ) then
+		numberOfEvents = 1
+		self:VerboseLog("REDINMA: OnEnterIdle - clamping number of events to : " .. tostring( numberOfEvents ) )
+	end
+
 
 	self.timePerEvent = stateDuration / numberOfEvents
 	self.currentTimePerEvent = self.timePerEvent
@@ -1636,7 +1644,7 @@ function dom_mananger:PrepareWave( attackCount, borderSpawnPointGroupName, waveP
 				markers[#markers + 1] = self:SpawnWaveIndicator( indicatorTimer, spawnPointName, "effects/messages_and_markers/wave_marker" )
 			end
 			
-			self:VerboseLog( log .. waveData.name )
+			self:VerboseLog( log .. " +dom_mananger:PrepareWave, waveData.name: " .. waveData.name )
 		end
 	end
 end
@@ -1674,6 +1682,8 @@ function dom_mananger:ReshuffleWave( index, attacks, reshuffleSwapn, reshuffleSp
 end
 
 function dom_mananger:RepeatWave(attacks)
+	-- REDINMA: Tried just returning attacks.  This didn't work; caused infinite repeating calls to this method.
+	
 	if (not attacks or #attacks==0) then return attacks end
 	self:VerboseLog("RepeatWave: checking " .. tostring(#attacks) .. " attacks for repeat and reshuffle")
 	
@@ -1702,7 +1712,6 @@ function dom_mananger:RepeatWave(attacks)
 				newAttacks[#newAttacks + 1] = attack
 			end		
 		end
-		break
 	end
 	
 	if (#newAttacks > 0) then
@@ -1768,9 +1777,10 @@ function dom_mananger:DoWaveCooldown( timer, dt )
 	end
 
 	if ( timer < self.waveRepeatTime and self.rules.waveRepeatChances ) then
-		if (#self.hqPreparedAttacks>0)     then self.hqPreparedAttacks = self:RepeatWave(self.hqPreparedAttacks)
-		elseif (#self.preparedAttacks>0)   then self.preparedAttacks   = self:RepeatWave(self.preparedAttacks)
-		end
+		-- REDINMA 1:32 PM Friday, July 4, 2025: Remove all calls to RepeatWave. But is the hq one for endgame?
+		-- if (#self.hqPreparedAttacks>0)     then self.hqPreparedAttacks = self:RepeatWave(self.hqPreparedAttacks)
+		-- elseif (#self.preparedAttacks>0)   then self.preparedAttacks   = self:RepeatWave(self.preparedAttacks)
+		-- end
 		if (#self.preparedAttacks + #self.hqPreparedAttacks == 0) then
 			self.waveRepeatTime = -9999
 			self:VerboseLog("DoWaveCooldown: no attack definitions to repeat")
@@ -1782,7 +1792,7 @@ function dom_mananger:SpawnPreparedWave( log, shouldAddtoSpawnedAttacks, prepare
 	for preparedWave in Iter( preparedAttacks ) do 
 		self.data:SetString( "spawn_point", preparedWave.spawnPointName )
 
-		self:VerboseLog( log .. preparedWave.waveName .. "  " )
+		self:VerboseLog( log .. " +dom_mananger:SpawnPreparedWave, preparedWave.waveName: " .. preparedWave.waveName .. "  " )
 		self:VerboseLog( "dom_mananger activating " .. preparedWave.waveName .. "  (wave repeat: " .. tostring((self.waveRepeated or 1) -1) .. ")")
 
 		self:PrepareLabels( "", "label_small", 0 )

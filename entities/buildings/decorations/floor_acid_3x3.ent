@@ -27,7 +27,7 @@ EntityBlueprint
 				building_cost
 				{
 					carbonium 	"9"
-					rhodonite 	"18"
+					rhodonite 	"1.8"
 				}
 			}		
 		}

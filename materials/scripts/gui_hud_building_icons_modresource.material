@@ -270,6 +270,116 @@ material "gui/hud/building_icons/resource_converter_titanium_disabled" : gui/def
 
 
 
+/////  blast_furnace
+
+material "gui/hud/building_icons/blast_furnace" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/blast_furnace.dds"
+}
+
+material "gui/hud/building_icons/blast_furnace_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/blast_furnace.dds"
+}
+
+material "gui/hud/building_icons/blast_furnace_lvl_2" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/blast_furnace_lvl_2.dds"
+}
+
+material "gui/hud/building_icons/blast_furnace_lvl_2_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/blast_furnace_lvl_2.dds"
+}
+
+
+/////  alloys_factory
+
+material "gui/hud/building_icons/alloys_factory_cobalt" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/alloys_factory_cobalt.dds"
+}
+
+material "gui/hud/building_icons/alloys_factory_cobalt_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/alloys_factory_cobalt.dds"
+}
+
+material "gui/hud/building_icons/alloys_factory_palladium" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/alloys_factory_palladium.dds"
+}
+
+material "gui/hud/building_icons/resource_converter_palladium_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/alloys_factory_palladium.dds"
+}
+
+material "gui/hud/building_icons/alloys_factory_titanium" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/alloys_factory_titanium.dds"
+}
+
+material "gui/hud/building_icons/alloys_factory_titanium_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/alloys_factory_titanium.dds"
+}
+
+material "gui/hud/building_icons/alloys_factory_uranium" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/alloys_factory_uranium.dds"
+}
+
+material "gui/hud/building_icons/alloys_factory_uranium_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/alloys_factory_uranium.dds"
+}
+
+
+/////  ore_mill
+
+material "gui/hud/building_icons/ore_mill" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/ore_mill.dds"
+}
+
+material "gui/hud/building_icons/ore_mill_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/ore_mill_disabled.dds"
+}
+
+material "gui/hud/building_icons/ore_mill_lvl_2" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/ore_mill_lvl_2.dds"
+}
+
+material "gui/hud/building_icons/ore_mill_lvl_2_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/ore_mill_disabled.dds"
+}
+
+material "gui/hud/building_icons/ore_mill_lvl_3" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/ore_mill_lvl_3.dds"
+}
+
+material "gui/hud/building_icons/ore_mill_lvl_3_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/ore_mill_disabled.dds"
+}
+
+material "gui/hud/building_icons/ore_mill_lvl_4" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/ore_mill_lvl_4.dds"
+}
+
+material "gui/hud/building_icons/ore_mill_lvl_4_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/ore_mill_disabled.dds"
+}
+
+
+
 /////  nitric_acid_refinery
 
 material "gui/hud/building_icons/nitric_acid_refinery" : gui/default

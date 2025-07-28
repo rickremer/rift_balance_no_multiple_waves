@@ -26,8 +26,8 @@ EntityBlueprint  // ammo_factory_lowcaliber_ext
 				building_cost
 				{
 					carbonium 	"3000"
-					steel 		"8000"
-					titanium	"1000"
+					steel 		"2000"
+					alloys		"500"
 					ai			"5"
 				}
 			}		
@@ -53,9 +53,9 @@ EntityBlueprint  // ammo_factory_lowcaliber_ext
 			
 			GameplayResource
 			{
-				resource 			"titanium"
-				value				"0.7"
-			}								
+				resource 			"alloys"
+				value				"1.0"
+			}
 
 			GameplayResource
 			{
@@ -67,7 +67,7 @@ EntityBlueprint  // ammo_factory_lowcaliber_ext
 			GameplayResource
 			{
 				resource 			"reagent"
-				value 				"10"
+				value 				"15"
 				attachment			"att_in_1"
 				family				"nitrogen"
 			}	
@@ -476,9 +476,9 @@ EntityBlueprint  // ammo_factory_lowcaliber_ext_lvl_2
 				building_time 180
 				building_cost
 				{
-					carbonium 	"3000"
+					carbonium 	"1000"
 					steel 		"8000"
-					titanium	"1000"
+					alloys		"1000"
 					ai			"2"
 				}
 			}		
@@ -504,7 +504,7 @@ EntityBlueprint  // ammo_factory_lowcaliber_ext_lvl_2
 			
 			GameplayResource
 			{
-				resource 			"titanium"
+				resource 			"alloys"
 				value				"1"
 			}	
 
@@ -518,7 +518,7 @@ EntityBlueprint  // ammo_factory_lowcaliber_ext_lvl_2
 			GameplayResource
 			{
 				resource 			"reagent"
-				value 				"10"
+				value 				"15"
 				attachment			"att_in_1"
 				family				"nitrogen"
 			}	
@@ -526,14 +526,14 @@ EntityBlueprint  // ammo_factory_lowcaliber_ext_lvl_2
 			GameplayResource
 			{
 				resource 			"water"
-				value 				"5"
+				value 				"50"
 				attachment			"att_in_2"
 				family				"coolant"
 			}
 			GameplayResource
 			{
 				resource 			"supercoolant"
-				value 				"1"
+				value 				"10"
 				attachment			"att_in_2"
 				family				"coolant"
 			}

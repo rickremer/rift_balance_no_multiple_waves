@@ -1,92 +1,53 @@
-EntityBlueprint  // alloys_furnace
+EntityBlueprint
 {
-	name  "buildings/resources/alloys_furnace"
-
-	BuildingDesc
+	name  "buildings/resources/solid_material_storage"
+	
+		BuildingDesc
 	{
-		name 				"alloys_furnace"
-		bp   				"buildings/resources/alloys_furnace"
+		name 				"solid_material_storage"
+		bp   				"buildings/resources/solid_material_storage"
 		category 			"resources"
-		type				"pipe"
-		localization_id		"gui/hud/building_name/alloys_furnace"
-		description			"gui/hud/building_description/alloys_furnace"
-		menu_icon			"gui/hud/building_icons/placeholder"
+		localization_id		"gui/hud/building_name/solid_material_storage"
+		description			"gui/hud/building_description/solid_material_storage"
+		menu_icon			"gui/hud/building_icons/solid_material_storage"
 		require 			"headquarters"
-		//upgrade			"buildings/resources/alloys_furnace_lvl_2"
-		order				"26"
+		upgrade				"buildings/resources/solid_material_storage_lvl_2"
+		order				100
+		buildable			0
+		difficulty_cost_apply	"0"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
-		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
-		
+						
 		costs
 		{
 			BuildingCostInfo
 			{
 				name "default"
-				building_time 80
+				building_time 10
 				building_cost
 				{
-					carbonium 	"500"
-					steel 		"2000"
-					titanium	"500"
-					ai			"2"
+					carbonium 	"100"
 				}
 			}		
 		}	
-	}
-
-	ResourceConverterDesc
-	{
-		in
-		{
-			GameplayResource
-			{
-				resource 			"energy"
-				value			 	"150"
-			}
-			GameplayResource
-			{
-				resource 			"steel"
-				value			 	"2"
-			}
-			GameplayResource
-			{
-				resource 			"cobalt"
-				value			 	"2"
-			}
-			
-			GameplayResource
-			{
-				resource 			"plasma"
-				value 				"50"
-				attachment			"att_in_1"
-				family				"in"
-			}			
-			GameplayResource
-			{
-				resource 			"plasma_charged"
-				value 				"20"
-				attachment			"att_in_1"
-				family				"in"
-			}
-		}
-		
-		out
-		{
-			GameplayResource
-			{
-				resource 	"alloys"
-				value 		"2"
-			}	
-		}
-		priority 4
 	}
 
 	ResourceStorageDesc
 	{
 		Storages
 		{
+			Storage
+			{
+				group	 		"global"
+				subgroup		"base"
+				max 	 		"200"
+			}				
+			Storage
+			{
+				resource "energy"
+				max 	 "0"
+			}				
 		}
-	}	
+	}
 
 	LuaDesc
 	{
@@ -160,8 +121,8 @@ EntityBlueprint  // alloys_furnace
 
 	MeshDesc
 	{
-		mesh 		"meshes/buildings/resources/supercoolant_refinery.mesh"
-		material 	"buildings/ammo/ammo_factory_explosive_ext""
+		mesh "meshes/buildings/resources/solid_material_storage_lvl_1.mesh"
+		material "buildings/resources/solid_material_storage_lvl_1"
 	}
 
 	TypeDesc
@@ -171,12 +132,19 @@ EntityBlueprint  // alloys_furnace
 
 	SkeletonDesc
 	{
-		name "meshes/buildings/resources/alloys_furnace"  // original: "meshes/buildings/resources/supercoolant_refinery"
+		name "meshes/buildings/resources/solid_material_storage_lvl_1"
 	}
 
-	AnimationGraphDesc
+	AnimationDesc
 	{
-		animation_graph_name "building_working"
+		animations
+		{
+			Anim
+			{
+				animName "working_1"
+				animTime "0.0"
+			}
+		}
 	}
 
 	PhysicsDesc
@@ -190,19 +158,17 @@ EntityBlueprint  // alloys_furnace
 				physics_material 	"default"
 				Shapes
 				{
-					PhysicsBoxShape
+					PhysicsSphereShape
 					{
-						x	5
-						y	9
-						z	9
-
+						r "2.45"
+	
 						position 
 						{
-							x 0
-							y 0
-							z 2
+							x "0.0"
+							y "1.0"
+							z "0.0"
 						}
-					}
+					}		
 				}
 			}
 		}
@@ -219,19 +185,10 @@ EntityBlueprint  // alloys_furnace
 	{
 		Shapes
 		{
-   			PhysicsBoxShape
-   			{
-				x	6
-				y	10
-				z	10
-				
-				position 
-				{
-					x 0
-					y 0
-					z 2
-				}
-   			}
+			PhysicsMeshShape
+			{
+				mesh "meshes/buildings/resources/solid_material_storage_g1.nxs"
+			}	
 		}
 	}
 
@@ -248,7 +205,7 @@ EntityBlueprint  // alloys_furnace
 		size
 		{
 			x "3"
-			y "5"
+			y "3"
 		}
 					
 		visibility			"always"
@@ -381,42 +338,6 @@ EntityBlueprint  // alloys_furnace
 		EffectBaseBlueprints
 		{
 			"buildings/effects_medium_base"
-		}	
-		////////////////////////Resources/////////////////////////
-		EffectGroup
-		{
-			group "att_in_1"
-			enabled "0"
-			delay "0"
-			
-			Effects
-			{
-				Effect
-				{
-					blueprint "effects/buildings_and_machines/building_arrow"
-					bone "att_in_1_arrow"
-				}
-			}
-		}
-		////////////////////////MISC/////////////////////////
-		EffectGroup
-		{
-			group "vismod"
-			enabled "1"
-			Effects
-			{
-				Effect
-				{
-					blueprint "effects/buildings_and_machines/pipe"
-					bone 	"att_in_2_pipe"
-				}
-				Effect
-				{
-					blueprint "effects/buildings_and_machines/furnace"
-					bone 	"att_vismod_1"
-				}
-			}
 		}
 	}
 }
-
