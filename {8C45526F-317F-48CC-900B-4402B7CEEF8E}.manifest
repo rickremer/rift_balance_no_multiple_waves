@@ -1,0 +1,17 @@
+WorkspaceManifest
+{
+	description
+	tags
+	modified_game_files
+	title
+	homepage
+	modio_published_file "0"
+	visibility "1"
+	game_version "EXE: 1092 DATA: 718"
+	version
+	localizations
+	author
+	steam_published_file "0"
+	dependencies
+}
+

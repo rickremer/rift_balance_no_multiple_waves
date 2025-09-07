@@ -25,7 +25,7 @@ EntityBlueprint
 			BuildingCostInfo
 			{
 				name "default"
-				building_time 180
+				building_time 90
 				building_cost
 				{
 					carbonium 	"2000"
@@ -48,12 +48,20 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 			"biomass_plant"
-				value			 	".13"
+				value			 	"2"
 			}
 			GameplayResource
 			{
 				resource 			"biomass_animal"
-				value			 	".13"
+				value			 	"2"
+			}
+			
+			GameplayResource
+			{
+				resource 			"water"
+				value			 	"50"
+				attachment			"att_in_1"
+				family				"chem_in_1"
 			}
 		}
 		
@@ -87,6 +95,7 @@ EntityBlueprint
 		remove_entity 	 "0"
 		remove_component "0"
 		recreate_component "1"
+		priority			"1"
 	}
 
 	HealthDesc
@@ -257,9 +266,11 @@ EntityBlueprint
 
 	MinimapItemDesc
 	{
-		type			"image"
-		icon_material 	"gui/hud/minimap_icons/laboratory"
-		additional_z_order 1
+		type				"image"
+		icon_material 		"gui/hud/minimap_icons/laboratory"
+		additional_z_order 	1
+		visibility			"always"
+		layer_group			"important_buildings"
 	}
 
 	FogOfWarRevealerComponentDesc
@@ -408,6 +419,21 @@ EntityBlueprint
 			"buildings/effects_big_base"
 		}
 		////////////////////////Resources/////////////////////////
+		EffectGroup
+		{
+			group "att_in_1"
+			enabled "0"
+			delay "0"
+			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/building_arrow"
+					bone "att_in_arrow"
+				}
+			}
+		}
 		////////////////////////MISC/////////////////////////
 		EffectGroup
 		{

@@ -1,30 +1,14 @@
 
 class 'wave_gen'
 
--- function wave_gen:RediNomaLog( lineId, message )
-	-- local txtout = "\n################################################\n"
-	              -- .. "### DEBUG REDI no mult attacks:waves_gen.lua ###\n"
-	              -- .. "### "
-	-- if lineId ~= nil then txtout = txtout .. ", lineId " .. lineId end
-	-- txtout = txtout .. ": " .. message 
-	-- LogService:Log( txtout )
--- end
-
 function wave_gen:Generate( wavesSetting, waves )
 	-- e.g. make  { name="logic/missions/survival/attack_level_3_id_1_desert_alpha.logic",   spawn_type="RandomBorderInDistance", spawn_type_value=nil, target_type="Type", target_type_value="headquarters", target_min_radius=180.0, target_max_radius=350.0}, 
 	
-	--self:RediNomaLog( nil , "wave_gen:Generate" )
-	
 	if waves == nil                 then waves = {} end
-	--; self:RediNomaLog( nil, "waves changed to not nil" );   end
 	if wavesSetting.groups == nil   then wavesSetting.groups = { "default" } end
-	--; self:RediNomaLog( nil, "wavesSetting.groups changed to not nil" );  end
 	if wavesSetting.biomes == nil   then wavesSetting.biomes = { "" } end
-	--; self:RediNomaLog( nil, "wavesSetting.biomes changed to not nil" );  end
 	if wavesSetting.suffixes == nil then wavesSetting.suffixes = { "" } end
-	--; self:RediNomaLog( nil, "wavesSetting.suffixes changed to not nil" );  end
 	if wavesSetting.weight == nil   then wavesSetting.weight = 1 end
-	--; self:RediNomaLog( nil, "wavesSetting.weight changed to not nil" );  end
 	
 	local subwaves
 	for group in Iter( wavesSetting.groups ) do

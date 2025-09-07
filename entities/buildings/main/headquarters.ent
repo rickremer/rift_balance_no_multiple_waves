@@ -104,7 +104,7 @@ EntityBlueprint
 			Storage
 			{
 				resource	"ai"
-				max			"24"
+				max			"12"
 			}
 		}
 	}
@@ -319,9 +319,10 @@ EntityBlueprint
 
 	MinimapItemDesc
 	{
-		type			"image"
-		icon_material 	"gui/hud/minimap_icons/headquarters"
-		additional_z_order 1
+		type				"image"
+		icon_material 		"gui/hud/minimap_icons/headquarters"
+		additional_z_order 	1
+		layer_group			"important_buildings"
 	}
 
 	FogOfWarRevealerComponentDesc
