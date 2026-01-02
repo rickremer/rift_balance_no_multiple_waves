@@ -80,12 +80,12 @@ end
 
 function building_buffable:FindBestBuffSource( ) 
 	--LogService:Log( "building_buffable: FindBestBuffSource" )   
+	local best = nil
 	local buffBps = Split( self.data:GetStringOrDefault("buff_buildings",  "buildings/resources/ore_mill"), "," )
 	for bp in Iter(buffBps) do
-		local entities = FindService:FindEntitiesByBlueprintInRadius( self.entity, bp, self.maxBuffDistance )
+		local entities = FindService:FindEntitiesByBlueprintInRadius( self.entity, bp, self.maxBuffDistance or 30)
 		--LogService:Log( "building_buffable: by bp ".. tostring(#entities) .. " in range ".. tostring(self.maxBuffDistance))
 		
-		local best = nil
 		for ent in Iter(entities ) do
 			if ( not BuildingService:IsBuildingFinished( ent ))		then goto continue end
 			
@@ -101,11 +101,13 @@ function building_buffable:FindBestBuffSource( )
 			source.bp          = EntityService:GetBlueprintName( ent )
 			
 			if (self:IsValidBuffSource( source )) then
-				self.buffSource = source
+				best = source
+		        --LogService:Log( "building_buffable: new current best ".. tostring(best))
 			end
 			::continue::
 		end
 	end
+	--LogService:Log( "building_buffable: best found ".. tostring(best))
 	
 	self:UpdateBuffState( best ) 
 	return best
@@ -119,12 +121,22 @@ function building_buffable:UpdateBuffState( source )
 	if ( self.buffSource == nil ) then
 		if ( self.buffRequiredName ~= "" ) then
 			BuildingService:DisableBuilding( self.entity )
+			
+			if not self.reqIconBp then
+				local data = EntityService:GetDatabase( self.entity )
+				self.reqIconBp = data:GetStringOrDefault("buff_required_bp", "buildings/resources/ore_mill_missing_icon")
+			end
+			self.missing_effect = EntityService:SpawnAndAttachEntity( self.reqIconBp, self.entity, "att_missing_buff", "")
 		end
 		--LogService:Log( "building_buffable: no buff source")
 	else 
+		if (self.missing_effect or INVALID_ID) ~= INVALID_ID then
+			EntityService:RemoveEntity( self.missing_effect )
+		end
 		BuildingService:EnableBuilding( self.entity )
 		--LogService:Log( "building_buffable: new buff source ".. source.bp .. " " ..tostring(source.entity) .. ", level ".. tostring(source.level))
 		BuildingService:SetResourceConverterEfficientyModificator( self.entity, source.modificator , "buff" )
+		--BuildingService:AddConverterCostModifier( self.entity, 0.001, "" )
 	end
 end
 

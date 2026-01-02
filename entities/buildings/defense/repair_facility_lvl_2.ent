@@ -1,4 +1,4 @@
-EntityBlueprint
+EntityBlueprint  // repair_facility_lvl_2
 {
 	name  					"buildings/defense/repair_facility_lvl_2"
 	base_blueprint 			"buildings/defense/repair_facility"
@@ -16,6 +16,7 @@ EntityBlueprint
 		order				"4"
 		upgrade				"buildings/defense/repair_facility_lvl_3"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
+		overrides			"repair_facility,repair_facility_lvl_3"
 
 		costs
 		{
@@ -28,7 +29,7 @@ EntityBlueprint
 					carbonium 	"200"
 					steel 		"475"
 					cobalt 		"250"
-					ai			"2"
+					ai			"1"
 				}
 			}
 		}
@@ -63,7 +64,6 @@ EntityBlueprint
 	{
 		animation_graph_name "building_working"
 	}
-
 
 	LuaDesc
 	{

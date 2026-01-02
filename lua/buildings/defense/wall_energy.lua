@@ -45,13 +45,7 @@ end
 --Runs when the building turns on, including initial power on.
 function wall_energy:OnActivate()
 	--Verify the shield component exists. Create it if missing.
-	if self.healthChild == nil then
-		--Create and attatch the Shield as a child object.
-		self.healthChild = EntityService:SpawnAndAttachEntity(self.shieldBp, self.entity)
-		--Add self to the shield.
-		--This makes the shield feel snappy when placing the building, despite the long interval between scans.
-		ItemService:AddHealthLink(self.entity, self.healthChild)
-	end
+	if self.healthChild == nil then self:MakeShield() end
 	
 	self:EnableDamage()
 	self:ChargeShield()
@@ -62,6 +56,9 @@ end
 
 --Runs when the building turns off, loses power, or is removed.
 function wall_energy:OnDeactivate()
+	--Verify the shield component exists. Create it if missing.
+	if self.healthChild == nil then self:MakeShield() end
+	
 	--Shut down Shield
 	local state = self.fsm:GetState("working")
 	if (state ~= nil) then
@@ -79,10 +76,6 @@ end
 --STATE MACHINE--
 --State Machine Loop function
 function wall_energy:OnWorkInProgress(state)
-	--Check for the shield entity, and re-create it if it is missing.
-	if (self.healthChild == INVALID_ID or HealthService:GetHealth(self.healthChild)== -1) then
-		self.healthChild = EntityService:SpawnAndAttachEntity(self.shieldBp, self.entity)
-	end
 	
 	--Search Map for targets
 	local objects = FindService:FindEntitiesByGroupInRadius(self.entity, "energy_walls", diameter)
@@ -116,10 +109,18 @@ end
 -----------------------------------------------------------------------------------------------------------
 --SUBFUNCTIONS     SUBFUNCTIONS     SUBFUNCTIONS     SUBFUNCTIONS     SUBFUNCTIONS     SUBFUNCTIONS
 -----------------------------------------------------------------------------------------------------------
+function wall_energy:MakeShield()
+	--Create and attatch the Shield as a child object.
+	self.healthChild = EntityService:SpawnAndAttachEntity(self.shieldBp, self.entity)
+	--Add self to the shield.
+	--This makes the shield feel snappy when placing the building, despite the long interval between scans.
+	ItemService:AddHealthLink(self.entity, self.healthChild)
+end
+
 --Enables Damage Reflection
 function wall_energy:EnableDamage()
 	--Check that Damage Reflection amount is stored, then enable it
-	local DRcomponent = reflection_helper(EntityService:GetComponent(self.entity, "ReflectDamageComponent"))
+	local DRcomponent = self:GetReflectDamageComponent()
 	if self.damageVal ~= 0 then
 		--Restore Damage Reflection
 		DRcomponent.damage_value = self.damageVal
@@ -132,14 +133,14 @@ end
 
 --Disables Damage Reflection
 function wall_energy:DisableDamage()
-	local DRcomponent = reflection_helper(EntityService:GetComponent(self.entity, "ReflectDamageComponent"))
+	local DRcomponent = self:GetReflectDamageComponent()
 	DRcomponent.damage_value = 0
 end
 
 --Sets Shield to charge
 function wall_energy:ChargeShield()
 	--Check that Shield Regen amount is stored, then enable it
-	local Rcomponent = reflection_helper(EntityService:GetComponent(self.healthChild, "RegenerationComponent"))
+	local Rcomponent = self:GetRegenComponent()
 	if self.regen_rate ~= 0 then
 		--Restore Damage Reflection
 		Rcomponent.regeneration = self.regen_rate
@@ -156,7 +157,7 @@ end
 --Sets Shield to Drain
 function wall_energy:DrainShield()
 	--Set Shield to decay
-	local Rcomponent = reflection_helper(EntityService:GetComponent(self.healthChild, "RegenerationComponent"))
+	local Rcomponent = self:GetRegenComponent()
 	Rcomponent.regeneration = self.decay_rate
 	Rcomponent.regeneration_cooldown = 0
 	
@@ -165,5 +166,27 @@ function wall_energy:DrainShield()
 	Hcomponent.health = Hcomponent.health - 1
 end
 
+function wall_energy:GetRegenComponent()
+	if not self.healthChild == nil then self:MakeShield() end
+	
+	--Check for the shield entity, and re-create it if it is missing.
+	if (self.healthChild == INVALID_ID or HealthService:GetHealth(self.healthChild)== -1) then
+		self.healthChild = EntityService:SpawnAndAttachEntity(self.shieldBp, self.entity)
+	end
+	
+	local Rcomponent = EntityService:GetComponent(self.healthChild, "RegenerationComponent")
+	if not Rcomponent then
+		Rcomponent = EntityService:CreateComponent(self.healthChild, "RegenerationComponent")
+	end
+	return reflection_helper(Rcomponent)
+end
+
+function wall_energy:GetReflectDamageComponent()
+	local DRcomponent = EntityService:GetComponent(self.entity, "ReflectDamageComponent")
+	if not DRcomponent then
+		DRcomponent = EntityService:CreateComponent(self.entity, "ReflectDamageComponent")
+	end
+	return reflection_helper(DRcomponent)
+end
 
 return wall_energy

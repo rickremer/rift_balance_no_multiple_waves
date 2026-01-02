@@ -501,9 +501,10 @@ EntityBlueprint  // energy_connector_water
 		menu_icon			"gui/hud/building_icons/energy_connector_water"
 		order				"1"
 		building_mode		"radius"
-		radius_name			"water_tower"
-		min_radius			"14"
-		min_radius_effect	"voice_over/announcement/building_too_close"
+		// RRR Oct-25-2025: the min radius is annoying, and other conns don't have this.
+		// radius_name			"water_tower"
+		// min_radius			"14"
+		// min_radius_effect	"voice_over/announcement/building_too_close"
 		type				"energy"
 		require 			"headquarters"
 		buildable			"0"

@@ -212,8 +212,8 @@ EntityBlueprint
 		aim_volume "SphericalAimVolume"
 		{
 			range_min "8"
-			range_max "60"
-			aiming_range "70"
+			range_max "60"	-- REDINMA Jan-01-2026: un-mod
+			aiming_range "70"	-- REDINMA Jan-01-2026: un-mod
 		}
 
 		aiming_cooldown "1"
@@ -417,6 +417,7 @@ EntityBlueprint
 		on_world_hit_effect 	"effects/weapon_hit/artillery_explosion"
 		on_resisted_hit_effect 	"effects/weapon_hit/artillery_explosion"
 		collision_3d 			"world|world_blocker|world_destructible|destructible|ground_unit|shield|building"
+		hit_effect_direction 		"up"
 
 		artillery_gravity_factor 	"8"
 		artillery_min_angle      	"45"

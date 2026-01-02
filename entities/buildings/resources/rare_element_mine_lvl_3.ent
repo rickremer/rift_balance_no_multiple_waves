@@ -14,7 +14,7 @@ EntityBlueprint
 		menu_icon			"gui/hud/building_icons/rare_element_mine_lvl3"
 		order				"3"
 		//upgrade				"buildings/resources/rare_element_mine_lvl_4"		
-		require 			"headquarters"
+		//require 			"headquarters"
 		buildable			"0"
 		building_group		"carbonium_factory"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
@@ -66,44 +66,44 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 			"carbon_deepvein"
-				value				1.5
+				value				0.1	-- REDINMA Jan-01-2026: vs 1.5 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"iron_deepvein"
-				value				1.5
+				value				0.1	-- REDINMA Jan-01-2026: vs 1.5 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"ammonium_deepvein"
-				value				1.5
+				value				0.1	-- REDINMA Jan-01-2026: vs 1.5 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
 				family				"resource"
 			}
 			
 			GameplayResource
 			{
 				resource 			"uranium_ore_deepvein"
-				value				1.5
+				value				0.1	-- REDINMA Jan-01-2026: vs 1.5 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"titanium_deepvein"
-				value				1.5
+				value				0.1	-- REDINMA Jan-01-2026: vs 1.5 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"palladium_deepvein"
-				value				1.5
+				value				0.1	-- REDINMA Jan-01-2026: vs 1.5 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"cobalt_deepvein"
-				value				1.5
+				value				0.1	-- REDINMA Jan-01-2026: vs 1.5 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
 				family				"resource"
 			}
 		}
@@ -168,6 +168,7 @@ EntityBlueprint
 			cone_effect					string:"build_cone_3x3"
 			cone_effect_sell			string:"sell_big"
 			buff_buildings				string:"buildings/resources/ore_mill,buildings/resources/ore_mill_lvl_2,buildings/resources/ore_mill_lvl_3,buildings/resources/ore_mill_lvl_4"
+			buff_required_bp			string:"buildings/resources/ore_mill_missing_icon"
 			buff_required_name			string:"ore_mill"
 			buff_required_level			int:"0"
 			display_radius_group		string:"ore_mill"

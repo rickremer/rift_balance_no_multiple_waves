@@ -1,8 +1,9 @@
 ﻿$DebugPreference = "Continue"
+$VerbosePreference = "Continue"
 Write-Output 'Re-Extracting all RiftBreaker packs...'
 Write-Verbose '  assuming from Steam...'
 $rborigpacksdir = Join-Path -Path ${env:ProgramFiles(x86)} -ChildPath 'Steam\steamapps\common\Riftbreaker\packs'
-Write-Debug '  Game files source := ' + $rborigpacksdir
+Write-Debug ('  Game files source := ' + $rborigpacksdir)
 Write-Verbose "    can't proceed if no source files!"
 if ( ! ( Test-Path -Path $rborigpacksdir -PathType Container )) 
 { 
@@ -35,13 +36,13 @@ Test-ExistDir $CacheMaster -Verbose
 $cachepacksdir = Join-Path -Path $CacheMaster -Childpath 'packs'
 Write-Verbose -Message "Define a stable subdirectory to contain the copied packs files as $cachepacksdir"
 Write-Verbose -Message "  Note: no automatic update of content here!"
-Write-Debug '  $cachepacksdir := ' + $cachepacksdir 
+Write-Debug ('  $cachepacksdir := ' + $cachepacksdir )
 Test-ExistDir $cachepacksdir -Verbose
 
 $packsunziptmpdir = Join-Path -Path $CacheMaster -ChildPath 'unzipped_latest'
 Write-Verbose -Message "\nDefine a (final) directory target for latest files from re-extracted packs."
 Write-Verbose -Message "  WARNING: All existing content will be deleted!"
-Write-Debug -Message '  $packsunziptmpdir (temp location for unzipping packs) := ' + $packsunziptmpdir
+Write-Debug -Message ('  $packsunziptmpdir (temp location for unzipping packs) := ' + $packsunziptmpdir)
 if ( Test-Path -Path $packsunziptmpdir -PathType Container ) 
 {     
     Remove-Item $packsunziptmpdir -Recurse -Verbose

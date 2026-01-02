@@ -45,44 +45,51 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 			"carbon_vein"
-				value				2.0
+				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value				0.1
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"iron_vein"
-				value				2.0
+				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value				0.1
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"ammonium_vein"
-				value				2.0
+				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value				0.1
 				family				"resource"
 			}
 			
 			GameplayResource
 			{
 				resource 			"cobalt_vein"
-				value				2.0
+				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value				0.1
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"palladium_vein"
-				value				2.0
+				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value				0.1
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"titanium_vein"
-				value				2.0
+				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value				0.1
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"uranium_ore_vein"
-				value				2.0
+				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value				0.1
 				family				"resource"
 			}			
 		}

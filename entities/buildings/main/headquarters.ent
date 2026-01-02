@@ -28,6 +28,8 @@ EntityBlueprint
 		difficulty_cost_apply	"0"
 		is_shortcut_bindable	"0"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
+		hide_treasures 		"1"
+		disableable 		"0"
 
 		costs
 		{
@@ -59,8 +61,6 @@ EntityBlueprint
 
 			}
 		}
-
-		disableable 0
 	}
 
 	ResourceStorageDesc
@@ -78,7 +78,7 @@ EntityBlueprint
 			{
 				group	 		"global"
 				subgroup		"base"
-				max 	 		"50"
+				max 	 		"1000"
 			}
 
 			Storage
@@ -104,7 +104,8 @@ EntityBlueprint
 			Storage
 			{
 				resource	"ai"
-				max			"12"
+				-- REDINMA Jan-01-2026: need more because everything uses AI, early progression too difficult.  24 + 12/levelup
+				max			"24"
 			}
 		}
 	}
@@ -253,14 +254,14 @@ EntityBlueprint
 	}
 
 	SkeletonDesc
-  {
-    name "meshes/buildings/main/headquarters_lvl_1"
-  }
+	{
+		name "meshes/buildings/main/headquarters_lvl_1"
+	}
 
 	AnimationGraphDesc
-  {
-    animation_graph_name "building_working"
-  }
+	{
+		animation_graph_name "building_working"
+	}
 
 	PhysicsDesc
  	{

@@ -1,4 +1,4 @@
-EntityBlueprint
+EntityBlueprint  // repair_facility_lvl_3s
 {
 	name  					"buildings/defense/repair_facility_lvl_3"
 	base_blueprint 			"buildings/defense/repair_facility_lvl_2"
@@ -15,8 +15,8 @@ EntityBlueprint
 		building_group		"repair_facility"
 		buildable			"0"		
 		order				"4"
-		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"	
-		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
+		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
+		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless,repair_facility,repair_facility_lvl_2"
 		
 		costs
 		{
@@ -29,7 +29,7 @@ EntityBlueprint
 					carbonium 	"400"
 					steel 		"1000"
 					cobalt 		"750"
-					ai			"2"
+					ai			"1"
 				}
 			}
 		}
@@ -105,7 +105,7 @@ EntityBlueprint
 			cone_effect_sell		string:"sell_big"
 			energy_cost				float:"10"
 
-			drone_search_radius 	float:"40"
+			drone_search_radius 	float:"45"
 			drone_blueprint			string:"units/drones/drone_repair_facility_lvl_3"
 			drone_attachments		string:"att_landing"
 			drone_per_spot			int:"5"
@@ -246,7 +246,7 @@ EntityBlueprint
 				{
 					blueprint "effects/buildings_and_machines/gas_reactor"
 					bone  "att_vismod_1"
-					scale "0.9 1.0 0.9"
+					scale 1.0 1.0 1.0
 				}
 				Effect
 				{

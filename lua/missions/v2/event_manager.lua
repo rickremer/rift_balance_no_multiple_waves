@@ -14,6 +14,7 @@ function event_manager:init()
 	self:InitRules()
 
 	self.currentEventLevel = 1
+	self.campaignProgressLevel = 0
 
 	self.streamActionResourceGiveBelowPercentage		= 80
 	self.streamActionResourceTakeAwayAbovePercentage	= 10
@@ -78,12 +79,20 @@ function event_manager:Activated()
 end
 
 function event_manager:InitRules()
-    if ( type( self.rules ) == "string" ) then
-        self.rulesFile = self.rules
+	if ( type( self.rules ) == "table" ) then
+		self.rulesFile  = self.rules.rulesPath
+		self.rulesParam = self.rules.rulesParam
+		LogService:Log( "event_manager:InitRules() : rules given as table")
 		LogService:Log( "event_manager:InitRules() : rules file path : " .. tostring( self.rulesFile ) )
 		LogService:Log( "event_manager:InitRules() : difficulty : " .. tostring( DifficultyService:GetCurrentDifficultyName() ) )
-        self.rules = require( self.rulesFile )()
-    end
+		self.rules = require( self.rulesFile )( self.rulesParam )
+	elseif ( type( self.rules ) == "string" ) then
+		self.rulesFile = self.rules
+		LogService:Log( "event_manager:InitRules() : rules file path : " .. tostring( self.rulesFile ) )
+		LogService:Log( "event_manager:InitRules() : difficulty : " .. tostring( DifficultyService:GetCurrentDifficultyName() ) )
+		self.rules = require( self.rulesFile )()
+		self.rulesParam = self.rules.rulesParam
+	end
 	
 	-- make sure mod rule variables are available and valid
 	if (self.rules.eventsPerPrepareStateChance == nil      or type(self.rules.eventsPerPrepareStateChance) ~= "number")      then  self.rules.eventsPerPrepareStateChance = 75        end
@@ -128,25 +137,58 @@ function event_manager:FillInitialParamsEventManager()
 	if ( self.availableEventGroups == nil ) then
 		self.availableEventGroups = {}
 	end	
+	local progress = 0
+	local cobaltAccess = false
 	local campaignData = CampaignService:GetCampaignData()
 	if ( campaignData:GetStringOrDefault("global.uranium_outpost_complete", "" ) == "true" ) then 
 		self.availableEventGroups.uranium_completed = true
 		self.availableEventGroups.desert            = true
+		progress = progress + 1
 	end  
 	if ( campaignData:GetStringOrDefault("global.titanium_outpost_complete", "" ) == "true" ) then 
 		self.availableEventGroups.titanium_completed = true
 		self.availableEventGroups.magma              = true
+		progress = progress + 1
 	end 
 	if ( campaignData:GetStringOrDefault("global.palladium_outpost_complete", "" ) == "true" ) then 
 		self.availableEventGroups.palladium_completed = true
 		self.availableEventGroups.acid                = true
+		progress = progress + 1
+	end
+	if ( campaignData:GetStringOrDefault("global.cobalt_outpost_complete", "" ) == "true" ) then 
+		self.availableEventGroups.cobalt_completed = true
+		self.availableEventGroups.jungle           = true
+		cobaltAccess = true
 	end
 	if ( campaignData:GetStringOrDefault("global.metallic_outpost_stage_1", "" ) == "true" ) then 
 		self.availableEventGroups.morphium_unlocked = true
+		progress = progress + 0.1
+		cobaltAccess = true
 	end
 	if ( campaignData:GetStringOrDefault("global.alien_core_destroyed", "" ) == "true" or campaignData:GetStringOrDefault("global.alien_core_destroyed", "" ) == "true") then 
 		self.availableEventGroups.metallic = true
+		progress = progress + 0.4
 	end
+	if ( campaignData:GetStringOrDefault("global.caverns_outpost_stage_2_complete", "" ) == "true" ) then 
+		self.availableEventGroups.resin_unlocked = true
+		progress = progress + 0.1
+		cobaltAccess = true
+	end
+	if ( campaignData:GetStringOrDefault("global.caverns_end", "" ) == "true" ) then
+		self.availableEventGroups.caverns = true
+		progress = progress + 0.4
+	end
+	if ( campaignData:GetStringOrDefault("global.swamp_outpost_stage_3_complete", "" ) == "true" ) then 
+		self.availableEventGroups.resin_unlocked = true
+		progress = progress + 0.1
+		cobaltAccess = true
+	end
+	if ( campaignData:GetStringOrDefault("global.swamp_end", "" ) == "true" ) then
+		self.availableEventGroups.swamp = true
+		progress = progress + 0.4
+	end
+	if cobaltAccess then progress = progress + 0.5 end
+	self.campaignProgressLevel = progress
 	--if ( campaignData:GetStringOrDefault("global.metallic_start", "" ) == "true" ) then end
 	--if ( campaignData:GetStringOrDefault("global.metallic_outpost_stage_2_complete", "" ) == "true" ) then  end
 	--if ( campaignData:GetStringOrDefault("global.metallic_outpost_stage_3_complete", "" ) == "true" ) then end
@@ -157,9 +199,13 @@ function event_manager:FillInitialParamsEventManager()
 	--if ( campaignData:GetStringOrDefault("global.caverns_outpost_stage_1_complete", "" ) == "true" ) then  end
 	--if ( campaignData:GetStringOrDefault("global.caverns_outpost_stage_2_start", "" ) == "true" ) then end
 	--if ( campaignData:GetStringOrDefault("global.caverns_outpost_stage_2_complete", "" ) == "true" ) then  end
-	--if ( campaignData:GetStringOrDefault("global.caverns_end", "" ) == "true" ) then  end
 	--if ( campaignData:GetStringOrDefault("global.swamp_start", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.great_tree_saved", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.great_tree_destroyed", "" ) == "true" ) then  end
 	--if ( campaignData:GetStringOrDefault("global.swamp_outpost_stage_1_complete", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.swamp_outpost_stage_2_complete", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.swamp_outpost_stage_3_complete", "" ) == "true" ) then  end
+	--if ( campaignData:GetStringOrDefault("global.swamp_outpost_stage_4_complete", "" ) == "true" ) then  end
 end
 
 function event_manager:IncreamentEventLevel( freezedDifficultyLevel )
@@ -244,7 +290,7 @@ end
 function event_manager:GetBindingsFromObjectiveParams( name )
 	local bindingParams = {}
 
-		for data in Iter( self.rules.objectivesLogic ) do 
+	for data in Iter( self.rules.objectivesLogic ) do 
 		
 		if ( data.name == name ) and ( data.bindingParams ~= nil ) then
 			bindingParams = data.bindingParams
@@ -589,6 +635,7 @@ function event_manager:PrepareEvents( gameState )
 		
 			if ( remove == true ) then
 				table.insert( tableTmp, data )
+			-- REDINMA 7:34 PM Friday, Dec 26, 2025: Needs more informative logging.
 			else
 				LogService:Log( "event_manager:PrepareEvents: CheckObjective returned ~= true, so not removed." )
 			end
@@ -1042,7 +1089,7 @@ function event_manager:StartStreamingVoting()
 	end
 
 	while #currentStreamingData ~= optionsAtOnce do
-		local event = self:GetEventByWeight( tempStreamingData )
+		local event = GetRandomFormWeightedTable( tempStreamingData ).action
 
 		for i = 1, #tempStreamingData, 1 do 
 			if ( event == tempStreamingData[i].action ) then
@@ -1131,7 +1178,7 @@ function event_manager:StartAnEvent( gameState )
 			end
 
 			if ( #self.currentStreamingData > 0 ) then
-				local event = self:GetEventByWeight( self.currentStreamingData )
+				local event = GetRandomFormWeightedTable( self.currentStreamingData ).action
 				self.lastNonStreamEvent	= event
 				self:SpawnEvent( event, "" )
 			end
@@ -1191,6 +1238,7 @@ function event_manager:StartObjective()
 
 	if ( remove == false ) then
 		self:SpawnObjective()
+	-- REDINMA 7:34 PM Friday, Dec 26, 2025: Needs more informative logging.
 	else
 		LogService:Log( "event_manager:StartObjective: CheckObjective returned ~= false, so skipping self:SpawnObjective()" )
 	end

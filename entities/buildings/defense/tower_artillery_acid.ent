@@ -91,8 +91,8 @@ EntityBlueprint
 		aim_volume "SphericalAimVolume"
 		{
 			range_min "8"
-			range_max "60"
-			aiming_range "70"
+			range_max "60"	-- REDINMA Jan-01-2026: make same as vanilla equivalent
+			aiming_range "70"	-- REDINMA Jan-01-2026: make same as vanilla equivalent
 		}
 
 		aiming_cooldown "1"

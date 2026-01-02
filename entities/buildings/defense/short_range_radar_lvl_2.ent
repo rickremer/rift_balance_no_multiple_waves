@@ -57,7 +57,7 @@ EntityBlueprint
 		database
 		{
 			name				string:"range"
-			range				float:"180"
+			range				float:"180"	-- REDINMA Jan-01-2026: un-mod
 		}
 	}
 

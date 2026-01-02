@@ -1,4 +1,87 @@
-0.3.1 WIP
+0.3.?
+- fixed missing very first campaign wave attack
+- fixed some solid material storages not connecting to the energy grid
+- fixed missing some localization names
+- fixed some buildings, allowing to build over (replace) other levels of itself
+- updated map difficulty progression with additional limit if campaign is not progressed enough
+- updated stats of gas filtering plant 3, ammonium extractors, cobalt morphing plant, floating piercer towers
+- updated visuals of gas filtering plant 3, ammonium extractors, morphing plants, laboratory, heavy water plant
+- updated deuterium production and usage to minimize GUI issues with dropping decimals
+- updated visuals of ammonium veins
+- added landlocked version of piercer towers
+
+0.3.9
+- fixed fire control station should no longer be constrained by line of sight
+- fixed a potential crash with level 2 or 3 mines
+- fixed some outdated settings on cobalt outpost
+- added planetary defense as upgrade for the planet scanner
+- updated missing ore mill requirement icon
+
+0.3.8
+- fixed energy cell ammo storage missing a research which unlocked it
+- fixed decompressors hidden values match their production / consumption rate
+- added ambient heat ion charger and thermal ion charger: produce supercharged plasma from magma
+- added visual indicator for ore mill requirement for higher level mines
+- removed titanium production from steel separator
+- updated laboratory biomass upkeep (reduced at higher levels, animal biomass reduced, added mycelium)
+- updated petroleum well visuals
+- nerfed stat boosts for fire per shot and fire per burst weapon stats
+
+0.3.7
+- fixed (hopefully) storage issues, mainly with animal biomass locking early campaign progress
+- fixed skipped attacks on some exploration rare resource harvest maps
+- fixed alloys factories build times
+- updated water filtering plant higher tier pipe positions and visuals
+- updated reagent refinery higher tier visuals
+- updated resource converter visuals and minimap color
+- buffed reagent refinery by reducing biomass upkeep
+- added cryo station level 2
+
+0.3.6
+- fixed crashes on HQ-map mostly wrong difficulty names that caused missing waves
+- fixed another potential crash with energy walls
+- fixed liquid input issues with top tier liquid ammo factory 2
+- fixed repair tower 3 and some minor buffs
+- updated jungle survival to contain all main resource deposits from the mod for testing
+- updated minimap underground resource icons to match 2.0 visuals
+- buffed small machine gun, minigun, bouncing blades, nuke launcher, trident, corrosive gun
+
+0.3.5
+- reworking wave system: integrating multiplayer (boss) waves into the system and better difficulty balancing
+- reworking wave difficulty on maps after 2.0: hq, acid-, desert-, jungle-, magma-, metallic-, caverns-, swamp-outpost, swamp-forest
+- added wave system feature: stronger waves can be set with larger time intervals between repeats (e.g. less bosses spawn during wave attacks)
+- updated shield generator upkeep, level 1 now needs no piping but has carbonium upkeep, added plasma as lvl 2 option
+- updated HQ and outpost storage to 1000 and 500, such that early game does not require to research storage to build orbital scanner
+- buffed high caliber rifle post 2.0 changes
+- buffed plasma, heavy plasma, corrosive gun and nuke launcher
+- fixed tech tree for regen extractors
+- fixed a rare crash with energy walls
+
+0.3.4
+- changed portal tower lvl 2 & 3 input-liquids: replaced morphium with flammable gas or fluorine to have more uses for these gases.
+- updated liquid storage visuals to 2.0 assets
+- updated higher level building cost to use alloys: fusion & nuclear powerplant, bio refineries, crystalizers, reagent refinery & condenser, ionizers, supercoolants, centrifuge
+- fixed resources stored in underground solid storage
+- fixed a possible crash on wave repeat
+- added regenerating extractor as a high end use for resin
+
+0.3.3
+- minor RTG buff
+- fixed pipe junction grid from vanilla
+- fixed crash with mission conditions on two base campaign maps (unlock palladium and titanium)
+
+0.3.2
+- fixed crashes and weird behavior with AI hub level 2 and 3
+- fixed grid blocking issues for alloy factories (temporary workaround)
+- fixed deepvein resource info popup missing strings or showing wrong resource
+- fixed pumpjacks not placeable on mud wells
+- fixed fluid issue with HCM level 2
+- fixed issues with ore mills and mines not always interacting as intended
+- fixed (hopefully) caves outpost map crash due to bad lua wave setup for that map
+- updated orbital scanner missions to reuse outpost or find_rare_resource wave settings (for now)
+- updated orbital scanner missions to new resource deposits (for acid only)
+
+0.3.1
 - workaround for UI issues with mod disassembly: changed type of some resources to ammo (temporarily)
 - fixed laboratory level 1 taking in water (needed for campaign objective)
 - adjusted storage research to make early campaign objectives easier

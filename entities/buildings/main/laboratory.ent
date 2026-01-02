@@ -18,7 +18,8 @@ EntityBlueprint
 		menu_action			"research"
 		upgrade				"buildings/main/laboratory_lvl_2"	
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"	
-		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"		
+		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
+		hide_treasures 		"1"		
 
 		costs
 		{
@@ -48,12 +49,20 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 			"biomass_plant"
-				value			 	"2"
+				-- REDINMA Jan-01-2026: super annoying to deplete so fast.
+				value			 	".01"
+			}
+			GameplayResource
+			{
+				resource 			"biomass_mycelium"
+				-- REDINMA Jan-01-2026: super annoying to deplete so fast.
+				value			 	".01"
 			}
 			GameplayResource
 			{
 				resource 			"biomass_animal"
-				value			 	"2"
+				-- REDINMA Jan-01-2026: super annoying to deplete so fast.
+				value			 	".01"
 			}
 			
 			GameplayResource
@@ -441,8 +450,15 @@ EntityBlueprint
 			enabled "1"
 			Effects
 			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/ai_hub"
+					bone 	"att_vismod_5"
+					orientation 135 0 0
+					scale	1 1 1
+				}
 			}
-		}		
+		}
 		EffectGroup
 		{
 			group "working"

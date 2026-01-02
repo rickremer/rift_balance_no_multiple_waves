@@ -1,4 +1,4 @@
-EntityBlueprint
+EntityBlueprint  // laboratory_lvl_2
 {
 	name  "buildings/main/laboratory_lvl_2"
 
@@ -22,6 +22,7 @@ EntityBlueprint
 		buildable			"0"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
 		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
+		hide_treasures 		"1"
 
 		costs
 		{
@@ -51,12 +52,20 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 			"biomass_plant"
-				value			 	".25"
+				-- REDINMA Jan-01-2026: super annoying to deplete so fast.
+				value			 	".01"
+			}
+			GameplayResource
+			{
+				resource 			"biomass_mycelium"
+				-- REDINMA Jan-01-2026: super annoying to deplete so fast.
+				value			 	".01"
 			}
 			GameplayResource
 			{
 				resource 			"biomass_animal"
-				value			 	".25"
+				-- REDINMA Jan-01-2026: super annoying to deplete so fast.
+				value			 	".01"
 			}
 			
 			GameplayResource
@@ -216,8 +225,30 @@ EntityBlueprint
 		////////////////////////MISC/////////////////////////
 		EffectGroup
 		{
+			group "vismod"
+			enabled "1"
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/ai_hub"
+					bone 	"att_vismod_5"
+					orientation 135 0 0
+					scale	1 1 1
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/hlab_base"
+					bone 	"att_vismod_3"
+					orientation 0 0 0
+					scale	0.7 0.7 0.7
+				}
+			}
+		}
+		EffectGroup
+		{
 			group "working"
-			enabled "0"				
+			enabled "0"
 			
 			Effects
 			{
@@ -237,7 +268,7 @@ EntityBlueprint
 				Effect
 				{
 					blueprint "effects/buildings_and_machines/level_2"
-					bone "att_level"
+					bone "att_level_a"	-- REDINMA Jan-01-2026: was "att_level", not in _5 looks like typo...
 				}
 			}
 		}		

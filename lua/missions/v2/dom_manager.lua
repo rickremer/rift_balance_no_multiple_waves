@@ -51,7 +51,9 @@ local function ProcessRulesTable( rules )
 
 	if data.multiplayerWaves then
 		for _,data in pairs( data.multiplayerWaves ) do
-			ConvertLogicEntries( data.waves )
+			if data.waves then
+				ConvertLogicEntries( data.waves )
+			end
 		end
 	end
 
@@ -174,6 +176,9 @@ function dom_mananger:init()
 	self.player_death_position 	 = {}
 
 	self.version = 1
+
+	self:FillInitialParamsEventManager()
+	self:FillInitialParamsDomManager()
 end
 
 function dom_mananger:Update( dt)
@@ -243,7 +248,7 @@ function dom_mananger:Update( dt)
 			debug = debug .. " Time left: " .. tostring( state:GetDurationLimit() - state:GetDuration() )
 		elseif ( currentSpawnerState == "cooldown_after_spawn" ) then
 			debug = debug .. " Time left: " .. tostring( self.cooldownTimer )
-			if (self.rules.waveRepeatChances) then 
+			if (self.rules.waveRepeatChances) then
 				local repeatChances = self.rules.waveRepeatChances[self.currentDifficultyLevel]
 				local repeatChance  = repeatChances[self.waveRepeated+1] or 0
 				debug = debug .. " wave repeat chance: " .. tostring( repeatChance ) .. "%,"
@@ -297,7 +302,6 @@ function dom_mananger:OnLoad()
 		rulesCheckNewPath = rulesCheckNewPath .. currentDifficultyName .. ".lua"
 
 		self:VerboseLog("OnLoad - checking if there is a new rule : " .. rulesCheckNewPath )
-
 		if ( rulesCheckNewPath ~= rulesOldPath ) then
 			self:VerboseLog("OnLoad - old rules don't match difficulty level. Searching if new one exist" )
 			if ( script_exists( rulesCheckNewPath ) == true ) then
@@ -310,9 +314,9 @@ function dom_mananger:OnLoad()
 			self:VerboseLog("OnLoad - old rules match. Nothing to load." )
 		end
 		
-		self.rules = ProcessRulesTable( require( self.rulesFile )() )
+		self.rules = ProcessRulesTable( require( self.rulesFile )( self.rulesParam ) )
 	end
-
+	
 	if ( self.version == nil ) then
 		self:RegisterHandler( event_sink, "StartUpgradingEvent",        	   "OnStartUpgradingEvent" )
 		self:UnregisterHandler( event_sink, "BuildingStartEvent",        	   "OnBuildingStartEvent" )
@@ -337,6 +341,7 @@ function dom_mananger:FillInitialParamsDomManager()
 	for group in Iter( self.availableAttackGroups ) do 
 		self.availableEventGroups[group] = true
 	end
+	if ( self.waveRepeated == nil ) then self.waveRepeated = 0 end
 end
 
 	-- ======================================== LOGIC ============================================
@@ -407,7 +412,7 @@ function dom_mananger:LogicFilesSanityCheck()
 						if ( not ResourceManager:ResourceExists( "FlowGraphTemplate", data.name ) ) then
 							local log = "rules.waves" .. " " .. tostring( i ) .. " : " .. data.name
 							table.insert( failedLogicFileTable, log )
-							log = log .. " NOT EXIST"			
+							log = log .. " NOT EXIST"
 							LogService:Log( log )
 						end
 					end
@@ -415,21 +420,22 @@ function dom_mananger:LogicFilesSanityCheck()
 			end
 		end
 	end
-
+	
 	self:LogicTableCheck( self.rules.extraWaves, "rules.extraWaves", failedLogicFileTable )
 	self:LogicTableCheck( self.rules.bosses, "rules.bosses", failedLogicFileTable )
+	
 
-	if ( self.rules.multiplayerWaves ~= nil ) then		
+	if ( self.rules.multiplayerWaves ~= nil ) then
 		if ( #self.rules.multiplayerWaves ~= self.maxDifficultyLevel ) then
 			Assert( false, "rules.multiplayerWaves size must equal " .. tostring( self.maxDifficultyLevel ) )
 		end
-
+		
 		if self.rules.multiplayerWaves then
 			for i = 1, self.maxDifficultyLevel, 1 do 
 				for wave in Iter( self.rules.multiplayerWaves[i].waves ) do 
 					if ( not ResourceManager:ResourceExists( "FlowGraphTemplate", wave.name ) ) then
 						local log = "rules.multiplayerWaves " .. tostring( i ) .. " : " .. wave.name
-						table.insert( failedLogicFile, log )
+						table.insert( failedLogicFileTable, log )
 						log = log .. " NOT EXIST"			
 						LogService:Log( log )
 					end
@@ -828,9 +834,18 @@ function dom_mananger:ResumeAttacks()
 end
 
 function dom_mananger:SetMaxDifficultyLevel( maxDifficultyLevel )
-	maxDifficultyLevel = Clamp( maxDifficultyLevel, 1, self.maxDifficultyLevel )
-
 	self:VerboseLog( "OnLuaGlobalEvent: changing max difficulty level" )
+	self:VerboseLog( "OnLuaGlobalEvent: target max difficulty level - " .. tostring( maxDifficultyLevel ) )
+	
+	local progressLimit = 9
+	if self.campaignProgressLevel or 10 <= 1.5 then
+		progressLimit = 7
+	elseif self.campaignProgressLevel or 10 <= 3.5 then
+		progressLimit = 8
+	end	
+	maxDifficultyLevel = Clamp( maxDifficultyLevel, 1, math.min( self.maxDifficultyLevel, progressLimit) )
+
+	self:VerboseLog( "OnLuaGlobalEvent: current campaign progress level - " .. tostring( self.campaignProgressLevel ).. " -> difficulty limit - ".. tostring( progressLimit ))
 	self:VerboseLog( "OnLuaGlobalEvent: current freezed difficulty level - " .. tostring( self.freezedDifficultyLevel ) )
 	self:VerboseLog( "OnLuaGlobalEvent: current difficulty level - " .. tostring( self.currentDifficultyLevel ) )
 
@@ -1067,13 +1082,13 @@ function dom_mananger:GetWavePool( currentDifficultyLevel, silent )
 	end
 		
 	for group in Iter ( availableAttackPool )  do
-		local waves = self.rules.waves[ group ]
+		local waves = self.rules.waves[ group ] or {}
 		
 		currentDifficultyLevel = Clamp( currentDifficultyLevel, 0, #waves )
 
 		if ( currentDifficultyLevel > 0 ) then
 			for data in Iter( waves[currentDifficultyLevel] ) do 
-				if (not silent) then self:VerboseLog("Adding wave to the wave pool : " .. data.name) end
+				if (not silent) then self:VerboseLog("Adding wave to the wave pool : " .. string.format("%6.3f", data.weight or 1) .. " " .. data.name) end
 				availableWaves[#availableWaves + 1] = data
 			end
 		end
@@ -1105,7 +1120,7 @@ function dom_mananger:GetMultiplayerWavePool()
 
 	if ( pool ~= nil ) then	
 		for data in Iter( pool.waves ) do 
-			self:VerboseLog( "Adding multiplayer wave to the wave pool : " .. data.name )
+			self:VerboseLog( "Adding multiplayer wave to the wave pool : " .. string.format("%6.3f", data.weight or 1) .. " ".. data.name )
 		end
 
 		return pool.waves
@@ -1283,7 +1298,6 @@ end
 -------------------------------------------- prepare_spawn -------------------------------------------------
 
 function dom_mananger:OnEnterPrepareSpawn( state )
-
 	self:VerboseLog("OnEnterPrepareSpawn" )
 
 	CampaignService:OperateDOMPlanetaryJump( false )
@@ -1344,11 +1358,8 @@ function dom_mananger:OnEnterPrepareSpawn( state )
 
 	--if ( self.wavesDisabled == false ) then
 	--	self.data:SetFloat( "time_max", self.waitForSpawnTimer )
-	--	MissionService:ActivateMissionFlow( self.objectivePrepareForTheAttacLogicFileName, self.objectivePrepareForTheAttacLogicFile, "default", self.data )	
+	--	MissionService:ActivateMissionFlow( self.objectivePrepareForTheAttacLogicFileName, self.objectivePrepareForTheAttacLogicFile, "default", self.data )
 	--end
-
-
-
 end
 
 function dom_mananger:OnExecutePrepareSpawn( state, dt )
@@ -1411,6 +1422,8 @@ function dom_mananger:OnEnterIdle( state )
 	self:VerboseLog("OnEnterIdle" )
 	CampaignService:OperateDOMPlanetaryJump( true ) -- just in case, planetary travel is stuck due to a bug
 	
+	self:ClearPreparedAttacks() -- for compatibility: clear any outdated stuff from saves
+		
 	local stateDuration = self.rules.idleTime[self.currentDifficultyLevel]
 	self:VerboseLog("Idle time base ".. tostring(stateDuration))
 	
@@ -1445,7 +1458,6 @@ function dom_mananger:OnEnterIdle( state )
 		numberOfEvents = 1
 		self:VerboseLog("REDINMA: OnEnterIdle - clamping number of events to : " .. tostring( numberOfEvents ) )
 	end
-
 
 	self.timePerEvent = stateDuration / numberOfEvents
 	self.currentTimePerEvent = self.timePerEvent
@@ -1626,6 +1638,8 @@ function dom_mananger:OnHqEnterAttackLogic( state )
 	self:VerboseLog("OnHqEnterAttackLogic" )
 
 	if ( self.prepAttacks == false ) then  -- late attack preperation as a workaround
+		self.data:SetFloat( "time_max", self:GetPrepareSpawnTime() )
+		
 		local borderSpawnPointGroupName = self.borderSpawnPointGroupNames[RandInt( 1,#self.borderSpawnPointGroupNames )]
 
 		self:VerboseLog("Border spawn point group :" .. borderSpawnPointGroupName )
@@ -1690,30 +1704,40 @@ function dom_mananger:OnHqExitExitLogic( state )
 	self:VerboseLog("OnHqExitExitLogic" )
 end
 
+
 function dom_mananger:PrepareLabels( labels, labelName, labelsPercentageUse )
 	self.data:SetString( "labels", labels )
 	self.data:SetString( "label_name", labelName )
 	self.data:SetInt( "labels_percentage_use", labelsPercentageUse )
 end
 
-function dom_mananger:NewAttackSetup( waveData, wavePool, borderSpawnPointGroupName, spawnPointName, maxRepeats)
+function dom_mananger:IsAttackPaused( attack )
+	local currentRepeat = (self.waveRepeated or 1)
+	local nextRepeatVal = (attack.nextRepeatVal or 0)
+	return currentRepeat <= nextRepeatVal - 0.5
+end
+
+function dom_mananger:NewAttackSetup( waveData, wavePool, borderSpawnPointGroupName, spawnPointName, repeatInterval, originalAttack)
 	-- waveData: single element from waves definitions setup in the mission lua
-	if maxRepeats == nil then maxRepeats = waveData.maxRepeats
-	else maxRepeats = math.min(maxRepeats, waveData.maxRepeats or 99)
-	end
+	if not originalAttack then originalAttack = {} end
 	attack = {}
-	attack.waveName       = waveData.name
-	attack.maxRepeats     = maxRepeats
-	attack.spawnGroupName = borderSpawnPointGroupName
-	attack.spawnPointName = spawnPointName
-	attack.originalPool   = wavePool
+	attack.waveName       = waveData.name													-- logic file to run doing the actual mob spawning
+	attack.nextRepeatVal  = originalAttack.nextRepeatVal  or waveData.spawnDelay or 0		-- for the wave repeat system. determines the next repeat interaction at which this attack is spawned
+	attack.repeatInterval = originalAttack.repeatInterval or waveData.repeatInterval or 1	-- for the wave repeat system. determines in how many repeat interactions this attack is spawned (or paused)
+	attack.spawnGroupName = borderSpawnPointGroupName										-- vanilla setting
+	attack.spawnPointName = spawnPointName													-- vanilla setting
+	attack.originalPool   = wavePool														-- wave pool if wave is reshuffled
 	return attack
 end
 
 function dom_mananger:PrepareWave( attackCount, borderSpawnPointGroupName, wavePool, log, indicatorTimer, attacks, markers, participants, labelName, participantsPercentageUse )
+	if not wavePool or #wavePool == 0 then 
+		self:VerboseLog( "PrepareWave: WARNING: cannot prepare wave, wave-pool was empty!")
+		return
+	end
 
 	for i = 1, attackCount do
-		local waveData = wavePool[RandInt( 1, #wavePool )]
+		local waveData = GetRandomFormWeightedTable( wavePool )
 		self:VerboseLog( "PrepareWave: wave_logic='" .. waveData.name .. "'")
 
 		local spawnPointName = self:RandomizeSpawnPoint( borderSpawnPointGroupName, waveData )
@@ -1730,6 +1754,7 @@ function dom_mananger:PrepareWave( attackCount, borderSpawnPointGroupName, waveP
 				markers[#markers + 1] = self:SpawnWaveIndicator( indicatorTimer, spawnPointName, "effects/messages_and_markers/wave_marker" )
 			end
 			
+			-- REDINMA 7:19 PM Friday, Dec 26, 2025: Needs more informative logging.
 			self:VerboseLog( log .. " +dom_mananger:PrepareWave, waveData.name: " .. waveData.name )
 		end
 	end
@@ -1739,12 +1764,12 @@ function dom_mananger:ReshuffleWave( index, attacks, reshuffleSwapn, reshuffleSp
 	local borderSpawnPointGroupName = attacks[index].spawnGroupName
 	local spawnPointName            = attacks[index].spawnPointName
 	local wavePool                  = attacks[index].originalPool
-	local maxRepeats                = attacks[index].maxRepeats
+	local nextRepeatVal             = attacks[index].nextRepeatVal or 0
 	if (wavePool == nil or #wavePool == 0) then
 		self:VerboseLog( "Wave Reshuffle: attack ".. tostring(index) .." original wavePool is nil. using default pool")
 		wavePool = self:GetWavePool( self.currentDifficultyLevel )
 	end
-	local waveData  = wavePool[RandInt( 1, #wavePool )]
+	local waveData  = GetRandomFormWeightedTable( wavePool )
 	local textSpawn = ""
 	
 	if (reshuffleSpawnGroup ) then
@@ -1759,7 +1784,7 @@ function dom_mananger:ReshuffleWave( index, attacks, reshuffleSwapn, reshuffleSp
 	end
 	
 	if ( spawnPointName ~= "none" ) then
-		attacks[index] = self:NewAttackSetup( waveData, wavePool, borderSpawnPointGroupName, spawnPointName, maxRepeats)
+		attacks[index] = self:NewAttackSetup( waveData, wavePool, borderSpawnPointGroupName, spawnPointName, attacks[index])
 
 		-- markers[index] = self:SpawnWaveIndicator( indicatorTimer, spawnPointName, "effects/messages_and_markers/wave_marker" )
 		
@@ -1769,7 +1794,6 @@ end
 
 function dom_mananger:RepeatWave(attacks)
 	-- REDINMA: Tried just returning attacks.  This didn't work; caused infinite repeating calls to this method.
-	
 	if (not attacks or #attacks==0) then return attacks end
 	self:VerboseLog("RepeatWave: checking " .. tostring(#attacks) .. " attacks for repeat and reshuffle")
 	
@@ -1783,26 +1807,27 @@ function dom_mananger:RepeatWave(attacks)
 	local newAttacks = {}
 	for i = 1, #attacks, 1 do
 		local attack = attacks[i]
-		if attack.maxRepeats ~= nil and self.waveRepeated >= attack.maxRepeats then
-			self:VerboseLog("RepeatWave: attack ".. attackStr .. " reached its max repeats of ".. tostring(attack.maxRepeats) .." and will not contine")
-		else
-			local rngRoll = RandInt(0, 100)
-			local attackStr = tostring(i) .."/".. tostring(#attacks)
-			self:VerboseLog("RepeatWave: attack ".. attackStr .. " repeat ".. tostring(self.waveRepeated + 1) .." chance " .. tostring(repeatChance) .. ", rolled " .. tostring(rngRoll) .. " => " ..  tostring(repeatChance > rngRoll))
-			if ( repeatChance > rngRoll) then
-				rngRoll = RandInt(1, 100)
-				self:VerboseLog("RepeatWave: attack ".. attackStr.. " reshuffle chance ".. tostring(chanceWaveReroll) ..", rolled ".. tostring(rngRoll) .." => " .. tostring(chanceWaveReroll > rngRoll) )
-				if ( chanceWaveReroll > rngRoll) then
-					self:ReshuffleWave( i, attacks, chanceNewSpawnGroup < RandInt(1, 100), chanceNewSpawn < RandInt(1, 100) )
-				end
-				newAttacks[#newAttacks + 1] = attack
-			end		
+		local attackStr = tostring(i) .."/".. tostring(#attacks)
+		
+		local rngRoll = RandInt(0, 100)
+		self:VerboseLog("RepeatWave: attack ".. attackStr .. " repeat ".. tostring(self.waveRepeated + 1) .." chance " .. tostring(repeatChance) .. ", rolled " .. tostring(rngRoll) .. " => " ..  tostring(repeatChance > rngRoll))
+		if ( repeatChance > rngRoll) then
+			rngRoll = RandInt(1, 100)
+			self:VerboseLog("RepeatWave: attack ".. attackStr.. " reshuffle chance ".. tostring(chanceWaveReroll) ..", rolled ".. tostring(rngRoll) .." => " .. tostring(chanceWaveReroll > rngRoll) )
+			if ( chanceWaveReroll > rngRoll) then
+				self:ReshuffleWave( i, attacks, chanceNewSpawnGroup < RandInt(1, 100), chanceNewSpawn < RandInt(1, 100) )
+			end
+			if not self:IsAttackPaused( attack) then
+				local repeatInterval = attack.repeatInterval or 5 / ((attack.maxRepeats or 0)+1)  -- downwards compatibilty - maxRepeats was used before repeatInterval
+				attack.nextRepeatVal = (attack.nextRepeatVal or 0) + repeatInterval
+			end
+			newAttacks[#newAttacks + 1] = attack
 		end
 	end
 	
+	attacks = newAttacks
 	if (#newAttacks > 0) then
 		self:VerboseLog("RepeatWave: repeat ".. tostring(self.waveRepeated + 1) .." is set up with ".. tostring(#newAttacks).. "/".. tostring(#self.preparedAttacks) .." attacks continuing")
-		attacks = newAttacks
 		
 		if (not self.WaveStateMachine) then -- for downwards compatibility with some saves
 			self.WaveStateMachine = self.spawner
@@ -1810,7 +1835,7 @@ function dom_mananger:RepeatWave(attacks)
 		end
 		self.WaveStateMachine:ChangeState( self.WaveRepeatState ) 
 		
-		self.waveRepeated = self.waveRepeated + 1
+		--self.waveRepeated = self.waveRepeated + 1
 		self.eventsPerPrepareState = 0
 	else 
 		self:VerboseLog("RepeatWave: no attacks remaining, wave is completed.")
@@ -1849,6 +1874,7 @@ function dom_mananger:BeginWaveCooldown( cooldownTime )
 end
 
 function dom_mananger:DoWaveCooldown( timer, dt )
+	-- function is called by OnExecuteAttackLogic and OnExecuteCooldownAfterSpawnTime
 	if  (not self.waveEventsTimer) then self.waveEventsTimer = 1000 end -- line for downwards compatibility (property may not be set in older saves)
 	
 	self.waveEventsTimer = self.waveEventsTimer - dt
@@ -1861,34 +1887,51 @@ function dom_mananger:DoWaveCooldown( timer, dt )
 			self.coolEventSpawnTime[i] = -9999
 		end
 	end
-
 	if ( timer < self.waveRepeatTime and self.rules.waveRepeatChances ) then
 		-- REDINMA 1:32 PM Friday, July 4, 2025: Remove all calls to RepeatWave. But is the hq one for endgame?
-		-- if (#self.hqPreparedAttacks>0)     then self.hqPreparedAttacks = self:RepeatWave(self.hqPreparedAttacks)
-		-- elseif (#self.preparedAttacks>0)   then self.preparedAttacks   = self:RepeatWave(self.preparedAttacks)
-		-- end
+		-- if (#self.hqPreparedAttacks>0)  then self.hqPreparedAttacks = self:RepeatWave(self.hqPreparedAttacks) end
+		-- if (#self.preparedAttacks>0)    then self.preparedAttacks   = self:RepeatWave(self.preparedAttacks)   end
+		-- REDINMA 7:25 PM Friday, Dec 26, 2025: Line below was added in recent update, will try commenting it.
+		-- self.waveRepeated = self.waveRepeated + 1
+		
 		if (#self.preparedAttacks + #self.hqPreparedAttacks == 0) then
 			self.waveRepeatTime = -9999
 			self:VerboseLog("DoWaveCooldown: no attack definitions to repeat")
+		else self:VerboseLog("DoWaveCooldown: ".. #self.preparedAttacks .." + ".. #self.hqPreparedAttacks .. " prepared attacks remaining")
 		end
 	end
 end
 
-function dom_mananger:SpawnPreparedWave( log, shouldAddtoSpawnedAttacks, preparedAttacks, spawnedAttacks )
+function dom_mananger:ClearPreparedAttacks()
+	self.preparedAttacks = {}
+	self.hqPreparedAttacks = {}
+	
+	self.waveRepeatTime = -9999
+end
+
+function dom_mananger:SpawnPreparedWave( log, shouldAddtoSpawnedAttacks, preparedAttacks, spawnedAttacks )	
 	for preparedWave in Iter( preparedAttacks ) do 
 		self.data:SetString( "spawn_point", preparedWave.spawnPointName )
+		local currentRepeat = (self.waveRepeated or 1)
+		local nextRepeatVal = (preparedWave.nextRepeatVal or 0)
 
+		-- REDINMA 7:19 PM Friday, Dec 26, 2025: Needs more informative logging.
 		self:VerboseLog( log .. " +dom_mananger:SpawnPreparedWave, preparedWave.waveName: " .. preparedWave.waveName .. "  " )
-		self:VerboseLog( "dom_mananger activating " .. preparedWave.waveName .. "  (wave repeat: " .. tostring((self.waveRepeated or 1) -1) .. ")")
+		if self:IsAttackPaused( preparedWave) then
+			self:VerboseLog( "dom_mananger pausing " .. preparedWave.waveName .. "  (repeat period: " .. tostring(currentRepeat) .. ", next repeat: ".. tostring(nextRepeatVal) ..")")
+			goto continue
+		end
+		self:VerboseLog( "dom_mananger activating " .. preparedWave.waveName .. "  (repeat period: " .. tostring(currentRepeat) .. ", next repeat: ".. tostring(nextRepeatVal) ..")")
 
 		self:PrepareLabels( "", "label_small", 0 )
 
 		local currentLogicFile = MissionService:ActivateMissionFlow( "", preparedWave.waveName, "default", self.data )
-		self:SpawnWaveIndicator( 45, preparedWave.spawnPointName, "effects/messages_and_markers/wave_marker" )				
-
+		self:SpawnWaveIndicator( 45, preparedWave.spawnPointName, "effects/messages_and_markers/wave_marker" )
+		
 		if ( shouldAddtoSpawnedAttacks == true ) then
 			spawnedAttacks[#spawnedAttacks + 1] = currentLogicFile
 		end
+		::continue::
 	end
 end
 
@@ -1910,6 +1953,8 @@ function dom_mananger:SpawnWavesForDifficultyLevel( difficultyLevel, shouldAddto
 	local wavePool = {}
 	
 	if ((self.waveRepeated or 0) == 0) then -- attack preperation must be done only once
+		self.data:SetFloat( "time_max", self:GetPrepareSpawnTime() )
+		
 		if ( not shouldAddtoSpawnedAttacks or #self.preparedAttacks <= 0 ) then  -- late attack preparation
 			self.WaveRepeatState  = "streaming"
 			self.WaveStateMachine = self.spawner
@@ -1991,7 +2036,7 @@ end
 
 function dom_mananger:OnEnterStreaming( state )
 	self:VerboseLog("OnEnterStreaming" )
-	self:VerboseLog("Current attacks count : " .. tostring( #self.spawnedAttacks ) )
+	self:VerboseLog("Current spawned attacks : " .. tostring( #self.spawnedAttacks ) )
 
 	while ( #self.spawnedAttacks >= 2 ) do
 

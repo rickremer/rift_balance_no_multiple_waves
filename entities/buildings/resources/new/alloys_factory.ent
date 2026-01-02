@@ -213,12 +213,12 @@ EntityBlueprint  // alloys_factory
 				y	10
 				z	10
 				
-				position 
-				{
-					x 0
-					y 0
-					z 2
-				}
+				//position 
+				//{
+				//	x 0
+				//	y 0
+				//	z 2
+				//}
    			}
 		}
 	}
@@ -453,7 +453,7 @@ EntityBlueprint  // alloys_factory_titanium
 			BuildingCostInfo
 			{
 				name "default"
-				building_time 6
+				building_time 100
 				building_cost
 				{
 					carbonium 	"250"
@@ -553,12 +553,12 @@ EntityBlueprint  // alloys_factory_titanium
 				y	10
 				z	6 // 10
 				
-				position 
-				{
-					x 1
-					y 0
-					z 2
-				}
+				//position 
+				//{
+				//	x 0
+				//	y 0
+				//	z 2
+				//}
    			}
 		}
 	}
@@ -700,7 +700,7 @@ EntityBlueprint  // alloys_factory_palladium
 			BuildingCostInfo
 			{
 				name "default"
-				building_time 6
+				building_time 100
 				building_cost
 				{
 					carbonium 	"250"
@@ -807,12 +807,12 @@ EntityBlueprint  // alloys_factory_palladium
 				y	10
 				z	6 // 10
 				
-				position 
-				{
-					x 1
-					y 0
-					z 2
-				}
+				//position 
+				//{
+				//	x 0
+				//	y 0
+				//	z 2
+				//}
    			}
 		}
 	}
@@ -946,7 +946,7 @@ EntityBlueprint  // alloys_factory_uranium
 			BuildingCostInfo
 			{
 				name "default"
-				building_time 6
+				building_time 100
 				building_cost
 				{
 					carbonium 	"250"
@@ -1046,12 +1046,12 @@ EntityBlueprint  // alloys_factory_uranium
 				y	10
 				z	6 // 10
 				
-				position 
-				{
-					x 1
-					y 0
-					z 2
-				}
+				//position 
+				//{
+				//	x 0
+				//	y 0
+				//	z 2
+				//}
    			}
 		}
 	}

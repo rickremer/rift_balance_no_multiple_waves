@@ -1,4 +1,4 @@
-EntityBlueprint
+EntityBlueprint  //resource_converter
 {
 	name  "buildings/resources/resource_converter"
 
@@ -16,6 +16,7 @@ EntityBlueprint
 		require 			"headquarters"
 		//upgrade				"buildings/resources/resource_converter_cobalt_lvl_2"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
+		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
 
 		costs
 		{
@@ -230,9 +231,9 @@ EntityBlueprint
 		type	"quad"
 		color 
 		{
-			x "0"
-			y "0"
-			z "1"
+			x "0.5"  // r
+			y "0.5"  // g
+			z "1"    // b
 			w "1"
 		}
 		size
@@ -459,7 +460,7 @@ EntityBlueprint
 				}
 				Effect
 				{
-					blueprint "effects/buildings_main/rift_ball"
+					blueprint "effects/buildings_and_machines/spark_ball_blue"
 					bone "ball"
 				}
 			}
@@ -467,7 +468,7 @@ EntityBlueprint
 	}
 }
 
-EntityBlueprint
+EntityBlueprint  //resource_converter_cobalt
 {
 	name  "buildings/resources/resource_converter_cobalt"
 	//base_blueprint "buildings/resources/resource_converter" // cannot reuse an existing building if it is in a different building_group
@@ -486,6 +487,7 @@ EntityBlueprint
 		require 			"headquarters"
 		//upgrade				"buildings/resources/resource_converter_cobalt_lvl_2"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
+		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
 
 		costs
 		{
@@ -524,7 +526,7 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 		"morphium"
-				value 			"200"
+				value 			"100"
 				attachment		"att_in_1"
 			}
 			
@@ -700,9 +702,9 @@ EntityBlueprint
 		type	"quad"
 		color 
 		{
-			x "0"
-			y "0"
-			z "1"
+			x "0.7"
+			y "0.7"
+			z "0.7"
 			w "1"
 		}
 		size
@@ -841,11 +843,11 @@ EntityBlueprint
 		{
 			"buildings/effects_medium_base"
 		}	
-		////////////////////////Resources/////////////////////////		
+		////////////////////////Resources/////////////////////////
 		EffectGroup
 		{
 			group "att_in_1"
-			enabled "0"				
+			enabled "0"
 			delay "0"
 			
 			Effects
@@ -860,7 +862,7 @@ EntityBlueprint
 		EffectGroup
 		{
 			group "att_in_2"
-			enabled "0"				
+			enabled "0"
 			delay "0"
 			
 			Effects
@@ -872,7 +874,7 @@ EntityBlueprint
 				}
 			}
 		}
-		////////////////////////MISC/////////////////////////	
+		////////////////////////MISC/////////////////////////
 		EffectGroup
 		{
 			group "vismod"
@@ -930,20 +932,15 @@ EntityBlueprint
 				}
 				Effect
 				{
-					blueprint "effects/buildings_main/rift_ball"
+					blueprint "effects/buildings_and_machines/spark_ball_blue"
 					bone "ball"
-				}
-				Effect
-				{
-					blueprint "effects/buildings_and_machines/ionized_sphere"
-					bone "att_vismod_top"
 				}
 			}
 		}
 	}
 }
 
-EntityBlueprint
+EntityBlueprint  //resource_converter_palladium
 {
 	name  "buildings/resources/resource_converter_palladium"
 	//base_blueprint "buildings/resources/resource_converter"  // cannot reuse an existing building if it is in a different building_group
@@ -1176,9 +1173,9 @@ EntityBlueprint
 		type	"quad"
 		color 
 		{
-			x "0"
-			y "0"
-			z "1"
+			x "0.5"  // r
+			y "0.5"  // g
+			z "1"    // b
 			w "1"
 		}
 		size
@@ -1406,7 +1403,7 @@ EntityBlueprint
 				}
 				Effect
 				{
-					blueprint "effects/buildings_main/rift_ball"
+					blueprint "effects/buildings_and_machines/spark_ball_orange"
 					bone "ball"
 				}
 			}
@@ -1414,7 +1411,7 @@ EntityBlueprint
 	}
 }
 
-EntityBlueprint
+EntityBlueprint  //resource_converter_titanium
 {
 	name  "buildings/resources/resource_converter_titanium"
 	//base_blueprint "buildings/resources/resource_converter"  // cannot reuse an existing building if it is in a different building_group
@@ -1433,6 +1430,7 @@ EntityBlueprint
 		require 			"headquarters"
 		//upgrade				"buildings/resources/resource_converter_cobalt_lvl_2"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
+		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
 
 		costs
 		{
@@ -1647,9 +1645,9 @@ EntityBlueprint
 		type	"quad"
 		color 
 		{
-			x "0"
-			y "0"
-			z "1"
+			x "0.5"  // r
+			y "0.5"  // g
+			z "1"    // b
 			w "1"
 		}
 		size
@@ -1819,7 +1817,7 @@ EntityBlueprint
 				}
 			}
 		}
-		////////////////////////MISC/////////////////////////	
+		////////////////////////MISC/////////////////////////
 		EffectGroup
 		{
 			group "vismod"
@@ -1877,8 +1875,294 @@ EntityBlueprint
 				}
 				Effect
 				{
-					blueprint "effects/buildings_main/rift_ball"
+					blueprint "effects/buildings_and_machines/spark_ball_violet"
 					bone "ball"
+				}
+			}
+		}
+	}
+}
+
+
+EntityBlueprint  // resource_converter_cobalt_ghost
+{
+	name  "buildings/resources/resource_converter_cobalt_ghost"
+
+	MeshDesc
+	{
+		mesh 		"meshes/buildings/main/fusion_field_accelerator.mesh"
+		material 	"selector/hologram_blue"
+	}
+	
+	SkeletonDesc
+	{
+		name "meshes/buildings/resources/resource_converter"
+	}
+
+	EffectDesc
+	{
+		////////////////////////Resources/////////////////////////		
+		EffectGroup
+		{
+			group "att_in_1"
+			enabled "0"				
+			delay "0"
+			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/building_arrow"
+					bone "att_in_1_arrow"
+				}
+			}
+		}
+		EffectGroup
+		{
+			group "att_in_2"
+			enabled "0"				
+			delay "0"
+			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/building_arrow"
+					bone "att_in_2_arrow"
+				}
+			}
+		}
+		////////////////////////MISC/////////////////////////	
+		EffectGroup
+		{
+			group "vismod"
+			enabled "1"
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/pipe_ghost"
+					bone 	"att_in_1_pipe"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/pipe_ghost"
+					bone 	"att_in_2_pipe"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/morphium_power_ghost"
+					bone "att_vismod_1"
+					scale "0.6 0.8 0.6"
+					offset "0.0 -3.9 0.0"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/scifi_structure_very_small_03_ghost"
+					bone "att_vismod_2"
+					scale "0.8 0.8 0.8"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/scifi_structure_very_small_03_ghost"
+					bone "att_vismod_3"
+					scale "0.8 0.8 0.8"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/minipipes_ghost"
+					bone "att_vismod_4"
+					scale "0.8 0.8 0.8"
+				}
+			}
+		}
+	}
+}
+
+EntityBlueprint  // resource_converter_palladium_ghost
+{
+	name  "buildings/resources/resource_converter_palladium_ghost"
+
+	MeshDesc
+	{
+		mesh 		"meshes/buildings/main/fusion_field_accelerator.mesh"
+		material 	"selector/hologram_blue"
+	}
+	
+	SkeletonDesc
+	{
+		name "meshes/buildings/resources/resource_converter"
+	}
+
+	EffectDesc
+	{
+		////////////////////////Resources/////////////////////////		
+		EffectGroup
+		{
+			group "att_in_1"
+			enabled "0"				
+			delay "0"
+			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/building_arrow"
+					bone "att_in_1_arrow"
+				}
+			}
+		}
+		EffectGroup
+		{
+			group "att_in_2"
+			enabled "0"				
+			delay "0"
+			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/building_arrow"
+					bone "att_in_2_arrow"
+				}
+			}
+		}
+		////////////////////////MISC/////////////////////////	
+		EffectGroup
+		{
+			group "vismod"
+			enabled "1"
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/pipe_ghost"
+					bone 	"att_in_1_pipe"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/pipe_ghost"
+					bone 	"att_in_2_pipe"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/morphium_power_ghost"
+					bone "att_vismod_1"
+					scale "0.6 0.8 0.6"
+					offset "0.0 -3.9 0.0"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/scifi_structure_very_small_03_ghost"
+					bone "att_vismod_2"
+					scale "0.8 0.8 0.8"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/scifi_structure_very_small_03_ghost"
+					bone "att_vismod_3"
+					scale "0.8 0.8 0.8"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/minipipes_ghost"
+					bone "att_vismod_4"
+					scale "0.8 0.8 0.8"
+				}
+			}
+		}
+	}
+}
+
+EntityBlueprint  // resource_converter_titanium_ghost
+{
+	name  "buildings/resources/resource_converter_titanium_ghost"
+
+	MeshDesc
+	{
+		mesh 		"meshes/buildings/main/fusion_field_accelerator.mesh"
+		material 	"selector/hologram_blue"
+	}
+	
+	SkeletonDesc
+	{
+		name "meshes/buildings/resources/resource_converter"
+	}
+
+	EffectDesc
+	{
+		////////////////////////Resources/////////////////////////		
+		EffectGroup
+		{
+			group "att_in_1"
+			enabled "0"				
+			delay "0"
+			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/building_arrow"
+					bone "att_in_1_arrow"
+				}
+			}
+		}
+		EffectGroup
+		{
+			group "att_in_2"
+			enabled "0"				
+			delay "0"
+			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/building_arrow"
+					bone "att_in_2_arrow"
+				}
+			}
+		}
+		////////////////////////MISC/////////////////////////	
+		EffectGroup
+		{
+			group "vismod"
+			enabled "1"
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/pipe_ghost"
+					bone 	"att_in_1_pipe"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/pipe_ghost"
+					bone 	"att_in_2_pipe"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/morphium_power_ghost"
+					bone "att_vismod_1"
+					scale "0.6 0.8 0.6"
+					offset "0.0 -3.9 0.0"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/scifi_structure_very_small_03_ghost"
+					bone "att_vismod_2"
+					scale "0.8 0.8 0.8"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/scifi_structure_very_small_03_ghost"
+					bone "att_vismod_3"
+					scale "0.8 0.8 0.8"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/minipipes_ghost"
+					bone "att_vismod_4"
+					scale "0.8 0.8 0.8"
 				}
 			}
 		}
