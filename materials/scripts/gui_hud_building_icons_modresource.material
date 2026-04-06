@@ -34,6 +34,39 @@ material "gui/hud/building_icons/solid_material_storage_basic_disabled" : gui/de
 	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/solid_material_storage_disabled.dds"
 }
 
+
+/////  large_solid_material_storage
+
+material "gui/hud/building_icons/large_solid_material_storage_basic" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/large_solid_material_storage_basic.dds"
+}
+
+material "gui/hud/building_icons/large_solid_material_storage_basic_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/large_solid_material_storage_lvl3_disabled.dds"
+}
+
+material "gui/hud/building_icons/large_solid_material_storage_other" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/large_solid_material_storage_other.dds"
+}
+
+material "gui/hud/building_icons/large_solid_material_storage_other_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/large_solid_material_storage_lvl2_disabled.dds"
+}
+
+material "gui/hud/building_icons/large_solid_material_storage_rare" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/large_solid_material_storage_rare.dds"
+}
+
+material "gui/hud/building_icons/large_solid_material_storage_basic_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/large_solid_material_storage_disabled.dds"
+}
+
 material "gui/hud/building_icons/solid_material_storage_underground" : gui/default
 {
 	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/solid_material_storage_underground.dds"
@@ -43,7 +76,6 @@ material "gui/hud/building_icons/solid_material_storage_underground_disabled" : 
 {
 	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/mining_elevator_disabled.dds"
 }
-
 
 
 /////  liquid_pumpjack
@@ -273,6 +305,26 @@ material "gui/hud/building_icons/resource_converter_titanium" : gui/default
 }
 
 material "gui/hud/building_icons/resource_converter_titanium_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/resource_converter_disabled.dds"
+}
+
+material "gui/hud/building_icons/resource_converter_uranium_depleted" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/resource_converter_uranium_depleted.dds"
+}
+
+material "gui/hud/building_icons/resource_converter_uranium_depleted_disabled" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/resource_converter_disabled.dds"
+}
+
+material "gui/hud/building_icons/resource_converter_uranium" : gui/default
+{
+	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/resource_converter_uranium.dds"
+}
+
+material "gui/hud/building_icons/resource_converter_uranium_disabled" : gui/default
 {
 	set_texture_alias diffuse	"materials/textures/gui/hud/building_icons/resource_converter_disabled.dds"
 }
@@ -678,6 +730,29 @@ material "gui/hud/building_icons/supercoolant_chem_plant_lvl_3_disabled" : gui/d
 }
 
 
+/////  moisture_trap
+
+material "gui/hud/building_icons/moisture_trap" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/moisture_trap.dds"
+}
+
+material "gui/hud/building_icons/moisture_trap_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/fluorine_trap_disabled.dds"
+}
+
+material "gui/hud/building_icons/moisture_trap_lvl_2" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/moisture_trap_lvl_2.dds"
+}
+
+material "gui/hud/building_icons/moisture_trap_lvl_2_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/fluorine_trap_disabled.dds"
+}
+
+
 /////  fluorine_trap
 
 material "gui/hud/building_icons/fluorine_trap" : gui/default
@@ -970,6 +1045,26 @@ material "gui/hud/building_icons/heavy_water_plant_disabled" : gui/default
 	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/laboratory_disabled.dds"
 }
 
+material "gui/hud/building_icons/heavy_water_plant_lvl_2" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/heavy_water_plant_lvl_2.dds"
+}
+
+material "gui/hud/building_icons/heavy_water_plant_lvl_2_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/laboratory_disabled.dds"
+}
+
+material "gui/hud/building_icons/heavy_water_plant_lvl_3" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/heavy_water_plant_lvl_3.dds"
+}
+
+material "gui/hud/building_icons/heavy_water_plant_lvl_3_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/laboratory_disabled.dds"
+}
+
 
 /////  biomass_plant_press, biomass_morphed_press, biomass_water_press
 
@@ -993,6 +1088,16 @@ material "gui/hud/building_icons/biomass_plant_press_lvl_2_disabled" : gui/defau
 	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/animal_biomass_powerplant_disabled.dds"
 }
 
+material "gui/hud/building_icons/biomass_plant_press_lvl_3" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/biomass_plant_press_lvl_3.dds"
+}
+
+material "gui/hud/building_icons/biomass_plant_press_lvl_3_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/animal_biomass_powerplant_disabled.dds"
+}
+
 
 material "gui/hud/building_icons/biomass_morphed_press" : gui/default
 {
@@ -1010,6 +1115,16 @@ material "gui/hud/building_icons/biomass_morphed_press_lvl_2" : gui/default
 }
 
 material "gui/hud/building_icons/biomass_morphed_press_lvl_2_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/animal_biomass_powerplant_disabled.dds"
+}
+
+material "gui/hud/building_icons/biomass_morphed_press_lvl_3" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/biomass_morphed_press_lvl_3.dds"
+}
+
+material "gui/hud/building_icons/biomass_morphed_press_lvl_3_disabled" : gui/default
 {
 	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/animal_biomass_powerplant_disabled.dds"
 }
@@ -1056,6 +1171,16 @@ material "gui/hud/building_icons/biomass_oil_press_lvl_2_disabled" : gui/default
 	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/animal_biomass_powerplant_disabled.dds"
 }
 
+material "gui/hud/building_icons/biomass_oil_press_lvl_3" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/biomass_oil_press_lvl_3.dds"
+}
+
+material "gui/hud/building_icons/biomass_oil_press_lvl_3_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/animal_biomass_powerplant_disabled.dds"
+}
+
 
 material "gui/hud/building_icons/biomass_mycelium_press" : gui/default
 {
@@ -1073,6 +1198,16 @@ material "gui/hud/building_icons/biomass_mycelium_press_lvl_2" : gui/default
 }
 
 material "gui/hud/building_icons/biomass_mycelium_press_lvl_2_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/animal_biomass_powerplant_disabled.dds"
+}
+
+material "gui/hud/building_icons/biomass_mycelium_press_lvl_3" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/biomass_mycelium_press_lvl_3.dds"
+}
+
+material "gui/hud/building_icons/biomass_mycelium_press_lvl_3_disabled" : gui/default
 {
 	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/animal_biomass_powerplant_disabled.dds"
 }
@@ -1156,5 +1291,71 @@ material "gui/hud/building_icons/thermal_ion_charger_lvl_3_disabled" : gui/defau
 	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/thermal_ion_charger_disabled.dds"
 }
 
+
+
+/////  morphium_factory
+
+material "gui/hud/building_icons/morphium_factory" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/morphium_factory.dds"
+}
+
+material "gui/hud/building_icons/morphium_factory_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/morphium_factory_disabled.dds"
+}
+
+material "gui/hud/building_icons/morphium_factory_lvl_2" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/morphium_factory_lvl2.dds"
+}
+
+material "gui/hud/building_icons/morphium_factory_lvl_2_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/morphium_factory_disabled.dds"
+}
+
+material "gui/hud/building_icons/morphium_factory_lvl_3" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/morphium_factory_lvl3.dds"
+}
+
+material "gui/hud/building_icons/morphium_factory_lvl_3_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/morphium_factory_disabled.dds"
+}
+
+
+/////  resin_factory
+
+material "gui/hud/building_icons/resin_factory" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/resin_factory_lvl1.dds"
+}
+
+material "gui/hud/building_icons/resin_factory_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/resin_factory_disabled.dds"
+}
+
+material "gui/hud/building_icons/resin_factory_lvl_2" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/resin_factory_lvl2.dds"
+}
+
+material "gui/hud/building_icons/resin_factory_lvl_2_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/resin_factory_disabled.dds"
+}
+
+material "gui/hud/building_icons/resin_factory_lvl_3" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/resin_factory_lvl3.dds"
+}
+
+material "gui/hud/building_icons/resin_factory_lvl_3_disabled" : gui/default
+{
+	set_texture_alias diffuse "materials/textures/gui/hud/building_icons/resin_factory_disabled.dds"
+}
 
 

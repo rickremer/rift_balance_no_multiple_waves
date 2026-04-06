@@ -13,10 +13,10 @@ EntityBlueprint  // fusion_powerplant
 		type				"pipe"
 		require 			"headquarters"
 		upgrade				"buildings/energy/fusion_powerplant_lvl_2"
-		order				"12"	
+		order				"12"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
 		going_green_state	"1"
-		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless,fusion_powerplant_lvl_2,fusion_powerplant_lvl_3"
+		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless,fusion_powerplant,fusion_powerplant_lvl_2,fusion_powerplant_lvl_3"
 		
 		costs
 		{
@@ -58,7 +58,7 @@ EntityBlueprint  // fusion_powerplant
 			GameplayResource
 			{
 				resource 	"deuterium"
-				value 		"5"
+				value 		"10"
 				attachment	"att_in_1"
 				family		"fuel"
 			}
@@ -69,7 +69,14 @@ EntityBlueprint  // fusion_powerplant
 				value 		"100"
 				attachment	"att_in_2|att_in_3"
 				family		"coolant"
-			}				
+			}
+			GameplayResource
+			{
+				resource 	"morphium"
+				value 		"50"
+				attachment	"att_in_2|att_in_3"
+				family		"coolant"
+			}
 			GameplayResource
 			{
 				resource 	"supercoolant"
@@ -151,12 +158,17 @@ EntityBlueprint  // fusion_powerplant
 	
 	LuaDesc
 	{
-		script "lua/buildings/building.lua"
+		script "lua/buildings/building_buffable.lua"
 				
 		database
 		{
-			cone_effect			string:"build_cone_4x4"
-			cone_effect_sell	string:"sell_big"
+			cone_effect					string:"build_cone_4x4"
+			cone_effect_sell			string:"sell_big"
+			buff_buildings				string:"buildings/main/rift_magnetic_stabilizer,buildings/main/rift_magnetic_stabilizer_alien"
+			buff_localization			string:"buff_name/buff_magnetic_stabilizer"
+			buff_icon					string:"gui/hud/building_icons/rift_magnetic_stabilizer"
+			display_radius_group		string:"magnetic_stabilizer"
+			display_radius_blueprint	string:"effects/decals/range_circle_repair"
 		}
 		
 	}

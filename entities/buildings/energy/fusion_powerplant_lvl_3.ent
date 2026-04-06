@@ -9,16 +9,14 @@ EntityBlueprint  // fusion_powerplant_lvl_3
 		bp   				"buildings/energy/fusion_powerplant_lvl_3"
 		category 			"energy"
 		localization_id		"gui/hud/building_name/fusion_powerplant"
-		description			"gui/hud/building_description/fusion_powerplant"
+		description			"gui/hud/building_description/fusion_powerplant_lvl_3_new"
 		menu_icon			"gui/hud/building_icons/fusion_powerplant_lvl3"
 		type				"pipe"
 		require 			"headquarters"
-		//upgrade				"buildings/energy/fusion_powerplant_lvl_4"	
-		order				"5"		
 		buildable			"0"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
 		going_green_state	"1"
-		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless,fusion_powerplant_lvl_2"
+		overrides			"pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless,fusion_powerplant,fusion_powerplant_lvl_2,fusion_powerplant_lvl_3"
 
 		costs
 		{
@@ -51,13 +49,13 @@ EntityBlueprint  // fusion_powerplant_lvl_3
 	}
 
 	ResourceConverterDesc
-	{                                       
+	{
 		in
 		{
 			GameplayResource
 			{
 				resource 	"deuterium"
-				value 		"7"
+				value 		"15"
 				attachment	"att_in_1"
 				family		"fuel"
 			}
@@ -109,6 +107,26 @@ EntityBlueprint  // fusion_powerplant_lvl_3
 		}
 	}
 
+	LuaDesc
+	{
+		script "lua/buildings/building_buffable.lua"
+				
+		database
+		{
+			cone_effect					string:"build_cone_4x4"
+			cone_effect_sell			string:"sell_big"
+			buff_buildings				string:"buildings/main/rift_magnetic_stabilizer,buildings/main/rift_magnetic_stabilizer_alien"
+			buff_required_bp			string:"buildings/resources/magnetic_stabilizer_missing_icon"
+			buff_required_name			string:"magnetic_stabilizer"
+			buff_required_level			int:"0"
+			buff_localization			string:"buff_name/buff_magnetic_stabilizer"
+			buff_icon					string:"gui/hud/building_icons/rift_magnetic_stabilizer"
+			display_radius_group		string:"magnetic_stabilizer"
+			display_radius_blueprint	string:"effects/decals/range_circle_repair"
+		}
+		
+	}
+	
 	HealthDesc
 	{
 		max_health 					"4500"

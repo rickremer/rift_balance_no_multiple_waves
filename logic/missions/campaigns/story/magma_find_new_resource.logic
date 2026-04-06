@@ -836,8 +836,7 @@ FlowGraphTemplate
 					IntData
 					{
 						key "progress_max"
-		-- REDINMA 2:44 PM Friday, Dec 26, 2025: return objective value to vanilla value
-						value "500"
+						value "500"	-- REDINMA 2:44 PM Friday, Dec 26, 2025: return objective value to vanilla value
 					}
 
 					IntData

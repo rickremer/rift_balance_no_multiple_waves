@@ -1,4 +1,4 @@
-EntityBlueprint
+EntityBlueprint  // tower_water_big_lvl_2
 {
 	name  "buildings/defense/tower_water_big_lvl_2"
 	base_blueprint "buildings/defense/tower_water_big"
@@ -18,10 +18,10 @@ EntityBlueprint
 		overrides			"tower,wall"
 		upgrade				"buildings/defense/tower_water_big_lvl_3"
 		building_functionality	"BUILD_ON_WATER|NO_FOUNDATION"
-		resource_requirement "water_vein|sludge_vein|mud_vein|magma_vein|morphium_vein"
+		resource_requirement	"water_vein|sludge_vein|mud_vein|morphium_vein|supercoolant_vein"
 		radius_name				"water_tower"
 		min_radius				"15"
-		min_radius_effect   	"voice_over/announcement/building_too_close"		
+		min_radius_effect	 	"voice_over/announcement/building_too_close"
 
 		costs
 		{
@@ -52,9 +52,8 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 	"ferdonite"
-				-- REDINMA Jan-01-2026: agree with cost but 3 is too much for a rare resource
-				value 		"0.01"
-			}
+				-- REDINMA Jan-01-2026: agree with some cost but 3 is too much for a rare resource
+				value 		"0.2"	-- REDINMA Apr-6-2026: .01 caused crash on mouseover, .1/.2/.3
 		}
 		
 		out
@@ -64,46 +63,13 @@ EntityBlueprint
 		priority 6
 	}
 	
-	children
-	{
-		EntityBlueprint
-		{
-			name "buildings/defense/tower_water_big_lvl_2_pipeline"
-			
-			PipeComponent
-			{
-				attachment		"att_in_1,att_in_2"
-			}
-
-			ResourceStorageDesc
-			{
-				Storages
-				{
-					Storage
-					{
-						group	 		"local"
-						max 	 		"20"
-						attachment		"att_in_1|att_in_2"
-					}
-
-				}
-			}
-
-			SkeletonDesc
-			{
-				name "meshes/buildings/defense/tower_water_big_lvl_2"
-			}
-
-		}
-	}
-	
 	HealthDesc
 	{
 		max_health 					"2500"
 		health 						"2500"
 		regeneration 				"0"
 		regeneration_cooldown 		"0"
-		 is_manual 1
+		is_manual 1
 		update_health_uniform 		"1"
 
 
@@ -280,10 +246,10 @@ EntityBlueprint  // tower_ice_big_lvl_2
 		type				"tower"
 		overrides			"tower,wall,pipe_ground,pipe_connector_t,pipe_connector_x,pipe_corner,pipeline,pipe_straight_windowless"
 		upgrade				"buildings/defense/tower_ice_big_lvl_3"
-		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
+		exclude_terrain_types	"magma_hot_ground,magma_very_hot_ground"
 		radius_name				"water_tower"
 		min_radius				"15"
-		min_radius_effect   	"voice_over/announcement/building_too_close"
+		min_radius_effect		"voice_over/announcement/building_too_close"
 
 		costs
 		{
@@ -313,7 +279,8 @@ EntityBlueprint  // tower_ice_big_lvl_2
 			GameplayResource
 			{
 				resource 	"ferdonite"
-				value 		"3"
+				-- REDINMA Jan-01-2026: agree with some cost but 3 is too much for a rare resource
+				value 		"0.1"	-- REDINMA Apr-6-2026: forgot to change this one before
 			}
 			GameplayResource
 			{
@@ -336,6 +303,39 @@ EntityBlueprint  // tower_ice_big_lvl_2
 		}
 	
 		priority 6
+	}
+	
+	children
+	{
+		EntityBlueprint
+		{
+			name "buildings/defense/tower_water_big_lvl_2_pipeline"
+			
+			PipeComponent
+			{
+				attachment		"att_in_1,att_in_2"
+			}
+
+			ResourceStorageDesc
+			{
+				Storages
+				{
+					Storage
+					{
+						group	 		"local"
+						max 	 		"20"
+						attachment		"att_in_1|att_in_2"
+					}
+
+				}
+			}
+
+			SkeletonDesc
+			{
+				name "meshes/buildings/defense/tower_water_big_lvl_2"
+			}
+
+		}
 	}
 	
 	WeaponItemDesc

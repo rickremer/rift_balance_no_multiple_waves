@@ -288,7 +288,7 @@ EntityBlueprint  // laboratory_lvl_3
 		EffectGroup
 		{
 			group "working"
-			enabled "0"				
+			enabled "0"
 			
 			Effects
 			{
@@ -308,7 +308,7 @@ EntityBlueprint  // laboratory_lvl_3
 				Effect
 				{
 					blueprint "effects/buildings_and_machines/level_3"
-					bone "att_level_a"	-- REDINMA Jan-01-2026: was "att_level", not in _5 looks like typo...
+					bone "att_level_a"
 				}
 			}
 		}		

@@ -268,7 +268,7 @@ EntityBlueprint  // laboratory_lvl_2
 				Effect
 				{
 					blueprint "effects/buildings_and_machines/level_2"
-					bone "att_level_a"	-- REDINMA Jan-01-2026: was "att_level", not in _5 looks like typo...
+					bone "att_level_a"
 				}
 			}
 		}		

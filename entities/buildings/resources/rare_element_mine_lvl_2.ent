@@ -1,4 +1,4 @@
-EntityBlueprint
+EntityBlueprint  // rare_element_mine_lvl_2
 {
 	name  "buildings/resources/rare_element_mine_lvl_2"
 
@@ -13,7 +13,7 @@ EntityBlueprint
 		description			"gui/hud/building_description/mining_drill_lvl_2"
 		menu_icon			"gui/hud/building_icons/rare_element_mine_lvl2"
 		order				"3"
-		upgrade				"buildings/resources/rare_element_mine_lvl_3"		
+		upgrade				"buildings/resources/rare_element_mine_lvl_3"
 		//require 			"headquarters"
 		buildable			"0"
 		building_group		"carbonium_factory"
@@ -199,6 +199,8 @@ EntityBlueprint
 			buff_required_bp			string:"buildings/resources/ore_mill_missing_icon"
 			buff_required_name			string:"ore_mill"
 			buff_required_level			int:"0"
+			buff_localization			string:"buff_name/buff_ore_mill"
+			buff_icon					string:"gui/hud/building_icons/ore_mill"
 			display_radius_group		string:"ore_mill"
 			display_radius_blueprint	string:"effects/decals/range_circle_repair"
 		}
@@ -303,7 +305,7 @@ EntityBlueprint
 	}
 
 	EffectDesc
-	{		
+	{
 		EffectBaseBlueprints
 		{
 			"buildings/effects_medium_base"
@@ -311,36 +313,36 @@ EntityBlueprint
 		EffectGroup
 		{
 			group "att_in_1"
-			enabled "0"				
+			enabled "0"
 			delay "0"
 			
 			Effects
 			{
 				Effect
 				{
-					blueprint "effects/buildings_and_machines/building_arrow"								
+					blueprint "effects/buildings_and_machines/building_arrow"
 					bone "att_in_arrow"
 				}
 			}
 		}	
-		////////////////////////MISC/////////////////////////			
+		////////////////////////MISC/////////////////////////
 		EffectGroup
 		{
 			group "working"
-			enabled "0"				
+			enabled "0"
 			
 			Effects
 			{
 				Effect
 				{
-					blueprint "effects/buildings_and_machines/gas_chimney_small"								
+					blueprint "effects/buildings_and_machines/gas_chimney_small"
 					bone "att_chimney_1"
 				}
 				Effect
 				{
-					blueprint "effects/buildings_resources/rare_element_mine_working"	
-					delay "0.5"					
-				}				
+					blueprint "effects/buildings_resources/rare_element_mine_working"
+					delay "0.5"
+				}
 			}
 		}		
 		EffectGroup
@@ -367,6 +369,6 @@ EntityBlueprint
 				//	scale 0.7 0.7 0.7
 				//}
 			}
-		}		
-	}		
+		}
+	}
 }

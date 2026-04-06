@@ -48,7 +48,7 @@ EntityBlueprint  // reagent_condenser
 			GameplayResource
 			{
 				resource 			"hazenite"
-				value			 	"1"
+				value			 	"0.1"	-- REDINMA Mar-28-2026 resource upkeep / 10
 			}
 			
 			GameplayResource
@@ -455,7 +455,7 @@ EntityBlueprint  // reagent_condenser_lvl_2
 			GameplayResource
 			{
 				resource 			"hazenite"
-				value			 	"1"
+				value			 	"0.1"	-- REDINMA Mar-28-2026 resource upkeep / 10
 			}
 			
 			GameplayResource
@@ -663,7 +663,7 @@ EntityBlueprint  // reagent_condenser_lvl_3
 			GameplayResource
 			{
 				resource 			"hazenite"
-				value			 	"1"
+				value			 	"0.1"	-- REDINMA Mar-28-2026 resource upkeep / 10
 			}
 			
 			GameplayResource

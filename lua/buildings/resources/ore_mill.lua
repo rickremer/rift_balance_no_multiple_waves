@@ -1,3 +1,5 @@
+-- renamed to buff_source for other buildings to reuse. this file may still be used by save files from 0.3.11 or earlier versions
+
 local building = require("lua/buildings/building.lua")
 require("lua/utils/table_utils.lua")
 

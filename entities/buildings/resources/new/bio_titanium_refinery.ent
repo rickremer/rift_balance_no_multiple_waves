@@ -772,7 +772,7 @@ EntityBlueprint  // bio_titanium_refinery_lvl_3
 			GameplayResource
 			{
 				resource 	"ferdonite"
-				value 		"1"
+				value 		"0.1"	-- REDINMA Mar-28-2026 resource upkeep / 10
 			}
 		}
 		

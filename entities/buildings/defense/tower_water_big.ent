@@ -17,7 +17,7 @@ EntityBlueprint  // tower_water_big
 		upgrade				"buildings/defense/tower_water_big_lvl_2"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
 		building_functionality	"BUILD_ON_WATER|NO_FOUNDATION"
-		resource_requirement "water_vein|sludge_vein|mud_vein|morphium_vein"
+		resource_requirement "water_vein|sludge_vein|mud_vein|morphium_vein|supercoolant_vein"
 		radius_name				"water_tower"
 		min_radius				"15"
 		min_radius_effect   	"voice_over/announcement/building_too_close"
@@ -51,8 +51,8 @@ EntityBlueprint  // tower_water_big
 			GameplayResource
 			{
 				resource 	"ferdonite"
-				-- REDINMA Jan-01-2026: agree with cost but 3 is too much for a rare resource
-				value 		"0.01"
+				-- REDINMA Jan-01-2026: agree with some cost but 3 is too much for a rare resource
+				value 		"0.1"	-- REDINMA Apr-6-2026: .01 caused crash on mouseover, .1/.2/.3
 			}
 		}
 		
@@ -69,9 +69,10 @@ EntityBlueprint  // tower_water_big
 
 		database
 		{
-			cone_effect			string:"build_cone_1x1"
-			cone_effect_sell	string:"sell_small"
-			time_machine		int:"0"
+			standby_upkeep_factor	float:"0.1"
+			cone_effect				string:"build_cone_1x1"
+			cone_effect_sell		string:"sell_small"
+			time_machine			int:"0"
 		}
 
 	}
@@ -489,7 +490,8 @@ EntityBlueprint  // tower_ice_big
 			GameplayResource
 			{
 				resource 	"ferdonite"
-				value 		"3"
+				-- REDINMA Jan-01-2026: agree with some cost but 3 is too much for a rare resource
+				value 		"0.1"	-- REDINMA Apr-6-2026: forgot to change this one before
 			}
 			GameplayResource
 			{

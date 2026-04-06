@@ -1,4 +1,4 @@
-EntityBlueprint  // repair_facility_lvl_3s
+EntityBlueprint  // repair_facility_lvl_3
 {
 	name  					"buildings/defense/repair_facility_lvl_3"
 	base_blueprint 			"buildings/defense/repair_facility_lvl_2"
@@ -71,23 +71,23 @@ EntityBlueprint  // repair_facility_lvl_3s
 		{
 			GameplayResource
 			{
-				resource 			"energy"
-				value			 	"60"
-			}
-			
-			GameplayResource
-			{
-				resource 	"flammable_gas"
-				value 		"10"
-				family		"fuel"
-				attachment	"att_in_1"
+				resource	"energy"
+				value		"50"
 			}
 			
 			GameplayResource
 			{
 				resource 	"reagent"
 				value 		"2"
-				family		"fuel"
+				family		"onigel"
+				attachment	"att_in_1"
+			}
+			
+			GameplayResource
+			{
+				resource 	"fissonium"
+				value 		"1"
+				family		"onigel"
 				attachment	"att_in_1"
 			}
 			
@@ -105,11 +105,13 @@ EntityBlueprint  // repair_facility_lvl_3s
 			cone_effect_sell		string:"sell_big"
 			energy_cost				float:"10"
 
-			drone_search_radius 	float:"45"
-			drone_blueprint			string:"units/drones/drone_repair_facility_lvl_3"
-			drone_attachments		string:"att_landing"
-			drone_per_spot			int:"5"
-			drone_visible_on_spot 	int:"0"
+			drone_search_radius			float:"45"
+			drone_own_search_radius		float:"10"
+			drone_full_search_interval	int:"5"
+			drone_blueprint				string:"units/drones/drone_repair_facility_lvl_3"
+			drone_attachments			string:"att_landing"
+			drone_per_spot				int:"5"
+			drone_visible_on_spot		int:"0"
 
 			display_radius_blueprint string:"effects/decals/range_circle_repair"
 			display_radius_group	 string:"repair_tower"
@@ -223,7 +225,7 @@ EntityBlueprint  // repair_facility_lvl_3s
 		EffectGroup
 		{
 			group "att_in_1"
-			enabled "0"				
+			enabled "0"
 			delay "0"
 			
 			Effects

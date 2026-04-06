@@ -158,10 +158,9 @@ function dom_mananger:init()
 	end
 	self.prepAttacks = self.rules.prepareAttacks
 
-	local currentDifficulty = DifficultyService:GetCurrentDifficultyName()
-
-	if ( currentDifficulty == "sandbox" ) then
-		self:VerboseLog(" sandbox mode on - pausing attacks." )	
+	local waveStrength = DifficultyService:GetWaveStrength()
+	if ( waveStrength == "sandbox" ) then
+		LogService:Log(" sandbox mode on - pausing attacks." )	
 		self.pauseAttacks = true
 	end
 
@@ -286,6 +285,18 @@ function dom_mananger:OnLoad()
 	if ( self.rulesFile ~= nil ) then
 		self:VerboseLog("OnLoad - reloading rules." )
 
+		if string.find( self.rulesFile, "/campaigns/dlc_1/dom_template_" ) ~= nil then
+			self.rulesFile = string.gsub( self.rulesFile, "/campaigns/dlc_1/", "/campaigns/story/v2/metallic/" )
+		end
+
+		if string.find( self.rulesFile, "/campaigns/dlc_2/dom_template_" ) ~= nil then
+			self.rulesFile = string.gsub( self.rulesFile, "/campaigns/dlc_2/", "/campaigns/story/v2/caverns/" )
+		end
+
+		if string.find( self.rulesFile, "/campaigns/dlc_3/dom_template_" ) ~= nil then
+			self.rulesFile = string.gsub( self.rulesFile, "/campaigns/dlc_3/", "/campaigns/story/v2/swamp/" )
+		end
+
 		local rulesOldPath = self.rulesFile
 		local currentDifficultyName = DifficultyService:GetCurrentDifficultyName() 
 
@@ -317,6 +328,9 @@ function dom_mananger:OnLoad()
 		self.rules = ProcessRulesTable( require( self.rulesFile )( self.rulesParam ) )
 	end
 	
+	--self:VerboseLog( PrintTable( self.rules))
+	--self:VerboseLog( PrintTable( self.rules.multiplayerWaves))   -- waves extraWaves
+	
 	if ( self.version == nil ) then
 		self:RegisterHandler( event_sink, "StartUpgradingEvent",        	   "OnStartUpgradingEvent" )
 		self:UnregisterHandler( event_sink, "BuildingStartEvent",        	   "OnBuildingStartEvent" )
@@ -327,6 +341,12 @@ function dom_mananger:OnLoad()
 	self.player_death_position 	 = self.player_death_position or {}
 
 	self.rules = ProcessRulesTable( self.rules )
+
+	local waveStrength = DifficultyService:GetWaveStrength()
+	if ( waveStrength == "sandbox" ) then
+		LogService:Log(" sandbox mode on - pausing attacks." )	
+		self.pauseAttacks = true
+	end
 
 	self:VerboseLog("OnLoad - current hq state : " .. tostring( self.upgradeHQ:GetCurrentState() ) )
 	self:VerboseLog("OnLoad - current dom state : " .. tostring( self.spawner:GetCurrentState() ) )
@@ -779,7 +799,9 @@ function dom_mananger:AddAttackGroup( groupName )
 	else
 		self:VerboseLog( "AddAttackGroup : failed : " .. tostring( groupName ) .. " does not exist in rules.waves" )
 	end
-	self.availableEventGroups = self.availableAttackGroups -- ToDo: testing concept. not sure how to update for now
+	for group in Iter( self.availableAttackGroups ) do 
+		self.availableEventGroups[group] = true
+	end
 end
 
 function dom_mananger:RemoveAttackGroup( groupName )
@@ -802,7 +824,6 @@ function dom_mananger:RemoveAttackGroup( groupName )
 	else
 		self:VerboseLog( "RemoveAttackGroup : failed : " .. tostring( groupName ) .. " does not exist in rules.waves" )
 	end
-	self.availableEventGroups = self.availableAttackGroups -- ToDo: testing concept. not sure how to update for now
 end
 
 function dom_mananger:PauseDOM()
@@ -851,22 +872,22 @@ function dom_mananger:SetMaxDifficultyLevel( maxDifficultyLevel )
 
 	self.freezedDifficultyLevel = maxDifficultyLevel
 
-	self:VerboseLog( "OnLuaGlobalEvent : changed freezed difficulty level - " .. tostring( self.freezedDifficultyLevel ) )
+	self:VerboseLog( "OnLuaGlobalEvent: changed freezed difficulty level - " .. tostring( self.freezedDifficultyLevel ) )
 
 	if ( self.currentDifficultyLevel > self.freezedDifficultyLevel ) then
-		self:VerboseLog("OnLuaGlobalEvent : current difficulty level is higher than freezed one." )
+		self:VerboseLog("OnLuaGlobalEvent: current difficulty level is higher than freezed one." )
 
 		self.currentDifficultyLevel = self.freezedDifficultyLevel
 
-		self:VerboseLog("OnLuaGlobalEvent : current difficulty level is - " .. tostring( self.currentDifficultyLevel ) )
+		self:VerboseLog("OnLuaGlobalEvent: current difficulty level is - " .. tostring( self.currentDifficultyLevel ) )
 	end
 
 	if ( self.currentEventLevel > self.freezedDifficultyLevel ) then
-		self:VerboseLog("OnLuaGlobalEvent : current event level is higher than freezed one." )
+		self:VerboseLog("OnLuaGlobalEvent: current event level is higher than freezed one." )
 
 		self.currentEventLevel = self.freezedDifficultyLevel
 
-		self:VerboseLog("OnLuaGlobalEvent : current event level is - " .. tostring( self.currentEventLevel ) )
+		self:VerboseLog("OnLuaGlobalEvent: current event level is - " .. tostring( self.currentEventLevel ) )
 	end
 end
 
@@ -894,7 +915,7 @@ end
 
 function dom_mananger:OnStartUpgradingEvent( evt )
 	local buildingName = BuildingService:GetBuildingName( evt:GetEntity() );
-	local upgradeTime = BuildingService:CalculateBuildTime( evt:GetEntity() )
+	local upgradeTime = BuildingService:CalculateBuildTime( evt:GetEntity(), 0 )
 
 	for i = 1, #self.rules.buildingsUpgradeStartsLogic, 1 do 
 		if ( self.rules.buildingsUpgradeStartsLogic[i].name == buildingName ) then
@@ -1351,7 +1372,9 @@ function dom_mananger:OnEnterPrepareSpawn( state )
 				if ( multiplayerAttackCount > 0 ) then
 					wavePool = self:GetMultiplayerWavePool( self.currentDifficultyLevel )
 					self:PrepareWave( multiplayerAttackCount, borderSpawnPointGroupName, wavePool, "OnEnterPrepareSpawn: Prepare attack name : ", self.waitForSpawnTimer, self.preparedAttacks, self.preparedAttackMarkers )
+				else self:VerboseLog("Multiplayer attack count too low, skipping")
 				end
+			else self:VerboseLog("No multiplayer-waves available for current difficulty, skipping")
 			end
 		end
 	end
