@@ -51,8 +51,8 @@ EntityBlueprint  // tower_water_big
 			GameplayResource
 			{
 				resource 	"ferdonite"
-				-- REDINMA Jan-01-2026: agree with some cost but 3 is too much for a rare resource
-				value 		"0.1"	-- REDINMA Apr-6-2026: .01 caused crash on mouseover, .1/.2/.3
+				--
+				value 		"3"
 			}
 		}
 		
@@ -490,8 +490,8 @@ EntityBlueprint  // tower_ice_big
 			GameplayResource
 			{
 				resource 	"ferdonite"
-				-- REDINMA Jan-01-2026: agree with some cost but 3 is too much for a rare resource
-				value 		"0.1"	-- REDINMA Apr-6-2026: forgot to change this one before
+				--
+				value 		"3"
 			}
 			GameplayResource
 			{

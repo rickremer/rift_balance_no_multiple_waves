@@ -46,21 +46,21 @@ EntityBlueprint
 			{
 				resource 			"carbon_vein"
 				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0	-- REDINMA Apr-23-2026: temp increase
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"iron_vein"
 				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0	-- REDINMA Apr-23-2026: temp increase
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"ammonium_vein"
 				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0	-- REDINMA Apr-23-2026: temp increase
 				family				"resource"
 			}
 			
@@ -68,28 +68,28 @@ EntityBlueprint
 			{
 				resource 			"cobalt_vein"
 				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0	-- REDINMA Apr-23-2026: temp increase
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"palladium_vein"
 				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0	-- REDINMA Apr-23-2026: temp increase
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"titanium_vein"
 				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0	-- REDINMA Apr-23-2026: temp increase
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"uranium_ore_vein"
 				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0	-- REDINMA Apr-23-2026: temp increase
 				family				"resource"
 			}			
 		}

@@ -1,4 +1,4 @@
-EntityBlueprint
+EntityBlueprint  // uranium_centrifuge
 {
 	name  "buildings/resources/uranium_centrifuge"
 
@@ -54,7 +54,7 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 			"uranium_ore"
-				value				"2"
+				value				"1"
 			}			
 		}
 		out
@@ -62,13 +62,13 @@ EntityBlueprint
 			GameplayResource
 			{
 				resource 			"uranium_depleted"
-				value				"2"
+				value				"1"
 				optional			"1"
 			}
 			GameplayResource
 			{
 				resource 			"uranium"
-				value				"1"
+				value				"0.5"
 			}
 			
 		}		
@@ -309,6 +309,26 @@ EntityBlueprint
 		EffectBaseBlueprints
 		{
 			"buildings/effects_small_base"
+		}
+		////////////////////////MISC/////////////////////////
+		EffectGroup
+		{
+			group "working"
+			enabled "0"
+			
+			Effects
+			{
+				Effect
+				{
+					blueprint "effects/buildings_energy/morphium_powerplant_working"
+					delay "0.5"
+				}
+				Effect
+				{
+					blueprint "effects/buildings_and_machines/generic_4_working"
+					delay "1.0"
+				}
+			}
 		}
 	}
 }
