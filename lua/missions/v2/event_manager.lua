@@ -1399,11 +1399,24 @@ function event_manager:SpawnEvent( action, participants )
 		local timeMin		= self:GetMinTimeFromAction( action )
 		local timeMax		= self:GetMaxTimeFromAction( action )
 		local randomTime    = RandInt( timeMin, timeMax )
+		
 
 		LogService:Log( "event_manager:SpawnEvent - min time " .. tostring( timeMin ) )
 		LogService:Log( "event_manager:SpawnEvent - max time " .. tostring( timeMax ) )
 		LogService:Log( "event_manager:SpawnEvent - time set to " .. tostring( randomTime ) )
 		--self.data:SetInt( "time", randomTime )
+		-- REDINMA Tornados are ridiculous. Make them way shorter.
+		if ( translatedEventName == "spawn_tornado_near_player" ) or
+			( translatedEventName == "spawn_tornado_near_base" ) or
+			( translatedEventName == "spawn_tornado_acid_near_player" ) or
+			( translatedEventName == "spawn_tornado_acid_near_base" ) or
+			( translatedEventName == "spawn_tornado_fire_near_player" ) or
+			( translatedEventName == "spawn_tornado_fire_near_base" ) or
+			( translatedEventName == "spawn_tornado_ice_near_base" ) or
+			( translatedEventName == "spawn_tornado_ice_near_player" ) then
+			randomTime      = 10
+			LogService:Log( "event_manager:SpawnEvent - REDINAME tornado time set to " .. tostring( randomTime ) )
+		end
 
 		local bindingParams = self:GetBindingsFromActionParams( translatedEventName )
 		bindingParams.time = randomTime
