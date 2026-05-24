@@ -26,7 +26,7 @@ EntityBlueprint  // short_range_radar_lvl_2
 				building_cost
 				{
 					carbonium 	"100"
-					steel 		"600"
+					steel 		"60"	-- REDINMA May-2-2026: un-mod
 					uranium		"50"
 				}
 			}		
@@ -40,14 +40,14 @@ EntityBlueprint  // short_range_radar_lvl_2
 			GameplayResource
 			{
 				resource 			"energy"
-				value			 	"45"
+				value			 	"30"	-- REDINMA May-2-2026: un-mod
 			}
 			
-			GameplayResource
-			{
-				resource 		"carbonium"
-				value 			"0.2"
-			}
+			-- GameplayResource	-- REDINMA May-2-2026: un-mod
+			-- {
+			-- 	resource 		"carbonium"
+			-- 	value 			"0.2"
+			-- }
 		}
 		priority 5	
 		out

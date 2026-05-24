@@ -24,7 +24,7 @@ EntityBlueprint  // short_range_radar
 				building_cost
 				{
 					carbonium 	"50"
-					steel 		"300"
+					steel 		"30"	-- REDINMA May-2-2026: un-mod
 				}
 			}		
 		}

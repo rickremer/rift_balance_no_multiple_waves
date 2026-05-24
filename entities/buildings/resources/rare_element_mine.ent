@@ -10,11 +10,13 @@ EntityBlueprint  // rare_element_mine
 		localization_id		"gui/hud/building_name/mining_drill"
 		description			"gui/hud/building_description/mining_drill"
 		menu_icon			"gui/hud/building_icons/rare_element_mine"
-		order				"1"
 		upgrade				"buildings/resources/rare_element_mine_lvl_2"
 		//require 			"headquarters"
+		order				"1"
 		buildable			"0"
 		building_group		"carbonium_factory"
+		type				"solids_mine"
+		overrides			"solids_mine,pipe"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
 						
 		costs
@@ -83,47 +85,47 @@ EntityBlueprint  // rare_element_mine
 				family				"in"
 			}
 			
-			GameplayResource
+			GameplayResource	-- REDINMA May-2-2026: return "in" values to vanilla but keep format per mod
 			{
 				resource 			"carbon_deepvein"
-				value			 	0.1	-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value			 	1.0
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"iron_deepvein"
-				value			 	0.1	-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value			 	1.0
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"ammonium_deepvein"
-				value			 	0.1	-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value			 	1.0
 				family				"resource"
 			}
 			
 			GameplayResource
 			{
 				resource 			"cobalt_deepvein"
-				value			 	0.1	-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value			 	1.0
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"palladium_deepvein"
-				value			 	0.1	-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value			 	1.0
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"titanium_deepvein"
-				value			 	0.1	-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value			 	1.0
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"uranium_ore_deepvein"
-				value			 	0.1	-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
+				value			 	1.0
 				family				"resource"
 			}			
 		}

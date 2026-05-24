@@ -25,11 +25,11 @@ EntityBlueprint
 			{
 				name "default"
 				building_time 10
-				building_cost
+				building_cost	-- REDINMA May-2-2026: un-mod steel & AI
 				{
 					carbonium 	"100"
-					steel 		"250"
-					ai			"2"
+					steel 		"50"
+					ai			"1"
 				}
 			}
 		}

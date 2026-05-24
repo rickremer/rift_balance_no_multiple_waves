@@ -15,6 +15,8 @@ EntityBlueprint  // carbonium_factory_lvl_2
 		order				"1"
 		upgrade				"buildings/resources/carbonium_factory_lvl_3"
 		//require 			"headquarters"  // removed to save screen space
+		type				"solids_mine"
+		overrides			"solids_mine"
 		exclude_terrain_types "magma_hot_ground,magma_very_hot_ground"
 		
 		costs
@@ -23,7 +25,7 @@ EntityBlueprint  // carbonium_factory_lvl_2
 			{
 				name "default"
 				building_time 10
-				building_cost
+				building_cost	-- REDINMA May-2-2026: mod OK vs vanilla: carb "150"
 				{
 					carbonium 	"200"
 					steel 		"100"
@@ -41,104 +43,97 @@ EntityBlueprint  // carbonium_factory_lvl_2
 			GameplayResource
 			{
 				resource 			"energy"
-				value			 	30
+				value			 	35	-- REDINMA May-2-2026: mod 30 vs vanilla 35 seems pointless
 			}
 			
-			GameplayResource
+			GameplayResource	-- REDINMA May-2-2026: return "in" values to vanilla but keep format per mod
 			{
 				resource 			"carbon_vein"
-				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"iron_vein"
-				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"ammonium_vein"
-				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0
 				family				"resource"
 			}
 			
 			GameplayResource
 			{
 				resource 			"cobalt_vein"
-				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"palladium_vein"
-				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"titanium_vein"
-				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"uranium_ore_vein"
-				-- REDINMA Jan-01-2026: vs 2.0 ; super annoying to deplete so fast. TODO: find initial values and return to vanilla.
-				value				0.1
+				value				1.0
 				family				"resource"
 			}		
 		}
 		
 		out
 		{
-			GameplayResource
+			GameplayResource	-- REDINMA May-2-2026: return "out" values to vanilla but keep format per mod
 			{
 				resource 			"carbonium"
-				value				1.2
+				value				1.5
 				family				"resource"
 			}	
 			GameplayResource
 			{
 				resource 			"steel"
-				value				1.2
+				value				1.5
 				family				"resource"
 			}			
 			GameplayResource
 			{
 				resource 			"ammonium"
-				value				1.2
+				value				1.5
 				family				"resource"
 			}
 			
 			GameplayResource
 			{
 				resource 			"cobalt"
-				value				1.2
+				value				1.5
 				family				"resource"
 			}		
 			GameplayResource
 			{
 				resource 			"palladium"
-				value				1.2
+				value				1.5
 				family				"resource"
 			}
 			GameplayResource
 			{
 				resource 			"titanium"
-				value				1.2
+				value				1.5
 				family				"resource"
 			}	
 			GameplayResource
 			{
 				resource 			"uranium_ore"
-				value				1.2
+				value				1.5
 				family				"resource"
 			}
 		}
@@ -155,9 +150,10 @@ EntityBlueprint  // carbonium_factory_lvl_2
 			cone_effect					string:"build_cone_3x3"
 			cone_effect_sell			string:"sell_big"
 			buff_buildings				string:"buildings/resources/ore_mill,buildings/resources/ore_mill_lvl_2,buildings/resources/ore_mill_lvl_3,buildings/resources/ore_mill_lvl_4"
-			buff_required_bp			string:"buildings/resources/ore_mill_missing_icon"
-			buff_required_name			string:"ore_mill"
-			buff_required_level			int:"0"
+			-- REDINMA May-2-2026: remove buff REQUIREMENT only
+			-- buff_required_bp			string:"buildings/resources/ore_mill_missing_icon"
+			-- buff_required_name			string:"ore_mill"
+			-- buff_required_level			int:"0"
 			buff_localization			string:"buff_name/buff_ore_mill"
 			buff_icon					string:"gui/hud/building_icons/ore_mill"
 			display_radius_group		string:"ore_mill"

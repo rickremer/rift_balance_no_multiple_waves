@@ -1,0 +1,5 @@
+geothermal_powerplant.ent
+geothermal_powerplant_lvl_2.ent
+geothermal_powerplant_lvl_3.ent
+solar_panels.ent
+wind_turbine.ent
