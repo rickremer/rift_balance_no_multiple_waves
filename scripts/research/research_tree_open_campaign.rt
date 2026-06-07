@@ -242,6 +242,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_drone_attack"
@@ -422,6 +428,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_heavy_artillery_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_high_energy_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -633,6 +645,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_minigun_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
 							is_visible "1"
 						}
 
@@ -853,7 +871,7 @@ Research
 					research_scripts
 					position
 					{
-						x "909"
+						x "981"
 						y "576"
 					}
 
@@ -862,6 +880,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/fusion_powerplant_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_buff_mag_stabilizer_req"
 							is_visible "1"
 						}
 
@@ -928,7 +952,7 @@ Research
 					research_scripts
 					position
 					{
-						x "909"
+						x "981"
 						y "522"
 					}
 
@@ -937,6 +961,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/fusion_powerplant_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
 							is_visible "1"
 						}
 
@@ -996,7 +1026,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1143"
+						x "1215"
 						y "324"
 					}
 
@@ -1005,6 +1035,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/rare_element_mine_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_reagent_upkeep"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -1064,7 +1106,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1539"
+						x "1611"
 						y "126"
 					}
 
@@ -1139,7 +1181,7 @@ Research
 					research_scripts
 					position
 					{
-						x "864"
+						x "936"
 						y "522"
 					}
 
@@ -1148,6 +1190,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/shield_generator_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_high_energy_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -1209,6 +1257,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/carbonium_powerplant_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_simple_reagent_upkeep"
 							is_visible "1"
 						}
 
@@ -1280,6 +1334,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/auxiliary_buildings"
@@ -1345,6 +1411,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_plasma_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_generic_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -1486,7 +1558,7 @@ Research
 					research_scripts
 					position
 					{
-						x "864"
+						x "936"
 						y "324"
 					}
 
@@ -1495,6 +1567,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/shield_generator_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_generic_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -1692,7 +1770,7 @@ Research
 
 						ResearchAward
 						{
-							blueprint "research/building_limit_cap_increase_comms_hub"
+							blueprint "research/building_limit_increase_outpost"
 							is_visible "1"
 						}
 
@@ -1899,6 +1977,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/building_limit_increase_outpost"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/main"
@@ -1948,7 +2032,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1620"
+						x "1692"
 						y "-162"
 					}
 
@@ -2025,6 +2109,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/carbonium_powerplant_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_reagent_upkeep"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -2152,7 +2248,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1539"
+						x "1611"
 						y "324"
 					}
 
@@ -2161,6 +2257,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/nuclear_powerplant_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
 							is_visible "1"
 						}
 
@@ -2549,7 +2651,7 @@ Research
 					research_scripts
 					position
 					{
-						x "387"
+						x "540"
 						y "-324"
 					}
 
@@ -2758,7 +2860,7 @@ Research
 					research_scripts
 					position
 					{
-						x "909"
+						x "981"
 						y "126"
 					}
 
@@ -2819,7 +2921,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1215"
+						x "1287"
 						y "-162"
 					}
 
@@ -2834,6 +2936,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/ore_mill"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_buff_ore_mill_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -2960,13 +3074,6 @@ Research
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
-						ResearchNodeRequirement
-						{
-							render_line "1"
-							research_name "gui/menu/research/name/resource_handling_liquid_lvl3"
-							research_category "gui/menu/research/category_base_buildings"
-						}
-
 					}
 
 					research_name "gui/menu/research/name/gas_energy_lvl3"
@@ -3005,7 +3112,7 @@ Research
 					research_scripts
 					position
 					{
-						x "576"
+						x "639"
 						y "270"
 					}
 
@@ -3014,6 +3121,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/gas_powerplant_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_reagent_upkeep"
 							is_visible "1"
 						}
 
@@ -3066,7 +3179,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1143"
+						x "1215"
 						y "-162"
 					}
 
@@ -3210,6 +3323,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/building_limit_increase_outpost"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/main"
@@ -3266,7 +3385,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1215"
+						x "1287"
 						y "126"
 					}
 
@@ -3275,6 +3394,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/carbonium_factory_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -3343,6 +3468,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/repair_facility_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -3456,7 +3593,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1728"
+						x "1800"
 						y "-162"
 					}
 
@@ -3542,6 +3679,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_simple"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/auxiliary_buildings"
@@ -3591,7 +3734,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1674"
+						x "1746"
 						y "-162"
 					}
 
@@ -3677,6 +3820,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_high_energy_plasma_upkeep"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_plasma"
@@ -3742,6 +3891,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/repair_facility_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_reagent_upkeep"
 							is_visible "1"
 						}
 
@@ -3856,7 +4011,7 @@ Research
 					research_scripts
 					position
 					{
-						x "576"
+						x "639"
 						y "126"
 					}
 
@@ -3865,6 +4020,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/gas_powerplant_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_simple_reagent_upkeep"
 							is_visible "1"
 						}
 
@@ -3936,169 +4097,15 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_reagent_upkeep"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/biomass_energy"
-				}
-
-				ResearchNode
-				{
-					research_flags
-					requirement_tooltip
-					requirements
-					{
-						ResearchNodeRequirement
-						{
-							render_line "1"
-							research_name "gui/menu/research/name/resource_handling_liquid_lvl2"
-							research_category "gui/menu/research/category_base_buildings"
-						}
-
-						ResearchNodeRequirement
-						{
-							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl5"
-							research_category "gui/menu/research/category_base_buildings"
-						}
-
-					}
-
-					research_name "gui/menu/research/name/resource_handling_liquid_lvl3"
-					research_costs
-					{
-						ResearchCost
-						{
-							amount "0"
-							resource "carbonium"
-							count "15000"
-						}
-
-						ResearchCost
-						{
-							amount "0"
-							resource "download"
-							count "1500"
-						}
-
-						ResearchCost
-						{
-							amount "0"
-							resource "steel"
-							count "7500"
-						}
-
-					}
-
-					research_scripts
-					position
-					{
-						x "531"
-						y "180"
-					}
-
-					research_awards
-					{
-						ResearchAward
-						{
-							blueprint "buildings/resources/liquid_material_storage_large"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "buildings/resources/liquid_pump_lvl_3"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "buildings/resources/water_filtering_plant_lvl_3"
-							is_visible "1"
-						}
-
-					}
-
-					icon "gui/menu/research/icons/resource_handling_liquid"
-				}
-
-				ResearchNode
-				{
-					research_flags
-					requirement_tooltip
-					requirements
-					{
-						ResearchNodeRequirement
-						{
-							render_line "1"
-							research_name "gui/menu/research/name/resource_handling_liquid_lvl1"
-							research_category "gui/menu/research/category_base_buildings"
-						}
-
-						ResearchNodeRequirement
-						{
-							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl4"
-							research_category "gui/menu/research/category_base_buildings"
-						}
-
-					}
-
-					research_name "gui/menu/research/name/resource_handling_liquid_lvl2"
-					research_costs
-					{
-						ResearchCost
-						{
-							amount "0"
-							resource "carbonium"
-							count "6000"
-						}
-
-						ResearchCost
-						{
-							amount "0"
-							resource "download"
-							count "1000"
-						}
-
-						ResearchCost
-						{
-							amount "0"
-							resource "steel"
-							count "2000"
-						}
-
-					}
-
-					research_scripts
-					position
-					{
-						x "531"
-						y "-18"
-					}
-
-					research_awards
-					{
-						ResearchAward
-						{
-							blueprint "buildings/resources/liquid_material_storage_medium"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "buildings/resources/liquid_pump_lvl_2"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
-							blueprint "buildings/resources/water_filtering_plant_lvl_2"
-							is_visible "1"
-						}
-
-					}
-
-					icon "gui/menu/research/icons/resource_handling_liquid"
 				}
 
 				ResearchNode
@@ -4152,7 +4159,7 @@ Research
 					research_scripts
 					position
 					{
-						x "864"
+						x "936"
 						y "180"
 					}
 
@@ -4304,6 +4311,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/biomass_energy"
@@ -4376,6 +4395,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/energy_storage_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
 							is_visible "1"
 						}
 
@@ -4521,6 +4546,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/energy_storage"
@@ -4570,7 +4607,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1674"
+						x "1746"
 						y "-216"
 					}
 
@@ -4771,7 +4808,7 @@ Research
 					research_scripts
 					position
 					{
-						x "576"
+						x "639"
 						y "-162"
 					}
 
@@ -4838,18 +4875,12 @@ Research
 					research_scripts
 					position
 					{
-						x "531"
+						x "459"
 						y "-216"
 					}
 
 					research_awards
 					{
-						ResearchAward
-						{
-							blueprint "buildings/resources/liquid_material_storage_small"
-							is_visible "1"
-						}
-
 						ResearchAward
 						{
 							blueprint "buildings/resources/liquid_pump"
@@ -5090,7 +5121,7 @@ Research
 
 					position
 					{
-						x "1539"
+						x "1611"
 						y "-18"
 					}
 
@@ -5236,7 +5267,7 @@ Research
 
 					position
 					{
-						x "1539"
+						x "1611"
 						y "-162"
 					}
 
@@ -5257,6 +5288,12 @@ Research
 						ResearchAward
 						{
 							blueprint "items/loot/resources/biomass_animal_item"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -5316,7 +5353,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1782"
+						x "1854"
 						y "-162"
 					}
 
@@ -5398,7 +5435,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1143"
+						x "1215"
 						y "-18"
 					}
 
@@ -5407,6 +5444,24 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/rare_element_mine_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_buff_ore_mill_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_drilling_fluid_upkeep"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -5476,8 +5531,8 @@ Research
 
 					position
 					{
-						x "1143"
-						y "-216"
+						x "1215"
+						y "-270"
 					}
 
 					research_awards
@@ -5556,7 +5611,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1287"
+						x "1359"
 						y "-162"
 					}
 
@@ -5630,7 +5685,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1287"
+						x "1359"
 						y "126"
 					}
 
@@ -5704,7 +5759,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1287"
+						x "1359"
 						y "324"
 					}
 
@@ -5851,6 +5906,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_generic_plasma_upkeep"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_lightning"
@@ -5916,6 +5977,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_lightning_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_high_energy_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -6036,7 +6103,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1242"
+						x "1314"
 						y "180"
 					}
 
@@ -6110,7 +6177,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1242"
+						x "1314"
 						y "324"
 					}
 
@@ -6639,7 +6706,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1242"
+						x "1314"
 						y "-18"
 					}
 
@@ -6907,14 +6974,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/resource_handling_liquid_lvl1"
-							research_category "gui/menu/research/category_base_buildings"
-						}
-
-						ResearchNodeRequirement
-						{
-							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl4"
+							research_name "gui/menu/research/name/pumps_lvl_2"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -6949,7 +7009,7 @@ Research
 					research_scripts
 					position
 					{
-						x "432"
+						x "387"
 						y "-18"
 					}
 
@@ -6988,7 +7048,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_name "gui/menu/research/name/pumps_lvl_3"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -7023,7 +7083,7 @@ Research
 					research_scripts
 					position
 					{
-						x "432"
+						x "387"
 						y "180"
 					}
 
@@ -7091,7 +7151,7 @@ Research
 					research_scripts
 					position
 					{
-						x "432"
+						x "387"
 						y "369"
 					}
 
@@ -7117,7 +7177,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/comm_hub_lvl_3"
+							research_name "gui/menu/research/name/comm_hub_lvl_2"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -7152,8 +7212,8 @@ Research
 					research_scripts
 					position
 					{
-						x "765"
-						y "-18"
+						x "837"
+						y "-162"
 					}
 
 					research_awards
@@ -7185,7 +7245,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/comm_hub_lvl_4"
+							research_name "gui/menu/research/name/comm_hub_lvl_3"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -7213,8 +7273,8 @@ Research
 					research_scripts
 					position
 					{
-						x "765"
-						y "180"
+						x "837"
+						y "-18"
 					}
 
 					research_awards
@@ -7222,6 +7282,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/nitrification_plant_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -7247,6 +7313,13 @@ Research
 						{
 							render_line "1"
 							research_name "gui/menu/research/name/comm_hub_lvl_5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/comm_hub_lvl_4"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -7288,8 +7361,8 @@ Research
 					research_scripts
 					position
 					{
-						x "765"
-						y "324"
+						x "837"
+						y "126"
 					}
 
 					research_awards
@@ -8714,7 +8787,7 @@ Research
 					research_scripts
 					position
 					{
-						x "693"
+						x "756"
 						y "-18"
 					}
 
@@ -8741,6 +8814,13 @@ Research
 						{
 							render_line "1"
 							research_name "gui/menu/research/name/gas_energy_lvl1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/pumps_lvl_2"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -8775,7 +8855,7 @@ Research
 					research_scripts
 					position
 					{
-						x "477"
+						x "594"
 						y "-18"
 					}
 
@@ -8808,7 +8888,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/resource_handling_liquid_lvl2"
+							research_name "gui/menu/research/name/pumps_lvl_3"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -8843,8 +8923,8 @@ Research
 					research_scripts
 					position
 					{
-						x "477"
-						y "126"
+						x "594"
+						y "180"
 					}
 
 					research_awards
@@ -8852,6 +8932,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/gas_ionizer_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -8876,7 +8962,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/resource_handling_liquid_lvl3"
+							research_name "gui/menu/research/name/headquarters_lvl6"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -8911,7 +8997,7 @@ Research
 					research_scripts
 					position
 					{
-						x "477"
+						x "594"
 						y "369"
 					}
 
@@ -8920,6 +9006,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/gas_ionizer_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -8986,7 +9084,7 @@ Research
 					research_scripts
 					position
 					{
-						x "693"
+						x "756"
 						y "180"
 					}
 
@@ -8995,6 +9093,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/supercoolant_chem_plant_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -9061,7 +9165,7 @@ Research
 					research_scripts
 					position
 					{
-						x "693"
+						x "756"
 						y "369"
 					}
 
@@ -9070,6 +9174,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/supercoolant_chem_plant_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_reagent_upkeep"
 							is_visible "1"
 						}
 
@@ -9186,6 +9296,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/ammo/ammo_factory_lowcaliber_ext_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
 							is_visible "1"
 						}
 
@@ -9625,6 +9741,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_power_rod"
@@ -9768,6 +9890,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_hcm"
@@ -9833,6 +9961,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_hcm_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -9952,6 +10086,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/tower_ammunition_handling"
@@ -9963,6 +10103,13 @@ Research
 					requirement_tooltip
 					requirements
 					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/pumps_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
 						ResearchNodeRequirement
 						{
 							render_line "1"
@@ -10001,7 +10148,7 @@ Research
 					research_scripts
 					position
 					{
-						x "342"
+						x "504"
 						y "-18"
 					}
 
@@ -10044,6 +10191,13 @@ Research
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/pumps_lvl_3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
 					}
 
 					research_name "gui/menu/research/name/bio_condenser_lvl2"
@@ -10075,7 +10229,7 @@ Research
 					research_scripts
 					position
 					{
-						x "342"
+						x "504"
 						y "180"
 					}
 
@@ -10090,6 +10244,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/bioreactor_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -10156,7 +10322,7 @@ Research
 					research_scripts
 					position
 					{
-						x "342"
+						x "504"
 						y "369"
 					}
 
@@ -10165,6 +10331,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/bio_condenser_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/resources/bioreactor_lvl_3"
 							is_visible "1"
 						}
 
@@ -10284,6 +10456,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/tower_ammunition_handling"
@@ -10390,6 +10568,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/ammo/ammo_factory_energy_ext_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
 							is_visible "1"
 						}
 
@@ -10706,6 +10890,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/tower_ammunition_handling"
@@ -10849,6 +11039,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_basic"
@@ -10942,13 +11138,6 @@ Research
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
-						ResearchNodeRequirement
-						{
-							render_line "1"
-							research_name "gui/menu/research/name/resource_handling_liquid_lvl2"
-							research_category "gui/menu/research/category_base_buildings"
-						}
-
 					}
 
 					research_name "gui/menu/research/name/gas_filtering_lvl2"
@@ -10980,7 +11169,7 @@ Research
 					research_scripts
 					position
 					{
-						x "621"
+						x "684"
 						y "126"
 					}
 
@@ -10989,6 +11178,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/gas_filtering_plant_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -11007,13 +11208,6 @@ Research
 						{
 							render_line "1"
 							research_name "gui/menu/research/name/gas_energy_lvl2"
-							research_category "gui/menu/research/category_base_buildings"
-						}
-
-						ResearchNodeRequirement
-						{
-							render_line "1"
-							research_name "gui/menu/research/name/resource_handling_liquid_lvl3"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -11055,7 +11249,7 @@ Research
 					research_scripts
 					position
 					{
-						x "621"
+						x "684"
 						y "270"
 					}
 
@@ -11064,6 +11258,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/gas_filtering_plant_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -11182,6 +11388,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/mech_upgrade_combat_drones"
@@ -11240,6 +11452,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/ai_hub_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
 							is_visible "1"
 						}
 
@@ -11430,14 +11648,14 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl4"
+							research_name "gui/menu/research/name/gas_energy_lvl1"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/gas_energy_lvl1"
+							research_name "gui/menu/research/name/pumps_lvl_2"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -11472,7 +11690,7 @@ Research
 					research_scripts
 					position
 					{
-						x "387"
+						x "549"
 						y "-18"
 					}
 
@@ -11498,13 +11716,6 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/headquarters_lvl5"
-							research_category "gui/menu/research/category_base_buildings"
-						}
-
-						ResearchNodeRequirement
-						{
-							render_line "1"
 							research_name "gui/menu/research/name/gas_extractor_lvl1"
 							research_category "gui/menu/research/category_base_buildings"
 						}
@@ -11513,6 +11724,13 @@ Research
 						{
 							render_line "0"
 							research_name "gui/menu/research/name/geoscanning_lvl_1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/pumps_lvl_3"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -11547,7 +11765,7 @@ Research
 					research_scripts
 					position
 					{
-						x "387"
+						x "549"
 						y "180"
 					}
 
@@ -11556,6 +11774,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/gas_extractor_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_buff_geoscanner_req"
 							is_visible "1"
 						}
 
@@ -11622,7 +11846,7 @@ Research
 					research_scripts
 					position
 					{
-						x "387"
+						x "549"
 						y "369"
 					}
 
@@ -11631,6 +11855,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/gas_extractor_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -11880,7 +12116,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1377"
+						x "1449"
 						y "-216"
 					}
 
@@ -11889,6 +12125,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/main/communications_hub_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
 							is_visible "1"
 						}
 
@@ -11948,7 +12190,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1377"
+						x "1449"
 						y "-72"
 					}
 
@@ -11957,6 +12199,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/main/communications_hub_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_generic_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -12016,7 +12264,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1377"
+						x "1449"
 						y "72"
 					}
 
@@ -12025,6 +12273,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/main/communications_hub_lvl_4"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
 							is_visible "1"
 						}
 
@@ -12084,7 +12338,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1377"
+						x "1449"
 						y "270"
 					}
 
@@ -12093,6 +12347,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/main/communications_hub_lvl_5"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_high_energy_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -12184,6 +12444,15 @@ Research
 					}
 
 					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "research/building_limit_increase_outpost"
+							is_visible "1"
+						}
+
+					}
+
 					icon "gui/menu/research/icons/orbital_scanning"
 				}
 
@@ -12277,6 +12546,15 @@ Research
 					}
 
 					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "research/building_limit_increase_outpost"
+							is_visible "1"
+						}
+
+					}
+
 					icon "gui/menu/research/icons/orbital_scanning"
 				}
 
@@ -12363,6 +12641,15 @@ Research
 					}
 
 					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "research/building_limit_increase_outpost"
+							is_visible "1"
+						}
+
+					}
+
 					icon "gui/menu/research/icons/orbital_scanning"
 				}
 
@@ -12456,6 +12743,15 @@ Research
 					}
 
 					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "research/building_limit_increase_outpost"
+							is_visible "1"
+						}
+
+					}
+
 					icon "gui/menu/research/icons/orbital_scanning"
 				}
 
@@ -12542,6 +12838,15 @@ Research
 					}
 
 					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "research/building_limit_increase_outpost"
+							is_visible "1"
+						}
+
+					}
+
 					icon "gui/menu/research/icons/orbital_scanning"
 				}
 
@@ -12867,7 +13172,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1620"
+						x "1692"
 						y "36"
 					}
 
@@ -12935,7 +13240,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1620"
+						x "1692"
 						y "126"
 					}
 
@@ -12944,6 +13249,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/rtg_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_simple"
 							is_visible "1"
 						}
 
@@ -13003,7 +13314,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1620"
+						x "1692"
 						y "324"
 					}
 
@@ -13012,6 +13323,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/rtg_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
 							is_visible "1"
 						}
 
@@ -13139,7 +13456,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1674"
+						x "1746"
 						y "126"
 					}
 
@@ -13148,6 +13465,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/uranium_centrifuge_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -13207,7 +13530,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1674"
+						x "1746"
 						y "324"
 					}
 
@@ -13216,6 +13539,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/uranium_centrifuge_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
 							is_visible "1"
 						}
 
@@ -13233,7 +13562,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/nitrogen_chemistry"
+							research_name "gui/menu/research/name/nitrogen_chemistry_lvl_2"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -13268,8 +13597,8 @@ Research
 					research_scripts
 					position
 					{
-						x "720"
-						y "126"
+						x "792"
+						y "36"
 					}
 
 					research_awards
@@ -13343,7 +13672,7 @@ Research
 					research_scripts
 					position
 					{
-						x "720"
+						x "792"
 						y "324"
 					}
 
@@ -13352,6 +13681,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/ammonium_synthesizer_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_water_upkeep"
 							is_visible "1"
 						}
 
@@ -13369,7 +13704,7 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/nitrogen_chemistry"
+							research_name "gui/menu/research/name/nitrogen_chemistry_lvl_2"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -13404,8 +13739,8 @@ Research
 					research_scripts
 					position
 					{
-						x "810"
-						y "126"
+						x "882"
+						y "36"
 					}
 
 					research_awards
@@ -13430,14 +13765,14 @@ Research
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/comm_hub_lvl_5"
+							research_name "gui/menu/research/name/ammonium_extraction"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
 						ResearchNodeRequirement
 						{
 							render_line "1"
-							research_name "gui/menu/research/name/ammonium_extraction"
+							research_name "gui/menu/research/name/nitrogen_chemistry_lvl_3"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -13472,8 +13807,8 @@ Research
 					research_scripts
 					position
 					{
-						x "810"
-						y "324"
+						x "882"
+						y "180"
 					}
 
 					research_awards
@@ -13526,7 +13861,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1332"
+						x "1404"
 						y "-162"
 					}
 
@@ -13587,7 +13922,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1332"
+						x "1404"
 						y "126"
 					}
 
@@ -13707,6 +14042,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_nitric_acid_upkeep"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/tower_ammunition_handling"
@@ -13815,6 +14156,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_nitric_acid_upkeep"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/tower_ammunition_handling"
@@ -13830,6 +14177,13 @@ Research
 						{
 							render_line "1"
 							research_name "gui/menu/research/name/ammo_explosive_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/nitrogen_chemistry"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -13914,6 +14268,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/ammo/ammo_factory_explosive_adv_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_nitric_acid_upkeep"
 							is_visible "1"
 						}
 
@@ -14043,6 +14403,13 @@ Research
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/plasma_physics"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
 					}
 
 					research_name "gui/menu/research/name/ammo_energy_cell_lvl2b"
@@ -14169,7 +14536,7 @@ Research
 					research_scripts
 					position
 					{
-						x "954"
+						x "1026"
 						y "180"
 					}
 
@@ -14237,7 +14604,7 @@ Research
 					research_scripts
 					position
 					{
-						x "954"
+						x "1026"
 						y "324"
 					}
 
@@ -14298,7 +14665,7 @@ Research
 					research_scripts
 					position
 					{
-						x "954"
+						x "1026"
 						y "522"
 					}
 
@@ -14307,6 +14674,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/plasma_converter_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_buff_mag_stabilizer_req"
 							is_visible "1"
 						}
 
@@ -14352,7 +14725,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1188"
+						x "1260"
 						y "-18"
 					}
 
@@ -14361,6 +14734,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/ore_mill_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -14413,7 +14792,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1188"
+						x "1260"
 						y "180"
 					}
 
@@ -14422,6 +14801,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/ore_mill_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
 							is_visible "1"
 						}
 
@@ -14474,7 +14859,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1188"
+						x "1260"
 						y "324"
 					}
 
@@ -14483,6 +14868,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/ore_mill_lvl_4"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_water_upkeep"
 							is_visible "1"
 						}
 
@@ -14542,7 +14933,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1440"
+						x "1512"
 						y "-162"
 					}
 
@@ -14615,7 +15006,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1440"
+						x "1512"
 						y "-18"
 					}
 
@@ -14624,6 +15015,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/blast_furnace_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
 							is_visible "1"
 						}
 
@@ -14690,7 +15087,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1620"
+						x "1692"
 						y "-18"
 					}
 
@@ -14765,7 +15162,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1674"
+						x "1746"
 						y "-18"
 					}
 
@@ -14840,7 +15237,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1728"
+						x "1800"
 						y "-18"
 					}
 
@@ -14908,7 +15305,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1782"
+						x "1854"
 						y "-18"
 					}
 
@@ -14976,7 +15373,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1782"
+						x "1854"
 						y "126"
 					}
 
@@ -14985,6 +15382,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/main/planet_defense_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_generic_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -15044,7 +15447,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1782"
+						x "1854"
 						y "324"
 					}
 
@@ -15053,6 +15456,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/main/planet_defense_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_high_energy_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -15173,7 +15582,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1503"
+						x "1575"
 						y "36"
 					}
 
@@ -15241,7 +15650,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1503"
+						x "1575"
 						y "180"
 					}
 
@@ -15309,7 +15718,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1575"
+						x "1647"
 						y "36"
 					}
 
@@ -15377,7 +15786,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1575"
+						x "1647"
 						y "180"
 					}
 
@@ -15482,6 +15891,13 @@ Research
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/nitrogen_chemistry"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
 					}
 
 					research_name "gui/menu/research/name/ammo_low_high_caliber_lvl2"
@@ -15513,7 +15929,7 @@ Research
 					research_scripts
 					position
 					{
-						x "-243"
+						x "-207"
 						y "-18"
 					}
 
@@ -15522,6 +15938,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/ammo/ammo_factory_lowcaliber_highcaliber_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_nitric_acid_upkeep"
 							is_visible "1"
 						}
 
@@ -15547,6 +15969,13 @@ Research
 						{
 							render_line "1"
 							research_name "gui/menu/research/name/towers_flamer_lvl1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/nitrogen_chemistry"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -15590,6 +16019,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/ammo/ammo_factory_explosive_liquid_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_nitric_acid_upkeep"
 							is_visible "1"
 						}
 
@@ -15642,7 +16077,7 @@ Research
 					research_scripts
 					position
 					{
-						x "648"
+						x "711"
 						y "-162"
 					}
 
@@ -15717,7 +16152,7 @@ Research
 					research_scripts
 					position
 					{
-						x "648"
+						x "711"
 						y "-18"
 					}
 
@@ -15726,6 +16161,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/moisture_trap_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -16274,6 +16721,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/tower_ammunition_handling"
@@ -16750,6 +17203,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_hcm"
@@ -16893,6 +17352,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_hcm"
@@ -16942,7 +17407,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1044"
+						x "1116"
 						y "36"
 					}
 
@@ -16957,6 +17422,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/heavy_water_plant"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -17016,7 +17487,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1044"
+						x "1116"
 						y "180"
 					}
 
@@ -17084,7 +17555,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1116"
+						x "1188"
 						y "126"
 					}
 
@@ -17093,6 +17564,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/heavy_water_plant_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -17152,7 +17629,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1008"
+						x "1080"
 						y "126"
 					}
 
@@ -17220,7 +17697,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1071"
+						x "1143"
 						y "126"
 					}
 
@@ -17288,7 +17765,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1071"
+						x "1143"
 						y "324"
 					}
 
@@ -17297,6 +17774,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/irradiator_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -17356,7 +17839,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1071"
+						x "1143"
 						y "522"
 					}
 
@@ -17365,6 +17848,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/irradiator_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -17904,6 +18393,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_water_upkeep"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/mech_upgrade_sonic_sensors"
@@ -17979,6 +18474,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_buff_geoscanner_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/renewable_energy"
@@ -18047,6 +18548,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_high_energy_plasma_upkeep"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/mech_upgrade_sonic_sensors"
@@ -18069,6 +18576,13 @@ Research
 						{
 							render_line "1"
 							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/floating_power_connectors"
 							research_category "gui/menu/research/category_base_buildings"
 						}
 
@@ -18193,6 +18707,652 @@ Research
 					}
 
 					icon "gui/menu/research/icons/skill_tornado"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/basic_energy_production"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/energy_connector_eluminated"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "carbonium"
+							count "3500"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "download"
+							count "55"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "steel"
+							count "1000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-1557"
+						y "-216"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/energy/energy_connector_xlamp"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/energy/energy_connector_xlamp_blue"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/energy/energy_connector_xlamp_green"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/energy/energy_connector_xlamp_red"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "buildings/energy/energy_connector_xlamp_yellow"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/decorations"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/resource_handling_liquid_lvl1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl4"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/pumps_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "carbonium"
+							count "500"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "download"
+							count "500"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "steel"
+							count "1000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "423"
+						y "-72"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/liquid_pump_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/pumps"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/pumps_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl5"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/pumps_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "carbonium"
+							count "2000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "download"
+							count "1500"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "steel"
+							count "3500"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "423"
+						y "126"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/liquid_pump_lvl_3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/pumps"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/pumps_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/liquid_storage_lvl_1"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "carbonium"
+							count "1500"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "download"
+							count "120"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "steel"
+							count "500"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "342"
+						y "-18"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/liquid_material_storage_small"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/liquid_storage"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/liquid_storage_lvl_1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/pumps_lvl_3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/liquid_storage_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "carbonium"
+							count "4000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "download"
+							count "2000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "steel"
+							count "4000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "342"
+						y "180"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/liquid_material_storage_medium"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/liquid_storage"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/liquid_storage_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl6"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/liquid_storage_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "alloys"
+							count "3000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "carbonium"
+							count "8000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "download"
+							count "4000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "342"
+						y "369"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/liquid_material_storage_large"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/liquid_storage"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/resource_handling_liquid_lvl1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/pumps_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/water_purification_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "carbonium"
+							count "6000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "download"
+							count "1000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "steel"
+							count "2000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "459"
+						y "-18"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/water_filtering_plant_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/resource_handling_liquid"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/water_purification_lvl_2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/pumps_lvl_3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/water_purification_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "carbonium"
+							count "15000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "download"
+							count "1500"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "steel"
+							count "7500"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "459"
+						y "180"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/resources/water_filtering_plant_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_simple_reagent_upkeep"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/resource_handling_liquid"
+				}
+
+				ResearchNode
+				{
+					research_flags
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/basic_energy_production"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/headquarters_lvl3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/floating_power_connectors"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "carbonium"
+							count "4000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "download"
+							count "1000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "steel"
+							count "1000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "-1350"
+						y "-162"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/energy/energy_connector_water"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/energy_relay_system"
 				}
 
 			}
@@ -31836,7 +32996,7 @@ Research
 					research_scripts
 					position
 					{
-						x "945"
+						x "999"
 						y "630"
 					}
 
@@ -32250,6 +33410,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_simple"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_laser"
@@ -32367,7 +33533,7 @@ Research
 					research_scripts
 					position
 					{
-						x "945"
+						x "999"
 						y "216"
 					}
 
@@ -32447,6 +33613,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_railgun"
@@ -32523,7 +33695,7 @@ Research
 
 					position
 					{
-						x "945"
+						x "999"
 						y "-288"
 					}
 
@@ -33461,6 +34633,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_simple_reagent_upkeep"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/alien_research"
@@ -33657,6 +34841,18 @@ Research
 						ResearchAward
 						{
 							blueprint "research/building_limit_cap_increase_research_lab"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -34069,7 +35265,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1035"
+						x "1089"
 						y "630"
 					}
 
@@ -34144,7 +35340,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1035"
+						x "1089"
 						y "486"
 					}
 
@@ -34224,6 +35420,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_laser"
@@ -34287,7 +35489,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1035"
+						x "1089"
 						y "207"
 					}
 
@@ -34375,7 +35577,7 @@ Research
 
 					position
 					{
-						x "1098"
+						x "1152"
 						y "-288"
 					}
 
@@ -34562,6 +35764,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/supercooling"
@@ -34719,7 +35927,7 @@ Research
 
 					position
 					{
-						x "981"
+						x "1035"
 						y "-396"
 					}
 
@@ -34916,7 +36124,7 @@ Research
 					research_scripts
 					position
 					{
-						x "918"
+						x "972"
 						y "-27"
 					}
 
@@ -35058,6 +36266,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_reagent_upkeep"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/alien_research"
@@ -35136,6 +36356,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/flora_cultivator_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -35815,7 +37047,7 @@ Research
 					research_scripts
 					position
 					{
-						x "945"
+						x "999"
 						y "486"
 					}
 
@@ -36187,6 +37419,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/magma_energy"
@@ -36375,6 +37619,18 @@ Research
 						ResearchAward
 						{
 							blueprint "research/building_limit_cap_increase_research_lab"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_nitric_acid_upkeep"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -36867,6 +38123,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/magma_energy"
@@ -37036,6 +38298,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_railgun"
@@ -37119,7 +38387,7 @@ Research
 
 					position
 					{
-						x "1035"
+						x "1089"
 						y "-288"
 					}
 
@@ -38449,6 +39717,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/morphium_energy"
@@ -38514,6 +39794,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/energy/morphium_powerplant_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -38977,6 +40263,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_high_energy_plasma_upkeep"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/tower_gatling_laser"
@@ -39094,7 +40386,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1062"
+						x "1116"
 						y "-234"
 					}
 
@@ -39162,7 +40454,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1062"
+						x "1116"
 						y "-27"
 					}
 
@@ -39237,7 +40529,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1062"
+						x "1116"
 						y "261"
 					}
 
@@ -39312,7 +40604,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1062"
+						x "1116"
 						y "540"
 					}
 
@@ -40644,7 +41936,7 @@ Research
 					research_scripts
 					position
 					{
-						x "918"
+						x "972"
 						y "261"
 					}
 
@@ -40653,6 +41945,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/ionizer_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -40712,7 +42010,7 @@ Research
 					research_scripts
 					position
 					{
-						x "918"
+						x "972"
 						y "540"
 					}
 
@@ -40721,6 +42019,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/ionizer_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_reagent_upkeep"
 							is_visible "1"
 						}
 
@@ -40792,6 +42096,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_water_upkeep"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/supercooling"
@@ -40857,6 +42173,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/supercoolant_refinery_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -40986,6 +42314,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/nitric_acid_refinery_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -42562,6 +43902,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/floor_acid"
@@ -42634,6 +43980,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/reagent_condenser_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -42934,6 +44286,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/alien_flora_cultivation"
@@ -43123,6 +44487,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/research_station"
@@ -43188,6 +44564,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/reagent_refinery_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -43576,12 +44958,6 @@ Research
 
 						ResearchAward
 						{
-							blueprint "buildings/energy/energy_connector_water"
-							is_visible "1"
-						}
-
-						ResearchAward
-						{
 							blueprint "resources/ammo_tower_liquid"
 							is_visible "1"
 						}
@@ -43752,6 +45128,13 @@ Research
 							render_line "1"
 							research_name "gui/menu/research/name/tower_water_basic_lvl1"
 							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/floating_power_connectors"
+							research_category "gui/menu/research/category_base_buildings"
 						}
 
 					}
@@ -43984,6 +45367,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_water_big_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
 							is_visible "1"
 						}
 
@@ -44968,7 +46357,7 @@ Research
 					research_scripts
 					position
 					{
-						x "891"
+						x "945"
 						y "-288"
 					}
 
@@ -45036,7 +46425,7 @@ Research
 					research_scripts
 					position
 					{
-						x "891"
+						x "945"
 						y "216"
 					}
 
@@ -45111,7 +46500,7 @@ Research
 					research_scripts
 					position
 					{
-						x "891"
+						x "945"
 						y "486"
 					}
 
@@ -45186,7 +46575,7 @@ Research
 					research_scripts
 					position
 					{
-						x "891"
+						x "945"
 						y "630"
 					}
 
@@ -45240,7 +46629,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1008"
+						x "1062"
 						y "-234"
 					}
 
@@ -45308,7 +46697,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1008"
+						x "1062"
 						y "-27"
 					}
 
@@ -45383,7 +46772,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1008"
+						x "1062"
 						y "261"
 					}
 
@@ -45458,7 +46847,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1008"
+						x "1062"
 						y "540"
 					}
 
@@ -45721,6 +47110,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/carbonium_synthesizer"
@@ -45786,6 +47187,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/steel_seperator_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_generic_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -45915,6 +47322,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/bio_composter_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_water_upkeep"
 							is_visible "1"
 						}
 
@@ -46258,6 +47671,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/rare_element_mining"
@@ -46396,7 +47815,7 @@ Research
 					research_scripts
 					position
 					{
-						x "981"
+						x "1035"
 						y "-144"
 					}
 
@@ -46471,7 +47890,7 @@ Research
 					research_scripts
 					position
 					{
-						x "981"
+						x "1035"
 						y "117"
 					}
 
@@ -46480,6 +47899,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/crystalizer_tanzanite_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_generic_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -46539,7 +47964,7 @@ Research
 					research_scripts
 					position
 					{
-						x "981"
+						x "1035"
 						y "405"
 					}
 
@@ -46776,6 +48201,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/rare_element_mining"
@@ -46923,6 +48354,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/crystalizer_rhodonite_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_nitric_acid_upkeep"
 							is_visible "1"
 						}
 
@@ -47347,6 +48784,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/consumable_gravity_granade"
@@ -47398,6 +48847,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/biomass_morphed_press_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_generic_plasma_upkeep"
 							is_visible "1"
 						}
 
@@ -47459,6 +48914,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/bio_cobalt_refinery_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -47527,6 +48988,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/bio_cobalt_refinery_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -47605,6 +49072,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/rare_element_mining"
@@ -47677,6 +49150,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/bio_uranium_refinery_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -47755,6 +49234,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/rare_element_mining"
@@ -47827,6 +49312,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/bio_titanium_refinery_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -47905,6 +49396,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_high_energy_plasma_upkeep"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/rare_element_mining"
@@ -47977,6 +49474,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/bio_palladium_refinery_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -48443,6 +49946,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/consumable_gravity_granade"
@@ -48501,6 +50010,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/regenerating_extractor_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_nitric_acid_upkeep"
 							is_visible "1"
 						}
 
@@ -48569,6 +50084,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/main/cryo_station_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
 							is_visible "1"
 						}
 
@@ -48710,6 +50231,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/thermal_ion_charger_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -48923,6 +50456,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_water_big"
@@ -48988,6 +50527,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_water_big_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_advanced"
 							is_visible "1"
 						}
 
@@ -49127,6 +50672,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_shockwave"
@@ -49192,6 +50743,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_shockwave_acid_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
 							is_visible "1"
 						}
 
@@ -49394,7 +50951,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1134"
+						x "1188"
 						y "-234"
 					}
 
@@ -49469,7 +51026,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1134"
+						x "1188"
 						y "27"
 					}
 
@@ -49478,6 +51035,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_portal_lvl_2"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
 							is_visible "1"
 						}
 
@@ -49544,7 +51107,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1134"
+						x "1188"
 						y "261"
 					}
 
@@ -49624,6 +51187,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/floor_acid"
@@ -49689,6 +51264,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/biomass_mycelium_press_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_coolant_upkeep_normal"
 							is_visible "1"
 						}
 
@@ -49766,6 +51347,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/alien_flora_cultivation"
@@ -49831,6 +51418,18 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/biomass_morphed_press_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -49977,6 +51576,12 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/towers_acid_shredder"
@@ -50049,6 +51654,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/defense/tower_acid_shredder_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
 							is_visible "1"
 						}
 
@@ -50326,7 +51937,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1179"
+						x "1233"
 						y "-288"
 					}
 
@@ -50401,7 +52012,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1179"
+						x "1233"
 						y "207"
 					}
 
@@ -50476,7 +52087,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1179"
+						x "1233"
 						y "486"
 					}
 
@@ -50891,7 +52502,7 @@ Research
 					research_scripts
 					position
 					{
-						x "1107"
+						x "1161"
 						y "-27"
 					}
 
@@ -51039,6 +52650,18 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/resource_handling_liquid"
@@ -51104,6 +52727,12 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/morphium_factory_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
 							is_visible "1"
 						}
 
@@ -51243,6 +52872,24 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/fusion_energy"
@@ -51308,6 +52955,24 @@ Research
 						ResearchAward
 						{
 							blueprint "buildings/resources/resin_factory_lvl_3"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_upkeep_req"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/upgrade_nitric_acid_upkeep"
+							is_visible "1"
+						}
+
+						ResearchAward
+						{
+							blueprint "research/warning_rounding"
 							is_visible "1"
 						}
 
@@ -51590,9 +53255,165 @@ Research
 							is_visible "1"
 						}
 
+						ResearchAward
+						{
+							blueprint "research/upgrade_new_piping_req"
+							is_visible "1"
+						}
+
 					}
 
 					icon "gui/menu/research/icons/floor_acid"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/ammo_liquid_lvl2"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/crystalizer_ferdonite"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/towers_flamer_lvl1"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/tower_flamer_cryo_lvl_2"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "alloys"
+							count "2000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "analysis"
+							count "4000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "ferdonite"
+							count "1000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "873"
+						y "-27"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/defense/tower_flamer_cryo_lvl_2"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/towers_flamer"
+				}
+
+				ResearchNode
+				{
+					research_flags "hidden|hidden_requirements_visible"
+					requirement_tooltip
+					requirements
+					{
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/tower_flamer_cryo_lvl_2"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "1"
+							research_name "gui/menu/research/name/crystalizer_ferdonite_lvl2"
+							research_category "gui/menu/research/category_alien"
+						}
+
+						ResearchNodeRequirement
+						{
+							render_line "0"
+							research_name "gui/menu/research/name/ammo_liquid_lvl3"
+							research_category "gui/menu/research/category_base_buildings"
+						}
+
+					}
+
+					research_name "gui/menu/research/name/tower_flamer_cryo_lvl_3"
+					research_costs
+					{
+						ResearchCost
+						{
+							amount "0"
+							resource "alloys"
+							count "4000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "analysis"
+							count "6000"
+						}
+
+						ResearchCost
+						{
+							amount "0"
+							resource "ferdonite"
+							count "4000"
+						}
+
+					}
+
+					research_scripts
+					position
+					{
+						x "873"
+						y "261"
+					}
+
+					research_awards
+					{
+						ResearchAward
+						{
+							blueprint "buildings/defense/tower_flamer_cryo_lvl_3"
+							is_visible "1"
+						}
+
+					}
+
+					icon "gui/menu/research/icons/towers_flamer"
 				}
 
 			}
@@ -53144,6 +54965,6 @@ Research
 
 	type
 	editor "6741"
-	version "226"
+	version "234"
 }
 

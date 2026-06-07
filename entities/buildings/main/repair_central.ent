@@ -49,7 +49,7 @@ EntityBlueprint  // repair_central
 			GameplayResource
 			{
 				resource 			"reagent"
-				value				"50"
+				value				"20"	-- REDINMA was 50 
 				family				"onigel"
 				attachment			"att_in_1"
 			}
@@ -57,7 +57,7 @@ EntityBlueprint  // repair_central
 			GameplayResource
 			{
 				resource			"fissonium"
-				value				"25"
+				value				"10"	-- REDINMA was 25 
 				family				"onigel"
 				attachment			"att_in_1"
 			}

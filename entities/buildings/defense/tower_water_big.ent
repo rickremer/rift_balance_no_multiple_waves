@@ -51,7 +51,6 @@ EntityBlueprint  // tower_water_big
 			GameplayResource
 			{
 				resource 	"ferdonite"
-				--
 				value 		"3"
 			}
 		}
@@ -490,7 +489,6 @@ EntityBlueprint  // tower_ice_big
 			GameplayResource
 			{
 				resource 	"ferdonite"
-				--
 				value 		"3"
 			}
 			GameplayResource

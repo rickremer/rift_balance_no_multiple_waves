@@ -1,3 +1,34 @@
+0.?? WIP
+- added research cost and time factor multipliers to custom rules map difficulty scaling
+- added new feature: radar jamming - now any type of jammer near a rad will reduce its range as long as it remains active
+- updated some weather events with radar jamming (dust storm, ion storm, thunder storm, ash clouds, blue hail, fog, solar burn)
+- updated bioanomalies with radar jamming. level 1 and 2 have little, level 3 gets noticeable and level 4 has quite some range.
+
+0.4.9
+- updated tech tree, split water filtering from pumps and storage, some liquid tech rearrangement
+- updated bioreactor and bio conders stats to fit the mod, added a level 3 version for bioreactors
+- updated floating energy connector and split it into separate research
+- updated tech tree, added warning info for building upgrades in the alien research tab
+- updated piercer tower, mycelium press, geoscanner, ionizer building stats
+
+0.4.8
+- fixed visuals of petroleum wells
+- updated lamps (work now as energy connectors)
+- updated root gun and blaster weapon stat (better rate of fire for some lvl1 liquid ammo cost at high levels)
+- updated flamer and cryo atomizer weapons stats (reduced ammo cost)
+- updated flamer towers with an idle upkeep factor of 0.1, reduced ammo cost and improved range
+- updated artillery and portal tower stats, mostly some range improvements
+- updated geoscanner, AI hub, orbital defense, HCM, power rod towers, energy balancer, nuclear powerplant, comm hub stats: added piping options to match tech tree info
+- updated tech tree, made nitrogen chemistry an earlier tech
+- updated tech tree, added requirements to higher ammo prod to ensure they have the liquids they need researched
+- updated tech tree, added warning info for some building upgrades
+- added cryo atomizer tower (cryo variant of flamer)
+
+0.4.7
+- fixed some file format issues that logged errors
+- fixed localization typos
+- added German and Chinese localization
+
 0.4.6
 - fixed sludge production buildings missing in building bar
 - updated supercoolant refinerly 3 stats, reduced carbonium upkeep
